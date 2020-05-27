@@ -1,0 +1,1160 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Python基础知识学习笔记 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="python的进制 python的进制表示 二进制 python中的二进制用‘0b’开头表示   八进制 python中的八进制用‘0o’开头表示   十六进制 python中的十六进制哟个‘0x’开头表示     python的进制转换 转换成十进制 系统默认的print()的结果就为十进制   转换成二进制 使用系统自带的函数 bin()   转换成八进制 使用系统自带的函数 oct()">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python基础知识学习笔记">
+<meta property="og:url" content="http://yoursite.com/2020/05/27/Python%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="python的进制 python的进制表示 二进制 python中的二进制用‘0b’开头表示   八进制 python中的八进制用‘0o’开头表示   十六进制 python中的十六进制哟个‘0x’开头表示     python的进制转换 转换成十进制 系统默认的print()的结果就为十进制   转换成二进制 使用系统自带的函数 bin()   转换成八进制 使用系统自带的函数 oct()">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-05-27T04:10:35.893Z">
+<meta property="article:modified_time" content="2020-05-27T04:10:28.857Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Python基础知识学习笔记" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/05/27/Python%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="article-date">
+  <time datetime="2020-05-27T04:10:35.893Z" itemprop="datePublished">2020-05-27</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Python基础知识学习笔记
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="python的进制"><a href="#python的进制" class="headerlink" title="python的进制"></a>python的进制</h2><ul>
+<li>python的进制表示<ul>
+<li>二进制<ul>
+<li>python中的二进制用‘0b’开头表示</li>
+</ul>
+</li>
+<li>八进制<ul>
+<li>python中的八进制用‘0o’开头表示</li>
+</ul>
+</li>
+<li>十六进制<ul>
+<li>python中的十六进制哟个‘0x’开头表示</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>python的进制转换<ul>
+<li>转换成十进制<ul>
+<li>系统默认的print()的结果就为十进制</li>
+</ul>
+</li>
+<li>转换成二进制<ul>
+<li>使用系统自带的函数 bin()</li>
+</ul>
+</li>
+<li>转换成八进制<ul>
+<li>使用系统自带的函数 oct()</li>
+</ul>
+</li>
+<li>转换成十六进制<ul>
+<li>使用后系统自带的函数 hex()  海克斯</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#八进制用法</span></span><br><span class="line">a = <span class="number">0o32</span></span><br><span class="line">print(a)</span><br></pre></td></tr></table></figure>
+
+<pre><code>26</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#十六进制用法</span></span><br><span class="line">a = <span class="number">0x3A</span></span><br><span class="line">print(a)</span><br></pre></td></tr></table></figure>
+
+<pre><code>58</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#二进制用法</span></span><br><span class="line">a = <span class="number">0b10</span></span><br><span class="line">print(a)</span><br></pre></td></tr></table></figure>
+
+<pre><code>2</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#十进制转换为二进制</span></span><br><span class="line">a = <span class="number">131</span></span><br><span class="line">b = bin(a)</span><br><span class="line">print(b)</span><br><span class="line"></span><br><span class="line"><span class="comment">#十进制转换为八进制</span></span><br><span class="line">c = oct(a)</span><br><span class="line">print(c)</span><br><span class="line"></span><br><span class="line"><span class="comment">#十进制转换为十六进制</span></span><br><span class="line">d = hex(a)</span><br><span class="line">print(d)</span><br></pre></td></tr></table></figure>
+
+<pre><code>0b10000011
+0o203
+0x83</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#八进制转换为十六进制</span></span><br><span class="line">a = <span class="number">0o203</span></span><br><span class="line">b = hex(a)</span><br><span class="line">print(b)</span><br><span class="line"></span><br><span class="line"><span class="comment">#检验以上结果是否正确</span></span><br><span class="line">b = <span class="number">0x83</span></span><br><span class="line"><span class="comment">#将a与b都转换为10进制，如果结果相同，证明转换成功</span></span><br><span class="line">print(a)</span><br><span class="line">print(b)</span><br></pre></td></tr></table></figure>
+
+<pre><code>0x83
+131
+131</code></pre><h2 id="浮点数"><a href="#浮点数" class="headerlink" title="浮点数"></a>浮点数</h2><ul>
+<li>定义：日常理解的小数，例如：3.2、-3.4</li>
+<li>表示形式<ul>
+<li>常见小数，带小数点，例如 3.2、-3.4</li>
+<li>科学计数法， 小数成语10为底的指数，指数可以为复数，例如：8321.31 = 8.32131*10^3 = 8.32131e3</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#浮点数表述</span></span><br><span class="line">a = <span class="number">3.14</span></span><br><span class="line">print(a)</span><br><span class="line"></span><br><span class="line"><span class="comment">#科学计数法</span></span><br><span class="line">b = <span class="number">3.14e3</span></span><br><span class="line">print(b)</span><br></pre></td></tr></table></figure>
+
+<pre><code>3.14
+3140.0</code></pre><h2 id="复数"><a href="#复数" class="headerlink" title="复数"></a>复数</h2><ul>
+<li>定义： 由实部和虚部组成，中间用‘+’好链接，虚部后跟‘j’表示</li>
+<li>例如：3+4j</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#复数表达</span></span><br><span class="line">a = <span class="number">3</span>+<span class="number">4j</span></span><br><span class="line">print(a)</span><br></pre></td></tr></table></figure>
+
+<pre><code>(3+4j)</code></pre><h2 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h2><ul>
+<li>定义：表示文本信息的一种形式 例如：“我爱中国”<ul>
+<li>排列有序，即文本从左到后解释</li>
+<li>在非注释中，凡是用引号括起来的部分都是字符串</li>
+<li>引号类型<ul>
+<li>单引号：’’</li>
+<li>双引号：””</li>
+<li>三单引号：’’’我爱中国’’’</li>
+<li>三双引号：”””我爱中国”””</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#字符串表达</span></span><br><span class="line">a = <span class="string">'我爱中国'</span></span><br><span class="line">b = <span class="string">"我爱人民"</span></span><br><span class="line">c = <span class="string">'''我爱中国'''</span></span><br><span class="line">d = <span class="string">"""我爱人民"""</span></span><br><span class="line">print(a)</span><br><span class="line">print(b)</span><br><span class="line">print(c)</span><br><span class="line">print(d)</span><br></pre></td></tr></table></figure>
+
+<pre><code>我爱中国
+我爱人民
+我爱中国
+我爱人民</code></pre><ul>
+<li>四种引号的区别<ul>
+<li>单引号，双引号没有区别</li>
+<li>三引号，三双引号没有区别</li>
+<li>三引号用来表示多行字符串信息，或者在程序函数内部体开头表示函数说明</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#多行文字用三引号或三双引号表达</span></span><br><span class="line">a = <span class="string">'''啊</span></span><br><span class="line"><span class="string">冬天来了</span></span><br><span class="line"><span class="string">春天还会远吗？'''</span></span><br><span class="line">print(a)</span><br><span class="line"></span><br><span class="line">b = <span class="string">"""啊</span></span><br><span class="line"><span class="string">冬天来了</span></span><br><span class="line"><span class="string">春天还会远吗？"""</span></span><br><span class="line">print(b)</span><br></pre></td></tr></table></figure>
+
+<pre><code>啊
+冬天来了
+春天还会远吗？
+啊
+冬天来了
+春天还会远吗？</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#多行文字无法用单引号或双引号表达</span></span><br><span class="line">c = <span class="string">'啊</span></span><br><span class="line"><span class="string">冬天来了</span></span><br><span class="line"><span class="string">春天还会远吗'</span></span><br><span class="line">print(c)</span><br><span class="line"></span><br><span class="line">d = <span class="string">"啊</span></span><br><span class="line"><span class="string">冬天来了</span></span><br><span class="line"><span class="string">春天还会远吗"</span></span><br><span class="line">print(d)</span><br><span class="line"></span><br><span class="line"><span class="comment">#报错解析：</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment">#lin2 表明 第二行出现问题</span></span><br><span class="line"><span class="comment">#报错SyntaxError: EOL while scanning string literal</span></span><br><span class="line"><span class="comment">#EOL代表结尾</span></span><br><span class="line"><span class="comment">#while scanning string 当扫描字符串</span></span><br><span class="line"><span class="comment">#整体含义是当扫描字符串时，发现结尾有问题</span></span><br><span class="line"><span class="comment">#主要是由于单引号/双引号中的内容不能有回车，但三引号或三双引号没有限制。</span></span><br></pre></td></tr></table></figure>
+
+
+<pre><code>  File &quot;&lt;ipython-input-17-abbd9ef6c99d&gt;&quot;, line 2
+    c = &apos;啊
+          ^
+SyntaxError: EOL while scanning string literal</code></pre><ul>
+<li>字符串出现单引号问题<ul>
+<li>例如： let’s go，</li>
+<li>常规使用单引号去将该字符串设置为变量，会出现报错。</li>
+<li>当字符串出现单引号时，使用双引号或三双引号方式概括字符串即可。</li>
+<li>可以使用转义字符避免报错。</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#使用单引号概括字符串</span></span><br><span class="line">a = <span class="string">'let'</span>s go<span class="string">'</span></span><br><span class="line"><span class="string">print(a)</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">#line 1 提示第一行出现问题</span></span><br><span class="line"><span class="string">#提示let与s之间的单引号有问题</span></span><br><span class="line"><span class="string">#invalid syntax 提示这种表达方式为python的非法语句</span></span><br></pre></td></tr></table></figure>
+
+
+<pre><code>  File &quot;&lt;ipython-input-21-849d1d84996e&gt;&quot;, line 1
+    a = &apos;let&apos;s go&apos;
+             ^
+SyntaxError: invalid syntax</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#使用双引号概括字符串</span></span><br><span class="line">a = <span class="string">"let's go"</span></span><br><span class="line">print(a)</span><br><span class="line"><span class="comment">#不会出现上述报错了！</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#使用三双引号概括字符串</span></span><br><span class="line">b = <span class="string">"""let's go"""</span></span><br><span class="line">print(b)</span><br><span class="line"><span class="comment">#也不会出现上述报错了！</span></span><br></pre></td></tr></table></figure>
+
+<pre><code>let&apos;s go
+let&apos;s go</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#可以使用转义字符避免单引号问题</span></span><br><span class="line">a = <span class="string">'let\'s go'</span></span><br><span class="line">print(a)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 将let与s中间的'使用\’进行转义即可避免错误</span></span><br></pre></td></tr></table></figure>
+
+<pre><code>let&apos;s go</code></pre><h2 id="转义字符"><a href="#转义字符" class="headerlink" title="转义字符"></a>转义字符</h2><ul>
+<li>定义：字符串中一些不太好表示的符号，比如换行、制表符等，联通一些需要特殊表示的符号，比如单引号，为了表示这些符号，我们需要一些特殊的形式，俗称转义，需要转义的字符，俗称转义字符。</li>
+<li>常用的转义字符:<ul>
+<li>单引号： &#39;</li>
+<li>双引号：&quot;</li>
+<li>响铃：\a</li>
+<li>反斜杠：\</li>
+<li>换行：\n</li>
+<li>水平制表符：\t</li>
+<li>倒退：\b</li>
+<li>空字符串。字符值为0：\0</li>
+<li>unicode 16位的十六进制数值：\uxxxx (xxxx表示四个数字)</li>
+<li>unicode 32位的十六进制数值：\uxxxx xxxx (xxxx xxxxx表示8位数字)</li>
+<li>十六进制值：\xXX (第一个小写的x是必须要有的，后面的大写X表示十六进制值)</li>
+<li>八进制值：\oXX (第一个小写的o是必须要有的，后面的大写X表示8进制值)</li>
+</ul>
+</li>
+</ul>
+<h2 id="string类型的API"><a href="#string类型的API" class="headerlink" title="string类型的API"></a>string类型的API</h2><ul>
+<li>api定义：应用程序接口，是已经做好的第三方程序功能，我们只需要引用、调用即可，提高开发效率，减少开发时间。</li>
+<li>API分类<ul>
+<li>一般函数<ul>
+<li>startswith/endswith 判断以某特定字符开头或结尾</li>
+<li>count 代表计数，计算一个字符从某一个字符串出现的次数。</li>
+<li>find 查找字符串中要查找字符出现的位置，如果能查到，只返回字符出现的第一个位置。如果查不到，返回-1</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>查询手册<ul>
+<li>思路：遇到不熟悉的api时的思路：通过名字大致了解其功能，通过该api手册中的介绍了解是否满足需求，如果满足需求，进一步看手册寻找如何使用。如果没有现成的api满足需求后，需要自己写一个api</li>
+<li>help(str) 查询字符串的api手册</li>
+<li>输入变量. 使用tab键显示出可以使用哪些函数,比如 a.</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#判断字符串开头</span></span><br><span class="line">a = <span class="string">'i love china'</span></span><br><span class="line"><span class="comment">###判断是否以i开头，使用.调用函数</span></span><br><span class="line">a.startwith(<span class="string">"i"</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#AttributeError 代表属性错误</span></span><br><span class="line"><span class="comment">#----&gt; 4 a.startwith("i") 表明该局出错</span></span><br><span class="line"><span class="comment">#'str' object has no attribute 'startwith' 表明字符串没有该startwith函数属性，也就是没有这个函数</span></span><br><span class="line"><span class="comment">#排查发现是startwith少了个s，应该为startswith</span></span><br></pre></td></tr></table></figure>
+
+
+<pre><code>---------------------------------------------------------------------------
+
+AttributeError                            Traceback (most recent call last)
+
+&lt;ipython-input-25-ff014f9ddf1c&gt; in &lt;module&gt;
+      2 a = &apos;i love china&apos;
+      3 ###判断是否以i开头，使用.调用函数
+----&gt; 4 a.startwith(&quot;i&quot;)
+      5 
+      6 #AttributeError 代表属性错误
+
+
+AttributeError: &apos;str&apos; object has no attribute &apos;startwith&apos;</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#判断字符串开头</span></span><br><span class="line">a = <span class="string">'i love china'</span></span><br><span class="line"><span class="comment">###判断是否以i开头，使用.调用函数,函数值要用双引号概括</span></span><br><span class="line">a.startswith(<span class="string">"i"</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#true代表为真，也就是代表确实该字符串以i开头。</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+<pre><code>True</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#判断字符串开头</span></span><br><span class="line">a = <span class="string">'i love china'</span></span><br><span class="line"><span class="comment">###判断是否以q开头，使用.调用函数，函数值要用双引号概括</span></span><br><span class="line">a.startswith(<span class="string">"q"</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#false代表为假，也就是代表该字符串不以q开头。</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+<pre><code>False</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#判断字符串结尾</span></span><br><span class="line">a = <span class="string">'i love china'</span></span><br><span class="line"><span class="comment">###判断是否以a结尾，使用.调用函数</span></span><br><span class="line">a.endswith(<span class="string">"a"</span>)</span><br></pre></td></tr></table></figure>
+
+
+
+
+<pre><code>True</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#判断字符串结尾</span></span><br><span class="line">a = <span class="string">'i love china'</span></span><br><span class="line"><span class="comment">###判断是否以q结尾，使用.调用函数</span></span><br><span class="line">a.endswith(<span class="string">"q"</span>)</span><br></pre></td></tr></table></figure>
+
+
+
+
+<pre><code>False</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#判断次数</span></span><br><span class="line">a = <span class="string">'i love china,i love people , i love dog'</span></span><br><span class="line"><span class="comment">#判断love出现的次数</span></span><br><span class="line">a.count(<span class="string">"love"</span>)</span><br></pre></td></tr></table></figure>
+
+
+
+
+<pre><code>3</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#判断次数</span></span><br><span class="line">a = <span class="string">'i love china,i love people , i love dog'</span></span><br><span class="line"><span class="comment">#判断o出现的次数</span></span><br><span class="line">a.count(<span class="string">"o"</span>)</span><br></pre></td></tr></table></figure>
+
+
+
+
+<pre><code>5</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#判断次数</span></span><br><span class="line">a = <span class="string">'i love china,i love people , i love dog'</span></span><br><span class="line"><span class="comment">#判断q出现的次数</span></span><br><span class="line">a.count(<span class="string">"q"</span>)</span><br></pre></td></tr></table></figure>
+
+
+
+
+<pre><code>0</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#判断次数</span></span><br><span class="line">a = <span class="string">'i love china,i love people , i love dog'</span></span><br><span class="line"><span class="comment">#判断721出现的次数</span></span><br><span class="line">a.count(<span class="number">721</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#TypeError 提示类型错误</span></span><br><span class="line"><span class="comment">#----&gt; 4 a.count(721) 代表该行出现错误</span></span><br><span class="line"><span class="comment">#must be str, not int 表明函数值必须要为字符串，而721不是字符串而为整形int</span></span><br><span class="line"><span class="comment">#发现721少了双引号概括，当使用"721"就代表字符串，运行不会报错</span></span><br></pre></td></tr></table></figure>
+
+
+<pre><code>---------------------------------------------------------------------------
+
+TypeError                                 Traceback (most recent call last)
+
+&lt;ipython-input-36-ae66f7a2318a&gt; in &lt;module&gt;
+      2 a = &apos;i love china,i love people , i love dog&apos;
+      3 #判断721出现的次数
+----&gt; 4 a.count(721)
+
+
+TypeError: must be str, not int</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#查找位置</span></span><br><span class="line">a = <span class="string">'i love china,i love people , i love dog'</span></span><br><span class="line"><span class="comment">#判断love的位置</span></span><br><span class="line">a.find(<span class="string">"love"</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#代表love第一次出现的位置在第二个单词处</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+<pre><code>2</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#查找位置</span></span><br><span class="line">a = <span class="string">'i love china,i love people , i love dog'</span></span><br><span class="line"><span class="comment">#判断apple的位置</span></span><br><span class="line">a.find(<span class="string">"apple"</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#查不到返回-1</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+<pre><code>-1</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#查字符串手册</span></span><br><span class="line">help(str)</span><br></pre></td></tr></table></figure>
+
+<pre><code>Help on class str in module builtins:
+
+class str(object)
+ |  str(object=&apos;&apos;) -&gt; str
+ |  str(bytes_or_buffer[, encoding[, errors]]) -&gt; str
+ |  
+ |  Create a new string object from the given object. If encoding or
+ |  errors is specified, then the object must expose a data buffer
+ |  that will be decoded using the given encoding and error handler.
+ |  Otherwise, returns the result of object.__str__() (if defined)
+ |  or repr(object).
+ |  encoding defaults to sys.getdefaultencoding().
+ |  errors defaults to &apos;strict&apos;.
+ |  
+ |  Methods defined here:
+ |  
+ |  __add__(self, value, /)
+ |      Return self+value.
+ |  
+ |  __contains__(self, key, /)
+ |      Return key in self.
+ |  
+ |  __eq__(self, value, /)
+ |      Return self==value.
+ |  
+ |  __format__(self, format_spec, /)
+ |      Return a formatted version of the string as described by format_spec.
+ |  
+ |  __ge__(self, value, /)
+ |      Return self&gt;=value.
+ |  
+ |  __getattribute__(self, name, /)
+ |      Return getattr(self, name).
+ |  
+ |  __getitem__(self, key, /)
+ |      Return self[key].
+ |  
+ |  __getnewargs__(...)
+ |  
+ |  __gt__(self, value, /)
+ |      Return self&gt;value.
+ |  
+ |  __hash__(self, /)
+ |      Return hash(self).
+ |  
+ |  __iter__(self, /)
+ |      Implement iter(self).
+ |  
+ |  __le__(self, value, /)
+ |      Return self&lt;=value.
+ |  
+ |  __len__(self, /)
+ |      Return len(self).
+ |  
+ |  __lt__(self, value, /)
+ |      Return self&lt;value.
+ |  
+ |  __mod__(self, value, /)
+ |      Return self%value.
+ |  
+ |  __mul__(self, value, /)
+ |      Return self*value.
+ |  
+ |  __ne__(self, value, /)
+ |      Return self!=value.
+ |  
+ |  __repr__(self, /)
+ |      Return repr(self).
+ |  
+ |  __rmod__(self, value, /)
+ |      Return value%self.
+ |  
+ |  __rmul__(self, value, /)
+ |      Return value*self.
+ |  
+ |  __sizeof__(self, /)
+ |      Return the size of the string in memory, in bytes.
+ |  
+ |  __str__(self, /)
+ |      Return str(self).
+ |  
+ |  capitalize(self, /)
+ |      Return a capitalized version of the string.
+ |      
+ |      More specifically, make the first character have upper case and the rest lower
+ |      case.
+ |  
+ |  casefold(self, /)
+ |      Return a version of the string suitable for caseless comparisons.
+ |  
+ |  center(self, width, fillchar=&apos; &apos;, /)
+ |      Return a centered string of length width.
+ |      
+ |      Padding is done using the specified fill character (default is a space).
+ |  
+ |  count(...)
+ |      S.count(sub[, start[, end]]) -&gt; int
+ |      
+ |      Return the number of non-overlapping occurrences of substring sub in
+ |      string S[start:end].  Optional arguments start and end are
+ |      interpreted as in slice notation.
+ |  
+ |  encode(self, /, encoding=&apos;utf-8&apos;, errors=&apos;strict&apos;)
+ |      Encode the string using the codec registered for encoding.
+ |      
+ |      encoding
+ |        The encoding in which to encode the string.
+ |      errors
+ |        The error handling scheme to use for encoding errors.
+ |        The default is &apos;strict&apos; meaning that encoding errors raise a
+ |        UnicodeEncodeError.  Other possible values are &apos;ignore&apos;, &apos;replace&apos; and
+ |        &apos;xmlcharrefreplace&apos; as well as any other name registered with
+ |        codecs.register_error that can handle UnicodeEncodeErrors.
+ |  
+ |  endswith(...)
+ |      S.endswith(suffix[, start[, end]]) -&gt; bool
+ |      
+ |      Return True if S ends with the specified suffix, False otherwise.
+ |      With optional start, test S beginning at that position.
+ |      With optional end, stop comparing S at that position.
+ |      suffix can also be a tuple of strings to try.
+ |  
+ |  expandtabs(self, /, tabsize=8)
+ |      Return a copy where all tab characters are expanded using spaces.
+ |      
+ |      If tabsize is not given, a tab size of 8 characters is assumed.
+ |  
+ |  find(...)
+ |      S.find(sub[, start[, end]]) -&gt; int
+ |      
+ |      Return the lowest index in S where substring sub is found,
+ |      such that sub is contained within S[start:end].  Optional
+ |      arguments start and end are interpreted as in slice notation.
+ |      
+ |      Return -1 on failure.
+ |  
+ |  format(...)
+ |      S.format(*args, **kwargs) -&gt; str
+ |      
+ |      Return a formatted version of S, using substitutions from args and kwargs.
+ |      The substitutions are identified by braces (&apos;{&apos; and &apos;}&apos;).
+ |  
+ |  format_map(...)
+ |      S.format_map(mapping) -&gt; str
+ |      
+ |      Return a formatted version of S, using substitutions from mapping.
+ |      The substitutions are identified by braces (&apos;{&apos; and &apos;}&apos;).
+ |  
+ |  index(...)
+ |      S.index(sub[, start[, end]]) -&gt; int
+ |      
+ |      Return the lowest index in S where substring sub is found, 
+ |      such that sub is contained within S[start:end].  Optional
+ |      arguments start and end are interpreted as in slice notation.
+ |      
+ |      Raises ValueError when the substring is not found.
+ |  
+ |  isalnum(self, /)
+ |      Return True if the string is an alpha-numeric string, False otherwise.
+ |      
+ |      A string is alpha-numeric if all characters in the string are alpha-numeric and
+ |      there is at least one character in the string.
+ |  
+ |  isalpha(self, /)
+ |      Return True if the string is an alphabetic string, False otherwise.
+ |      
+ |      A string is alphabetic if all characters in the string are alphabetic and there
+ |      is at least one character in the string.
+ |  
+ |  isascii(self, /)
+ |      Return True if all characters in the string are ASCII, False otherwise.
+ |      
+ |      ASCII characters have code points in the range U+0000-U+007F.
+ |      Empty string is ASCII too.
+ |  
+ |  isdecimal(self, /)
+ |      Return True if the string is a decimal string, False otherwise.
+ |      
+ |      A string is a decimal string if all characters in the string are decimal and
+ |      there is at least one character in the string.
+ |  
+ |  isdigit(self, /)
+ |      Return True if the string is a digit string, False otherwise.
+ |      
+ |      A string is a digit string if all characters in the string are digits and there
+ |      is at least one character in the string.
+ |  
+ |  isidentifier(self, /)
+ |      Return True if the string is a valid Python identifier, False otherwise.
+ |      
+ |      Use keyword.iskeyword() to test for reserved identifiers such as &quot;def&quot; and
+ |      &quot;class&quot;.
+ |  
+ |  islower(self, /)
+ |      Return True if the string is a lowercase string, False otherwise.
+ |      
+ |      A string is lowercase if all cased characters in the string are lowercase and
+ |      there is at least one cased character in the string.
+ |  
+ |  isnumeric(self, /)
+ |      Return True if the string is a numeric string, False otherwise.
+ |      
+ |      A string is numeric if all characters in the string are numeric and there is at
+ |      least one character in the string.
+ |  
+ |  isprintable(self, /)
+ |      Return True if the string is printable, False otherwise.
+ |      
+ |      A string is printable if all of its characters are considered printable in
+ |      repr() or if it is empty.
+ |  
+ |  isspace(self, /)
+ |      Return True if the string is a whitespace string, False otherwise.
+ |      
+ |      A string is whitespace if all characters in the string are whitespace and there
+ |      is at least one character in the string.
+ |  
+ |  istitle(self, /)
+ |      Return True if the string is a title-cased string, False otherwise.
+ |      
+ |      In a title-cased string, upper- and title-case characters may only
+ |      follow uncased characters and lowercase characters only cased ones.
+ |  
+ |  isupper(self, /)
+ |      Return True if the string is an uppercase string, False otherwise.
+ |      
+ |      A string is uppercase if all cased characters in the string are uppercase and
+ |      there is at least one cased character in the string.
+ |  
+ |  join(self, iterable, /)
+ |      Concatenate any number of strings.
+ |      
+ |      The string whose method is called is inserted in between each given string.
+ |      The result is returned as a new string.
+ |      
+ |      Example: &apos;.&apos;.join([&apos;ab&apos;, &apos;pq&apos;, &apos;rs&apos;]) -&gt; &apos;ab.pq.rs&apos;
+ |  
+ |  ljust(self, width, fillchar=&apos; &apos;, /)
+ |      Return a left-justified string of length width.
+ |      
+ |      Padding is done using the specified fill character (default is a space).
+ |  
+ |  lower(self, /)
+ |      Return a copy of the string converted to lowercase.
+ |  
+ |  lstrip(self, chars=None, /)
+ |      Return a copy of the string with leading whitespace removed.
+ |      
+ |      If chars is given and not None, remove characters in chars instead.
+ |  
+ |  partition(self, sep, /)
+ |      Partition the string into three parts using the given separator.
+ |      
+ |      This will search for the separator in the string.  If the separator is found,
+ |      returns a 3-tuple containing the part before the separator, the separator
+ |      itself, and the part after it.
+ |      
+ |      If the separator is not found, returns a 3-tuple containing the original string
+ |      and two empty strings.
+ |  
+ |  replace(self, old, new, count=-1, /)
+ |      Return a copy with all occurrences of substring old replaced by new.
+ |      
+ |        count
+ |          Maximum number of occurrences to replace.
+ |          -1 (the default value) means replace all occurrences.
+ |      
+ |      If the optional argument count is given, only the first count occurrences are
+ |      replaced.
+ |  
+ |  rfind(...)
+ |      S.rfind(sub[, start[, end]]) -&gt; int
+ |      
+ |      Return the highest index in S where substring sub is found,
+ |      such that sub is contained within S[start:end].  Optional
+ |      arguments start and end are interpreted as in slice notation.
+ |      
+ |      Return -1 on failure.
+ |  
+ |  rindex(...)
+ |      S.rindex(sub[, start[, end]]) -&gt; int
+ |      
+ |      Return the highest index in S where substring sub is found,
+ |      such that sub is contained within S[start:end].  Optional
+ |      arguments start and end are interpreted as in slice notation.
+ |      
+ |      Raises ValueError when the substring is not found.
+ |  
+ |  rjust(self, width, fillchar=&apos; &apos;, /)
+ |      Return a right-justified string of length width.
+ |      
+ |      Padding is done using the specified fill character (default is a space).
+ |  
+ |  rpartition(self, sep, /)
+ |      Partition the string into three parts using the given separator.
+ |      
+ |      This will search for the separator in the string, starting at the end. If
+ |      the separator is found, returns a 3-tuple containing the part before the
+ |      separator, the separator itself, and the part after it.
+ |      
+ |      If the separator is not found, returns a 3-tuple containing two empty strings
+ |      and the original string.
+ |  
+ |  rsplit(self, /, sep=None, maxsplit=-1)
+ |      Return a list of the words in the string, using sep as the delimiter string.
+ |      
+ |        sep
+ |          The delimiter according which to split the string.
+ |          None (the default value) means split according to any whitespace,
+ |          and discard empty strings from the result.
+ |        maxsplit
+ |          Maximum number of splits to do.
+ |          -1 (the default value) means no limit.
+ |      
+ |      Splits are done starting at the end of the string and working to the front.
+ |  
+ |  rstrip(self, chars=None, /)
+ |      Return a copy of the string with trailing whitespace removed.
+ |      
+ |      If chars is given and not None, remove characters in chars instead.
+ |  
+ |  split(self, /, sep=None, maxsplit=-1)
+ |      Return a list of the words in the string, using sep as the delimiter string.
+ |      
+ |      sep
+ |        The delimiter according which to split the string.
+ |        None (the default value) means split according to any whitespace,
+ |        and discard empty strings from the result.
+ |      maxsplit
+ |        Maximum number of splits to do.
+ |        -1 (the default value) means no limit.
+ |  
+ |  splitlines(self, /, keepends=False)
+ |      Return a list of the lines in the string, breaking at line boundaries.
+ |      
+ |      Line breaks are not included in the resulting list unless keepends is given and
+ |      true.
+ |  
+ |  startswith(...)
+ |      S.startswith(prefix[, start[, end]]) -&gt; bool
+ |      
+ |      Return True if S starts with the specified prefix, False otherwise.
+ |      With optional start, test S beginning at that position.
+ |      With optional end, stop comparing S at that position.
+ |      prefix can also be a tuple of strings to try.
+ |  
+ |  strip(self, chars=None, /)
+ |      Return a copy of the string with leading and trailing whitespace removed.
+ |      
+ |      If chars is given and not None, remove characters in chars instead.
+ |  
+ |  swapcase(self, /)
+ |      Convert uppercase characters to lowercase and lowercase characters to uppercase.
+ |  
+ |  title(self, /)
+ |      Return a version of the string where each word is titlecased.
+ |      
+ |      More specifically, words start with uppercased characters and all remaining
+ |      cased characters have lower case.
+ |  
+ |  translate(self, table, /)
+ |      Replace each character in the string using the given translation table.
+ |      
+ |        table
+ |          Translation table, which must be a mapping of Unicode ordinals to
+ |          Unicode ordinals, strings, or None.
+ |      
+ |      The table must implement lookup/indexing via __getitem__, for instance a
+ |      dictionary or list.  If this operation raises LookupError, the character is
+ |      left untouched.  Characters mapped to None are deleted.
+ |  
+ |  upper(self, /)
+ |      Return a copy of the string converted to uppercase.
+ |  
+ |  zfill(self, width, /)
+ |      Pad a numeric string with zeros on the left, to fill a field of the given width.
+ |      
+ |      The string is never truncated.
+ |  
+ |  ----------------------------------------------------------------------
+ |  Static methods defined here:
+ |  
+ |  __new__(*args, **kwargs) from builtins.type
+ |      Create and return a new object.  See help(type) for accurate signature.
+ |  
+ |  maketrans(x, y=None, z=None, /)
+ |      Return a translation table usable for str.translate().
+ |      
+ |      If there is only one argument, it must be a dictionary mapping Unicode
+ |      ordinals (integers) or characters to Unicode ordinals, strings or None.
+ |      Character keys will be then converted to ordinals.
+ |      If there are two arguments, they must be strings of equal length, and
+ |      in the resulting dictionary, each character in x will be mapped to the
+ |      character at the same position in y. If there is a third argument, it
+ |      must be a string, whose characters will be mapped to None in the result.</code></pre><ul>
+<li>字符串API分类<ul>
+<li>判断字符串类函数<ul>
+<li>islower/isupper 判断字符串是小写字母还是大写字母，要求全部是大写或小写的时候才会返回true</li>
+<li>isdigit 判断字符串是否全部由数字组成</li>
+<li>isalpha 哦按段字符串是否完全由字母组成</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#判断字符串大小写</span></span><br><span class="line">a = <span class="string">"i love china"</span></span><br><span class="line">a.islower()</span><br><span class="line"></span><br><span class="line"><span class="comment">#true表明字符串中全都是小写</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+<pre><code>True</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#判断字符串大小写</span></span><br><span class="line">a = <span class="string">"i love CHINA"</span></span><br><span class="line">a.islower()</span><br><span class="line"></span><br><span class="line"><span class="comment">#false表明字符串中有大写</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+<pre><code>False</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#判断字符串大小写</span></span><br><span class="line">a = <span class="string">"I LOVE CHINA"</span></span><br><span class="line">a.isupper()</span><br><span class="line"></span><br><span class="line"><span class="comment">#true表明字符串中都是大写</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+<pre><code>True</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#判断字符串大小写</span></span><br><span class="line">a = <span class="string">"i LOVE CHINA"</span></span><br><span class="line">a.isupper()</span><br><span class="line"></span><br><span class="line"><span class="comment">#false表明字符串中有小写</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+<pre><code>False</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#判断字符串是否由数字组成</span></span><br><span class="line">a = <span class="string">"i LOVE CHINA"</span></span><br><span class="line">a.isdigit()</span><br><span class="line"></span><br><span class="line"><span class="comment">#false代表字符串不完全由数字组成</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+<pre><code>False</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#判断字符串是否由数字组成</span></span><br><span class="line">a = <span class="string">"32131213"</span></span><br><span class="line">a.isdigit()</span><br><span class="line"></span><br><span class="line"><span class="comment">#true代表字符串完全由数字组成</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+<pre><code>True</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#判断字符串大小写</span></span><br><span class="line">a = <span class="string">"i LOVE CHINA"</span></span><br><span class="line">a.isalpha()</span><br><span class="line"></span><br><span class="line"><span class="comment">#false表明字符串不完全由字母组成</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+<pre><code>False</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#判断字符串大小写</span></span><br><span class="line">a = <span class="string">"iLOVECHINA"</span></span><br><span class="line">a.isalpha()</span><br><span class="line"></span><br><span class="line"><span class="comment">#true表明字符串完全由字母组成</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+<pre><code>True</code></pre><ul>
+<li>字符串API分类<ul>
+<li>操作类函数<ul>
+<li>lower/upper 把字符串转换为小写或大写</li>
+<li>strip/lstrip/rstrip 去掉两侧的空格/左侧的空格/右侧的空格</li>
+<li>swapcase 字符串中所有字符的大小写进行转换</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#转换成小写</span></span><br><span class="line">a = <span class="string">"i LOVE CHINA"</span></span><br><span class="line">a.lower()</span><br></pre></td></tr></table></figure>
+
+
+
+
+<pre><code>&apos;i love china&apos;</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#转换成大写</span></span><br><span class="line">a = <span class="string">"i LOVE CHINA"</span></span><br><span class="line">a.upper()</span><br></pre></td></tr></table></figure>
+
+
+
+
+<pre><code>&apos;I LOVE CHINA&apos;</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#去掉两侧空格</span></span><br><span class="line">a = <span class="string">" ILOVECHINA "</span></span><br><span class="line">a.strip()</span><br></pre></td></tr></table></figure>
+
+
+
+
+<pre><code>&apos;ILOVECHINA&apos;</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#去掉左侧空格</span></span><br><span class="line">a = <span class="string">" ILOVECHINA "</span></span><br><span class="line">a.lstrip()</span><br></pre></td></tr></table></figure>
+
+
+
+
+<pre><code>&apos;ILOVECHINA &apos;</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#去掉右侧空格</span></span><br><span class="line">a = <span class="string">" ILOVECHINA "</span></span><br><span class="line">a.rstrip()</span><br></pre></td></tr></table></figure>
+
+
+
+
+<pre><code>&apos; ILOVECHINA&apos;</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#所有字符的大小写进行转换</span></span><br><span class="line">a = <span class="string">"I love CHINA"</span></span><br><span class="line">a.swapcase()</span><br></pre></td></tr></table></figure>
+
+
+
+
+<pre><code>&apos;i LOVE china&apos;</code></pre><h2 id="字符串的格式化"><a href="#字符串的格式化" class="headerlink" title="字符串的格式化"></a>字符串的格式化</h2><ul>
+<li>把字符串按照我们想要的格式进行打印或填充</li>
+<li>格式化的方式分类<ul>
+<li>使用%<ul>
+<li>类似正则</li>
+<li>%s 代表字符串</li>
+<li>%r 字符串，表示正则，不是普通的字符串</li>
+<li>%c 代表整数转换为单个字符</li>
+<li>%d 代表数字（整数），如果输入是小数，只取整数</li>
+<li>%u 代表无符号整数</li>
+<li>%o 代表八进制</li>
+<li>%x 代表十六进制 （小写x的时候，十六进制内容中字母要为小写）</li>
+<li>%X 代表十六进制 （大写X，六进制内容中字母要为大写）</li>
+<li>%e 代表浮点数（科学计数法，输入值必须要有e，且e为小写）例如3.2e+4</li>
+<li>%E 代表浮点数（科学计数法，输入值必须要有E，且E为大写）例如3.2E+4</li>
+<li>%f 代表浮点数（小数）,%与f中添加.1，代表小数点后保留一位数，%.2f 代表小数点后保留两位数</li>
+<li>%g/%G 代表十进制形式的浮点或指数浮点的自动转换</li>
+<li>当格式化的数据与%后的输入值个数不一致时，会出现报错。因此格式化数据与输入值要一一对应。</li>
+</ul>
+</li>
+<li>使用format函数</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="string">"my name is %s "</span> % (<span class="string">"zhangfulin"</span>)  <span class="comment">#括号可以省略</span></span><br><span class="line">print(a)</span><br><span class="line">b = <span class="string">"my name is %s ,my age is %d"</span> % (<span class="string">"zhangfulin"</span>,<span class="number">28</span>)  <span class="comment">#括号不能省略</span></span><br><span class="line">print(b)</span><br><span class="line">c = <span class="string">"my name is %s ,my age is %d , my height is %.2fcm"</span> %  (<span class="string">"zhangfulin"</span>,<span class="number">28</span>,<span class="number">180.343</span>)</span><br><span class="line">print(c)</span><br></pre></td></tr></table></figure>
+
+<pre><code>my name is zhangfulin 
+my name is zhangfulin ,my age is 28
+my name is zhangfulin ,my age is 28 , my height is 180.34cm</code></pre><ul>
+<li>字符串占位方法<ul>
+<li>%s或%d等格式化数据的输入值需要占位的话，可以在%与字母中间加上数字，例如：%5d 表明占5位，默认右对齐</li>
+<li>想要左对齐的话，就加上-。即%5d改为%-5d</li>
+<li>想要补0的话，将%5d改为%05d即可。</li>
+<li>对于浮点数需要占位的话，使用%f，并在%与f中添加.1，代表小数点后保留一位数，%.2f 代表小数点后保留两位数，从而满足占位的要求</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#设置code值占5位</span></span><br><span class="line">a = <span class="string">"my code is %5d"</span> % (<span class="number">23</span>)</span><br><span class="line">print(a)</span><br><span class="line"><span class="comment">#默认是右对齐</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#设置code值占5位，并设定为左对齐</span></span><br><span class="line">b =  <span class="string">"my code is %-5d"</span> % (<span class="number">23</span>)</span><br><span class="line">print(b)</span><br><span class="line"></span><br><span class="line"><span class="comment">#设置code值占5位，空白区用0填充</span></span><br><span class="line">c = <span class="string">"my code is %05d"</span> % (<span class="number">23</span>)</span><br><span class="line">print(c)</span><br><span class="line"></span><br><span class="line"><span class="comment">#设置浮点数占位</span></span><br><span class="line">d = <span class="string">"my code is %.4f"</span> % (<span class="number">7.6</span>)</span><br><span class="line">print(d)</span><br></pre></td></tr></table></figure>
+
+<pre><code>my code is    23
+my code is 23   
+my code is 00023
+my code is 7.6000</code></pre><h2 id="布尔变量"><a href="#布尔变量" class="headerlink" title="布尔变量"></a>布尔变量</h2><ul>
+<li>含义：表示真假，是或不是，行与不行，对与不对 true/false</li>
+<li>在编程当中，需要出现大量判断语句，判断真假。</li>
+<li>如果布尔值作为数字参与运算，true代表1，false代表0</li>
+<li>如果使用一个数字作为判断，该数字为非0的数字，就代表为true，为0就代表false</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">8</span> &gt; <span class="number">4</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+<pre><code>True</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">4</span> &gt; <span class="number">8</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+<pre><code>False</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#字符串也可以直接拿来比较</span></span><br><span class="line"><span class="string">"aaa"</span> &gt; <span class="string">"kkk"</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+<pre><code>False</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (<span class="number">8</span> &gt; <span class="number">4</span>):</span><br><span class="line">    print(<span class="string">"yes"</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    print(<span class="string">"no"</span>)</span><br></pre></td></tr></table></figure>
+
+<pre><code>yes</code></pre><h2 id="None"><a href="#None" class="headerlink" title="None"></a>None</h2><ul>
+<li>是一个特殊的常可亮</li>
+<li>不表示任何类型，通常用来占位，或者用于解除变量绑定，None与其他类型进行比较时，结果永远等于false</li>
+<li>作用<ul>
+<li>占位</li>
+<li>解除变量绑定</li>
+</ul>
+</li>
+<li>None要正确书写，即首字母必须要大写</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="string">"36"</span></span><br><span class="line">print(a)</span><br><span class="line">a = <span class="literal">None</span></span><br><span class="line">print(a)</span><br></pre></td></tr></table></figure>
+
+<pre><code>36
+None</code></pre><h2 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h2><ul>
+<li>算数运算符 <ul>
+<li>+，-，*，/ 代表加减乘除<ul>
+<li>需要注意的是，python3中两数相除的结果必是浮点型，哪怕整除也是有小数点的。</li>
+</ul>
+</li>
+<li>// 称为地板除（floor）<ul>
+<li>用地板除将两数相除，等到的结果取整</li>
+<li>如果是两个整数相除，得到的结果没有小数点</li>
+<li>如果是两个浮点数相除，得到的结果虽然也是取整，但是有小数点。</li>
+</ul>
+</li>
+<li>% 表示取余，也叫做取模</li>
+<li>** 表示幂指数运算</li>
+</ul>
+</li>
+<li>运算优先级<ul>
+<li>** 也就是幂指数运算是第一优先级</li>
+<li>乘/除/地板除/取模 是第二优先级</li>
+<li>加减法 是第三优先级</li>
+<li>同一优先级中，按从左往右的优先顺序进行运算</li>
+<li>有括号，优先计算括号里的</li>
+<li>如果混合运算中，有浮点数的参与，结果一定为浮点型</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#两数相加</span></span><br><span class="line">a = <span class="number">1</span>+<span class="number">2</span></span><br><span class="line">print(a)</span><br><span class="line"></span><br><span class="line"><span class="comment">#两数相减</span></span><br><span class="line">a = <span class="number">2</span><span class="number">-1</span></span><br><span class="line">print(a)</span><br><span class="line"></span><br><span class="line"><span class="comment">#两数相乘</span></span><br><span class="line">a = <span class="number">2</span>*<span class="number">2</span></span><br><span class="line">print(a)</span><br><span class="line"></span><br><span class="line"><span class="comment">#两数相除</span></span><br><span class="line">a = <span class="number">6</span>/<span class="number">3</span></span><br><span class="line">print(a)</span><br><span class="line"></span><br><span class="line"><span class="comment">#使用地板除将两个整数相除</span></span><br><span class="line">a = <span class="number">6</span>//<span class="number">3</span></span><br><span class="line">print(a)</span><br><span class="line">a = <span class="number">6</span>//<span class="number">4</span></span><br><span class="line">print(a)</span><br><span class="line"></span><br><span class="line"><span class="comment">#使用地板除将两个浮点数相除</span></span><br><span class="line">a = <span class="number">6.0</span>//<span class="number">3.0</span></span><br><span class="line">print(a)</span><br><span class="line">a = <span class="number">6.0</span>//<span class="number">4.0</span></span><br><span class="line">print(a)</span><br><span class="line"></span><br><span class="line"><span class="comment">#取模</span></span><br><span class="line">a = <span class="number">5</span>%<span class="number">3</span></span><br><span class="line">print(a)</span><br><span class="line"></span><br><span class="line"><span class="comment">#幂指数运算</span></span><br><span class="line">a =<span class="number">2</span>**<span class="number">8</span></span><br><span class="line">print(a)</span><br><span class="line"></span><br><span class="line"><span class="comment">#混合运算</span></span><br><span class="line">a = <span class="number">10</span>+<span class="number">3</span>*<span class="number">2</span>**<span class="number">2</span></span><br><span class="line">print(a)</span><br></pre></td></tr></table></figure>
+
+<pre><code>3
+1
+4
+2.0
+2
+1
+2.0
+1.0
+2
+256
+22</code></pre><h2 id="赋值运算符"><a href="#赋值运算符" class="headerlink" title="赋值运算符"></a>赋值运算符</h2><ul>
+<li>为python变量提供赋值运算功能的符号<ul>
+<li>= 表示给一个变量赋予一个对象（也就是值），当没有这个变量时，会创建这个变量并赋予值给他，当有这个变量的时候，就将变量的对象进行修改。<ul>
+<li>可支持变量的批量赋值，多个变量用逗号分隔开，多个值也用逗号分隔开</li>
+<li>可支持两个变量值的交换 a,b=b,a</li>
+<li>除=外，其他的赋值，都是赋值和相应运算的简写形式。</li>
+</ul>
+</li>
+<li>+= 表明a+=b 为a=a+b</li>
+<li>-= 表明a-=b 为a=a-b</li>
+<li>/= 表明a/=b 为a=a/b</li>
+<li>%= 表明a%=b 为a=a%b</li>
+<li>**= 表明a**=b 为a=a**b</li>
+<li>//= 表明a//=b 为a=a//b</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#变量批量赋值与输出</span></span><br><span class="line">a,b,c= <span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span></span><br><span class="line">print(a,b,c)</span><br><span class="line"></span><br><span class="line"><span class="comment">#变量值交换</span></span><br><span class="line">a,b=b,a</span><br><span class="line">print(a,b,c)</span><br></pre></td></tr></table></figure>
+
+<pre><code>1 2 3
+2 1 3</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">a,b=<span class="number">1</span>,<span class="number">2</span></span><br><span class="line">a+=b</span><br><span class="line">print(a)</span><br><span class="line">a-=b</span><br><span class="line">print(a)</span><br><span class="line">a*=b</span><br><span class="line">print(a)</span><br><span class="line">a/=b</span><br><span class="line">print(a)</span><br><span class="line">a*=b</span><br><span class="line">print(a)</span><br><span class="line">a//=b</span><br><span class="line">print(a)</span><br><span class="line">a%b</span><br><span class="line">print(a)</span><br></pre></td></tr></table></figure>
+
+<pre><code>3
+1
+2
+1.0
+2.0
+1.0
+1.0</code></pre><h2 id="比较运算符"><a href="#比较运算符" class="headerlink" title="比较运算符"></a>比较运算符</h2><ul>
+<li>提供比较功能的运算符</li>
+<li>特点是：最后的结果总是真或总是假，即布尔值</li>
+<li>种类<ul>
+<li>&lt;</li>
+<li>&gt;</li>
+<li>&lt;=</li>
+<li>&gt;=</li>
+<li>==</li>
+<li>!= <ul>
+<li>python2中不等于也可以用&lt;&gt;</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h2><ul>
+<li>定义： 逻辑运算就是对布尔值进行运算</li>
+<li>类型<ul>
+<li>and 逻辑与，表示取交集</li>
+<li>or 逻辑或，表示取并集</li>
+<li>not  逻辑非，表示反</li>
+</ul>
+</li>
+</ul>
+<h2 id="特殊运算符"><a href="#特殊运算符" class="headerlink" title="特殊运算符"></a>特殊运算符</h2><ul>
+<li>is 判断两个变量是是否指向同一个对象</li>
+<li>is not  判断两个变量是否指向不同的对象</li>
+<li>del 用于同时删除变量，并且同时解除与对象的关联，如果解除关联后，对象与其他变量没有绑定关系，就会释放对象</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#判断是否指向同一个对象</span></span><br><span class="line">a = <span class="number">2300</span></span><br><span class="line">b = <span class="number">2300</span></span><br><span class="line">c = a <span class="keyword">is</span> b</span><br><span class="line">print(c)</span><br><span class="line"><span class="comment">#结果为false，代表a的对象和b的对象不一样</span></span><br><span class="line"></span><br><span class="line">a = <span class="number">2300</span></span><br><span class="line">b = a</span><br><span class="line">c = a <span class="keyword">is</span> b</span><br><span class="line">print(c)</span><br><span class="line"><span class="comment">#结果为true，代表b的对象引用了a的对象，因此a与b用了同一个对象，结果为true</span></span><br><span class="line"></span><br><span class="line">a = <span class="number">2</span></span><br><span class="line">b = <span class="number">2</span></span><br><span class="line">c = a <span class="keyword">is</span> b</span><br><span class="line">print(c)</span><br><span class="line"><span class="comment">#结果为true，而不是false的原因为：虽然a和b使用的都是独立赋予的对象，但是在python中有些对象是提前建立好的</span></span><br><span class="line"><span class="comment">#当我们赋予变量的对象是在python中提前建立好的，那么变量都是使用同一个对象，结果为true</span></span><br><span class="line"><span class="comment">#当我们赋予变量的对象是在python中不是提前建立好的，那么对象都是新建立起来的，每个变量使用的对象也就不会相同，结果为false</span></span><br></pre></td></tr></table></figure>
+
+<pre><code>False
+True
+True</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#释放变量</span></span><br><span class="line">a = <span class="number">300</span></span><br><span class="line"><span class="keyword">del</span> a</span><br><span class="line">print(a)</span><br><span class="line"><span class="comment">#由于变量a被删除了，因此输出变量a会提示报错</span></span><br><span class="line"><span class="comment">#NameError 提示名称错误</span></span><br><span class="line"><span class="comment">#NameError: name 'a' is not defined 提示该名字没有被定义</span></span><br></pre></td></tr></table></figure>
+
+
+<pre><code>---------------------------------------------------------------------------
+
+NameError                                 Traceback (most recent call last)
+
+&lt;ipython-input-203-4274cb66d955&gt; in &lt;module&gt;
+      2 a = 300
+      3 del a
+----&gt; 4 print(a)
+      5 #由于变量a被删除了，因此输出变量a会提示报错
+      6 #NameError 提示名称错误
+
+
+NameError: name &apos;a&apos; is not defined</code></pre><h2 id="基本输入输出"><a href="#基本输入输出" class="headerlink" title="基本输入输出"></a>基本输入输出</h2><ul>
+<li>input<ul>
+<li>定义：从标准输入设备上读取一个字符串，末尾的换行符会自动被删除</li>
+<li>标准输入设备一般指键盘</li>
+<li></li>
+</ul>
+</li>
+<li>print<ul>
+<li>定义：将字符串输出到标准输出设备上。</li>
+<li>标准的输出设备一般指显示器</li>
+<li></li>
+</ul>
+</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">input(<span class="string">"请输入您的年龄，按回车键结束:"</span>)</span><br></pre></td></tr></table></figure>
+
+<pre><code>请输入您的年龄，按回车键结束:28
+
+
+
+
+
+&apos;28&apos;</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">age = input(<span class="string">"请输入您的年龄，按回车键结束"</span>)</span><br><span class="line">print(<span class="string">"您刚刚输入的年龄为：%s"</span>% (age))</span><br><span class="line">print(<span class="string">"您刚刚输入的[InternetShortcut]</span></span><br><span class="line"><span class="string">URL=http://localhost:8891/notebooks/%E5%AD%A6%E4%B9%A0/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0.ipynb#</span></span><br><span class="line"><span class="string">年龄为:"</span>,age)</span><br></pre></td></tr></table></figure>
+
+<pre><code>请输入您的年龄，按回车键结束28
+您刚刚输入的年龄为：28
+您刚刚输入的年龄为: 28</code></pre><h2 id="分支语句"><a href="#分支语句" class="headerlink" title="分支语句"></a>分支语句</h2><ul>
+<li>程序有三种结构构成：<ul>
+<li>顺序：程序从上到下依次执行，一行执行完毕后才会执行下一行</li>
+<li>分支：通过判断条件，不同的结果对应不通用的处理程序段</li>
+<li>循环：多次重复执行相同或相似的代码</li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/05/27/Python%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" data-id="ckaouxxnr0000wkwe8ty502cx" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2020/05/27/python%E5%A5%BD%E4%B9%A0%E6%83%AF/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          python好习惯
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">May 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/05/27/%E5%87%BD%E6%95%B0%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">函数编程基础知识学习笔记</a>
+          </li>
+        
+          <li>
+            <a href="/2020/05/27/Python%E5%B8%B8%E7%94%A8%E6%A8%A1%E5%9D%97%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">Python常用模块学习笔记</a>
+          </li>
+        
+          <li>
+            <a href="/2020/05/27/python%E5%A5%BD%E4%B9%A0%E6%83%AF/">python好习惯</a>
+          </li>
+        
+          <li>
+            <a href="/2020/05/27/Python%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">Python基础知识学习笔记</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>

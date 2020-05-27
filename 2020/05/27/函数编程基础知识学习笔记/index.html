@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>函数编程基础知识学习笔记 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="函数编程学习笔记 通过视频学习 https:&#x2F;&#x2F;edu.csdn.net&#x2F;course&#x2F;play&#x2F;24459&#x2F;296354  函数文档 主要用于对函数进行注释、说明。 使用格式：’’’说明内容’’’，使用该格式进行注释 使用函数 help(函数名称) 可以查看到该函数中所有的函数说明与注释 使用 函数名称.doc_ doc前后使用两个下划线。 例如：function.doc 查看函数中的所有注释，">
+<meta property="og:type" content="article">
+<meta property="og:title" content="函数编程基础知识学习笔记">
+<meta property="og:url" content="http://yoursite.com/2020/05/27/%E5%87%BD%E6%95%B0%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="函数编程学习笔记 通过视频学习 https:&#x2F;&#x2F;edu.csdn.net&#x2F;course&#x2F;play&#x2F;24459&#x2F;296354  函数文档 主要用于对函数进行注释、说明。 使用格式：’’’说明内容’’’，使用该格式进行注释 使用函数 help(函数名称) 可以查看到该函数中所有的函数说明与注释 使用 函数名称.doc_ doc前后使用两个下划线。 例如：function.doc 查看函数中的所有注释，">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-05-27T04:14:45.202Z">
+<meta property="article:modified_time" content="2020-05-27T04:14:41.352Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-函数编程基础知识学习笔记" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/05/27/%E5%87%BD%E6%95%B0%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="article-date">
+  <time datetime="2020-05-27T04:14:45.202Z" itemprop="datePublished">2020-05-27</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      函数编程基础知识学习笔记
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="函数编程学习笔记"><a href="#函数编程学习笔记" class="headerlink" title="函数编程学习笔记"></a>函数编程学习笔记</h2><ul>
+<li>通过视频学习 <a href="https://edu.csdn.net/course/play/24459/296354" target="_blank" rel="noopener">https://edu.csdn.net/course/play/24459/296354</a></li>
+</ul>
+<h2 id="函数文档"><a href="#函数文档" class="headerlink" title="函数文档"></a>函数文档</h2><ul>
+<li>主要用于对函数进行注释、说明。</li>
+<li>使用格式：’’’说明内容’’’，使用该格式进行注释</li>
+<li>使用函数 help(函数名称) 可以查看到该函数中所有的函数说明与注释</li>
+<li>使用 函数名称.<strong>doc_</strong> doc前后使用两个下划线。 例如：function.<strong>doc</strong> 查看函数中的所有注释，但格式并不好看，没有help舒服。</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">function</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="string">'''</span></span><br><span class="line"><span class="string">    现在这里写的时该函数的说明文档。</span></span><br><span class="line"><span class="string">    您可以通过这里了解到这个函数的具体意思。</span></span><br><span class="line"><span class="string">    这个函数时一个测试函数，没有实际意义。</span></span><br><span class="line"><span class="string">    只是用来说明函数文档如何书写而创建出来的。</span></span><br><span class="line"><span class="string">    这里可以写多行内容，也可以写一行内容。</span></span><br><span class="line"><span class="string">    对于另一种注释的方式 #注释，就无法使用help或者doc进行查看。</span></span><br><span class="line"><span class="string">    因此一般都使用这种方式对函数添加具体注释</span></span><br><span class="line"><span class="string">    '''</span></span><br><span class="line">    print(<span class="string">"This is a test function"</span>)</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">function.__doc__</span><br></pre></td></tr></table></figure>
+
+
+
+
+<pre><code>&apos;\n    现在这里写的时该函数的说明文档。\n    您可以通过这里了解到这个函数的具体意思。\n    这个函数时一个测试函数，没有实际意义。\n    只是用来说明函数文档如何书写而创建出来的。\n    这里可以写多行内容，也可以写一行内容。\n    对于另一种注释的方式 #注释，就无法使用help或者doc进行查看。\n    因此一般都使用这种方式对函数添加具体注释\n    &apos;</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">help(function)</span><br></pre></td></tr></table></figure>
+
+<pre><code>Help on function function in module __main__:
+
+function()
+    现在这里写的时该函数的说明文档。
+    您可以通过这里了解到这个函数的具体意思。
+    这个函数时一个测试函数，没有实际意义。
+    只是用来说明函数文档如何书写而创建出来的。
+    这里可以写多行内容，也可以写一行内容。
+    对于另一种注释的方式 #注释，就无法使用help或者doc进行查看。
+    因此一般都使用这种方式对函数添加具体注释</code></pre><h2 id="对文件进行读写操作"><a href="#对文件进行读写操作" class="headerlink" title="对文件进行读写操作"></a>对文件进行读写操作</h2><ul>
+<li><p>打开文件</p>
+<ul>
+<li>函数open() 打开一个文件</li>
+<li>括号中填写，打开文件的相对路径和打开模式<ul>
+<li>格式举例：open( file=’test.txt’,mode=’w’) 打开或创建python脚本所在目录中的test.txt文件，并进行编辑。</li>
+</ul>
+</li>
+<li>打开模式可以不写，默认就为read模式</li>
+<li>打开模式的分类<ul>
+<li>mode=’r’ 代表打开只读模式，例如：open( file=’test.txt’,mode=’r’)<ul>
+<li>如果打开的文件不存在，会提示报错</li>
+<li>打开文件后，不能使用write相关的函数。</li>
+</ul>
+</li>
+<li>mode=’w’ 代表打开写入模式，例如：open( file=’test.txt’,mode=’w’)<ul>
+<li>如果打开的文件不存在，会新建这个文件</li>
+<li>如果打开的文件已存在，写入数据时会覆盖文件中原有的数据。</li>
+<li>在该模式下，不能使用read相关的函数</li>
+</ul>
+</li>
+<li>mode=’a’ 代表打开追加写入模式，例如：open( file=’test.txt’,mode=’a’)<ul>
+<li>如果打开的文件不存在，会新建这个文件</li>
+<li>如果打开的文件已存在，写入数据会追加到原来的数据后面</li>
+<li>在该模式下，不能使用read相关的函数<ul>
+<li>打开模式只能选择一种，python中对于一个文件操作不能读他的同时还要求编写他。</li>
+<li>当打开模式为r时，只能使用读文件的相关函数，写文件无法使用</li>
+<li>当打开模式为w或a时，只能使用写文件的相关函数，读文件不能使用</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>关闭文件</p>
+<ul>
+<li>函数close() 保存并关闭文件</li>
+</ul>
+</li>
+<li><p>写文件</p>
+<ul>
+<li>函数write() 向文件里写数据，括号中可以写数字或字符串或其他。<ul>
+<li>例如: write(“i love china\n”)  代表写入信息i love china,并且换行</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>读文件</p>
+<ul>
+<li>函数readline() 读文本中的一行内容</li>
+<li>函数read() 读文本中的数据<ul>
+<li>括号中的参数可以填写整数，表明读多少行，例如:read(50) 代表读50行数据</li>
+<li>括号中的参数不填写的话，代表读所有行，如果之前使用过readline读取过，已经读取过的不会被再次读取一遍</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">###新建一个文件并写入内容</span></span><br><span class="line"><span class="comment">#使用w模式打开文件，该文件没有时会新建</span></span><br><span class="line">f = open(file=<span class="string">'test.txt'</span>,mode=<span class="string">'w'</span>)</span><br><span class="line"><span class="comment">#书写内容</span></span><br><span class="line">f.write(<span class="string">"i love people\n"</span>)</span><br><span class="line">f.write(<span class="string">"i love china\n"</span>)</span><br><span class="line">f.write(<span class="string">"i love sky\n"</span>)</span><br><span class="line">f.write(<span class="string">"i love gress\n"</span>)</span><br><span class="line"><span class="comment">#关闭文件</span></span><br><span class="line">f.close()</span><br><span class="line"></span><br><span class="line"><span class="comment">###读取文件的内容</span></span><br><span class="line">f = open(file=<span class="string">'test.txt'</span>,mode=<span class="string">'r'</span>)</span><br><span class="line"><span class="comment">#读取一行内容</span></span><br><span class="line">print(f.readline())</span><br><span class="line"><span class="comment">#读取剩下所有行</span></span><br><span class="line">print(f.read())</span><br><span class="line"><span class="comment">#关闭文件</span></span><br><span class="line">f.close()</span><br><span class="line"></span><br><span class="line"><span class="comment">###向已存在的文件追加内容</span></span><br><span class="line"><span class="comment">#使用a模式打开文件。</span></span><br><span class="line">f = open(file=<span class="string">'test.txt'</span>,mode=<span class="string">'a'</span>)</span><br><span class="line"><span class="comment">#书写内容</span></span><br><span class="line">f.write(<span class="string">"i love python"</span>)</span><br><span class="line"><span class="comment">#关闭文件</span></span><br><span class="line">f.close()</span><br><span class="line"></span><br><span class="line"><span class="comment">###读取编辑后的文件所有内容</span></span><br><span class="line"><span class="comment">#使用r模式打开文件。</span></span><br><span class="line">f = open(file=<span class="string">'test.txt'</span>,mode=<span class="string">'r'</span>)</span><br><span class="line"><span class="comment">#读取所有行</span></span><br><span class="line">print(f.read())</span><br><span class="line"><span class="comment">#关闭文件</span></span><br><span class="line">f.close()</span><br></pre></td></tr></table></figure>
+
+<pre><code>i love people
+
+i love china
+i love sky
+i love gress
+
+i love people
+i love china
+i love sky
+i love gress
+i love python</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">###对已存在的文件内容进行覆盖</span></span><br><span class="line">f = open(file=<span class="string">'test.txt'</span>,mode=<span class="string">'w'</span>)</span><br><span class="line"><span class="comment">#书写内容</span></span><br><span class="line">f.write(<span class="string">"i love everything\n"</span>)</span><br><span class="line"><span class="comment">#关闭文件</span></span><br><span class="line">f.close()</span><br><span class="line"></span><br><span class="line"><span class="comment">###读取文件的内容</span></span><br><span class="line">f = open(file=<span class="string">'test.txt'</span>,mode=<span class="string">'r'</span>)</span><br><span class="line"><span class="comment">#读取所有行</span></span><br><span class="line">print(f.read())</span><br><span class="line"><span class="comment">#关闭文件</span></span><br><span class="line">f.close()</span><br><span class="line"><span class="comment">#读取的内容应该只有i love everything 这一行信息。</span></span><br></pre></td></tr></table></figure>
+
+<pre><code>i love everything</code></pre><h2 id="对文件的内容进行循环操作"><a href="#对文件的内容进行循环操作" class="headerlink" title="对文件的内容进行循环操作"></a>对文件的内容进行循环操作</h2><ul>
+<li>可对文件的中每条数据进行一次操作</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#对文件的每行数据进行一次输出操作</span></span><br><span class="line"><span class="comment">#打开文件，如果不加mode，默认为读模式</span></span><br><span class="line">f = open(file=<span class="string">'test.txt'</span>)</span><br><span class="line"><span class="comment">#在文件内容中遍历每行内容，并将每次的行内容赋予给line变量</span></span><br><span class="line"><span class="keyword">for</span> line <span class="keyword">in</span> f:</span><br><span class="line">    <span class="comment">#每次都输出line变量</span></span><br><span class="line">    print(line)</span><br></pre></td></tr></table></figure>
+
+<pre><code>i love people
+
+i love china
+
+i love sky
+
+i love gress
+
+i love python</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#将love后面的单词为people的行内容进行输出</span></span><br><span class="line"><span class="comment">#打开文件，如果不加mode，默认为读模式</span></span><br><span class="line">f = open(file=<span class="string">'test.txt'</span>)</span><br><span class="line"><span class="comment">#在文件内容中遍历每行内容</span></span><br><span class="line"><span class="keyword">for</span> line <span class="keyword">in</span> f:</span><br><span class="line">    <span class="comment">#将每一行的内容转换成列表的形式并付给info变量</span></span><br><span class="line">    info = line.split()</span><br><span class="line">    <span class="comment">#取info中的第三个单词,line[2]，并将其字符串化</span></span><br><span class="line">    keyword = str(info[<span class="number">2</span>])</span><br><span class="line">    <span class="comment">#如果每行中的第三个单词为people，就输出该行的内容。</span></span><br><span class="line">    <span class="keyword">if</span> keyword == <span class="string">"people"</span>:</span><br><span class="line">        print(line)</span><br></pre></td></tr></table></figure>
+
+<pre><code>i love people</code></pre><h2 id="文件操作中其他必要操作"><a href="#文件操作中其他必要操作" class="headerlink" title="文件操作中其他必要操作"></a>文件操作中其他必要操作</h2><ul>
+<li>seek() 字节移动，在括号中填写数字，代表从第几个字节后的内容开始进行操作。<ul>
+<li>比如 seek(2)，代表选取从第二个字节后的内容</li>
+</ul>
+</li>
+<li>seekable() 查看打开的文件能否使用seek命令</li>
+<li>tell()  反馈seek字节移动的位置</li>
+<li>flush() 将缓存中的数据强制刷到硬盘上<ul>
+<li>当向一个文件写入数据时，如果不进行close()操作，写入的数据都是存在缓存里的，不会写入到文件中</li>
+<li>除非等缓存空间满了，才会自动刷新到文件中，也就是落盘</li>
+<li>如果正在写入重要的数据到文件中，但是迟迟不会进行close()操作，就可以使用flush()函数，就可以周期性的将数据刷到硬盘中。</li>
+</ul>
+</li>
+<li>truncate() 截取文件内容，括号中填写数字用于指定长度<ul>
+<li>truncate(100) 截取文件第一个字节到第100个字节，100以后信息的全都过滤掉</li>
+<li>truncate(） 不填写参数就代表全部从光标所在字节之后的信息全都过滤掉</li>
+</ul>
+</li>
+</ul>
+<h2 id="文件操作的混合模式"><a href="#文件操作的混合模式" class="headerlink" title="文件操作的混合模式"></a>文件操作的混合模式</h2><ul>
+<li>w+ 代表创建一个文件，并可以执行写入操作，也可以执行读操作</li>
+<li>r+ 代表读写，打开这个文件后，读文件时，会从头读，读的是原来的内容，写的时候是追加写</li>
+<li>a+ 代表追加读，打开这个文件后，读文件时，读光标会移动到内容最后，读不出任何数据，写的时候是追加写。</li>
+<li>混合模式很少使用，一般都单独写或单独读。</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#使用r+</span></span><br><span class="line"><span class="comment">#可以将file=，moudle=进行忽略，但是不加形参名称的话都不加，不然的话都加。</span></span><br><span class="line">f = open(<span class="string">"test.txt"</span>,<span class="string">"r+"</span>)</span><br><span class="line">print(f.readline())</span><br><span class="line">f.write(<span class="string">"i love 10\n"</span>)</span><br><span class="line">f.write(<span class="string">"i love 11\n"</span>)</span><br><span class="line">f.write(<span class="string">"i love 12\n"</span>)</span><br><span class="line">f.close()</span><br></pre></td></tr></table></figure>
+
+<pre><code>i love 1</code></pre><h2 id="修改文件的方法"><a href="#修改文件的方法" class="headerlink" title="修改文件的方法"></a>修改文件的方法</h2><ul>
+<li>将源文件的每一行进行进行检查，并替换所需要替换的字，将新内容写在新的文件中，最后改名<ul>
+<li>不占用内存</li>
+<li>适合内容较多的文件修改</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#修改例子</span></span><br><span class="line"><span class="comment">#建立一个函数 叫做funtion_replace_key</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">funtion_replace_key</span><span class="params">(old_str,new_str,old_filename)</span>:</span></span><br><span class="line">    <span class="string">'''</span></span><br><span class="line"><span class="string">    funtion_replace_key是一个用于在文本中替换关键字</span></span><br><span class="line"><span class="string">    函数的括号()中需要填写三个参数，需要修改的关键字要改成的关键字、需要修改的文本名称</span></span><br><span class="line"><span class="string">    比如:funtion_replace_key("需要被替换的关键字"、"需要改成的关键字"，"被修改的文档名"）</span></span><br><span class="line"><span class="string">    注意的是参数一定要用双引号阔上。</span></span><br><span class="line"><span class="string">    '''</span></span><br><span class="line">    new_filename = <span class="string">"test_new.txt"</span></span><br><span class="line">    <span class="comment">#使用读模式打开原文件</span></span><br><span class="line">    <span class="comment">#使用写模式打开新文件</span></span><br><span class="line">    f = open(old_filename,<span class="string">"r"</span>)</span><br><span class="line">    f_new = open(new_filename,<span class="string">"w"</span>)</span><br><span class="line">    print(<span class="string">"原文件的内容如下:"</span>)</span><br><span class="line">    print(f.read())</span><br><span class="line">    <span class="comment">#关闭原文件的读取</span></span><br><span class="line">    f.close()</span><br><span class="line">    f = open(old_filename,<span class="string">"r"</span>)</span><br><span class="line">    <span class="comment">#对原文件的内容进行循环检查</span></span><br><span class="line">    <span class="keyword">for</span> line <span class="keyword">in</span> f:</span><br><span class="line">        <span class="comment"># 将每一行的内容进行替换</span></span><br><span class="line">        line = line.replace(old_str,new_str)</span><br><span class="line">    <span class="comment">#    print(line)</span></span><br><span class="line">        <span class="comment">#将替换号的内容写入新文件中</span></span><br><span class="line">        f_new.write(line)   </span><br><span class="line">    <span class="comment">#关闭新文件的写入</span></span><br><span class="line">    f_new.close()</span><br><span class="line">    <span class="comment">#关闭原文件的读取</span></span><br><span class="line">    f.close()</span><br><span class="line">    <span class="comment">#导入第三方模块os</span></span><br><span class="line">    <span class="keyword">import</span> os</span><br><span class="line">    <span class="comment">#删除原文件</span></span><br><span class="line">    os.remove(old_filename)</span><br><span class="line">    <span class="comment">#将新文件重命名为源文件的名字</span></span><br><span class="line">    os.rename(new_filename,old_filename)</span><br><span class="line">    <span class="comment">#打开修改后的文件</span></span><br><span class="line">    f = open(old_filename,<span class="string">"r"</span>)</span><br><span class="line">    <span class="comment">#读取修改后的内容</span></span><br><span class="line">    print(<span class="string">"修改后的内容如下:"</span>)</span><br><span class="line">    print(f.read())</span><br><span class="line">    <span class="comment">#关闭读取功能</span></span><br><span class="line">    f.close()</span><br><span class="line"><span class="comment">#函数结束</span></span><br><span class="line"><span class="keyword">return</span></span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">funtion_replace_key(<span class="string">"love"</span>,<span class="string">"like"</span>,<span class="string">"test.txt"</span>)</span><br></pre></td></tr></table></figure>
+
+<pre><code>原文件的内容如下:
+u like 1
+u like 2
+u like 3
+u like 4
+u like 5
+u like 6
+
+修改后的内容如下:
+u like 1
+u like 2
+u like 3
+u like 4
+u like 5
+u like 6</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#查看函数的注释</span></span><br><span class="line">help(funtion_replace_key)</span><br></pre></td></tr></table></figure>
+
+<pre><code>Help on function funtion_replace_key in module __main__:
+
+funtion_replace_key(old_str, new_str, old_filename)
+    funtion_replace_key是一个用于在文本中替换关键字
+    函数的括号()中需要填写三个参数，需要修改的关键字要改成的关键字、需要修改的文本名称
+    比如:funtion_replace_key(&quot;需要被替换的关键字&quot;、&quot;需要改成的关键字&quot;，&quot;被修改的文档名&quot;）
+    注意的是参数一定要用双引号阔上。</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">old_str = input(<span class="string">"请输入被替换的关键字，按回车键结束"</span>)</span><br><span class="line">new_str = input(<span class="string">"请输入修改成关键字，按回车键结束"</span>)</span><br><span class="line">old_filename = input(<span class="string">"请输入被修改的文件名，按回车键结束"</span>)</span><br><span class="line">funtion_replace_key(old_str,new_str,old_filename)</span><br></pre></td></tr></table></figure>
+
+<pre><code>请输入被替换的关键字，按回车键结束like
+请输入修改成关键字，按回车键结束love
+请输入被修改的文件名，按回车键结束test.txt
+原文件的内容如下:
+u like 1
+u like 2
+u like 3
+u like 4
+u like 5
+u like 6
+
+修改后的内容如下:
+u love 1
+u love 2
+u love 3
+u love 4
+u love 5
+u love 6</code></pre><h3 id="名称空间"><a href="#名称空间" class="headerlink" title="名称空间"></a>名称空间</h3><ul>
+<li>定义：程序中的对象是放到内存里的，而变量与对象的对应关系是存在名称空间里的，也可以说变量都放在名称空间中</li>
+<li>种类：有四种<ul>
+<li>locals：函数内部的名字空间，存储函数内的局部变量和形参，常用</li>
+<li>globals：整个模块的名字空间，模块就是python文件，存储全局变量，常用<ul>
+<li>可以在函数内部中声明一个变量为全局变量，但是不建议使用 使用格式：global name </li>
+</ul>
+</li>
+<li>enclosing：在嵌套函数中外部函数的名字空间，如func1函数里用了func2函数，那么对于func2函数而言，fun1的名字空间就是enclosing</li>
+<li><strong>builtins</strong>：内置模块空间，里面存储提前预置号的变量或函数<ul>
+<li>变量所在的名称空间决定了它的作用域，也就是在哪些范围内可以生效。</li>
+<li>一般变量在globals时，就是全局存活，全局有效</li>
+<li>一般变量在locals，就是局部存储，局部有效</li>
+<li>查看作用域的方法</li>
+<li>globals()函数，可以查看到一个function函数内的所有变量</li>
+<li>locals()函数，可以查看到整个python中所有的变量</li>
+<li>作用域查找的顺序</li>
+<li>当程序使用某个变量的时候，需要查找这个变量在那个名字空间中，从而知道它的作用范围是多大</li>
+<li>搜索顺序为LEGB<ul>
+<li>先搜索Locals</li>
+<li>再搜索enclosing</li>
+<li>之后搜索globals</li>
+<li>最后搜索<strong>builtins</strong></li>
+<li>如果都没有找到这个变量名称，就会调用内置空间<strong>builtins</strong>里的NameError，给执行者抛出NameError异常提示</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>了解名称空间的目的<ul>
+<li>当在程序的某一处需要使用一个变量，了解名称空间及其查找顺序的话，即使这个变量在之前的多个地方都与不同的对象进行绑定，那么也知道此处需要引用的变量实际的对象是什么，</li>
+<li>也可以排查出当出现无法找到变量时，具体应该在哪个名称空间中去创建才合理。</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#查看全局变量与局部变量</span></span><br><span class="line">i = <span class="number">10</span></span><br><span class="line">j = <span class="number">20</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">function1</span><span class="params">()</span>:</span></span><br><span class="line">    i = <span class="number">30</span></span><br><span class="line">    m = <span class="number">2</span></span><br><span class="line">    n = <span class="number">6</span></span><br><span class="line">    <span class="comment">#输出function1这个函数中的局部变量</span></span><br><span class="line">    print(<span class="string">"function1局部变量为:"</span>,locals())</span><br><span class="line">    <span class="comment">#函数结束</span></span><br><span class="line">    <span class="keyword">return</span></span><br><span class="line">print(<span class="string">"全局变量为"</span>,globals())</span><br></pre></td></tr></table></figure>
+
+<pre><code>全局变量为 {&apos;__name__&apos;: &apos;__main__&apos;, &apos;__doc__&apos;: &apos;Automatically created module for IPython interactive environment&apos;, &apos;__package__&apos;: None, &apos;__loader__&apos;: None, &apos;__spec__&apos;: None, &apos;__builtin__&apos;: &lt;module &apos;builtins&apos; (built-in)&gt;, &apos;__builtins__&apos;: &lt;module &apos;builtins&apos; (built-in)&gt;, &apos;_ih&apos;: [&apos;&apos;, &apos;#修改例子\ndef funtion_replace_key(old_str,new_str,old_filename):\n#    old_str = &quot;i&quot;\n#    new_str = &quot;you&quot;\n#    old_filename = &quot;test.txt&quot;\n    new_filename = &quot;test_new.txt&quot;\n    #使用读模式打开原文件\n    #使用写模式打开新文件\n    f = open(old_filename,&quot;r&quot;)\n    f_new = open(new_filename,&quot;w&quot;)\n    print(&quot;原文件的内容如下:&quot;)\n    print(f.read())\n    #关闭原文件的读取\n    f.close()\n    f = open(old_filename,&quot;r&quot;)\n    #对原文件的内容进行循环检查\n    for line in f:\n        # 将每一行的内容进行替换\n        line = line.replace(old_str,new_str)\n    #    print(line)\n        #将替换号的内容写入新文件中\n        f_new.write(line)   \n    #关闭新文件的写入\n    f_new.close()\n    #关闭原文件的读取\n    f.close()\n    f_new = open(new_filename,&quot;r&quot;)\n    print(&quot;修改后的内容如下:&quot;)\n    print(f_new.read())\n    f_new.close()\n    #导入第三方模块os\n    import os\n    #删除原文件\n    os.remove(old_filename)\n    #将新文件重命名为源文件的名字\n    os.rename(new_filename,old_filename)&apos;, &apos;#修改例子\ndef funtion_replace_key(old_str,new_str,old_filename):\n#    old_str = &quot;i&quot;\n#    new_str = &quot;you&quot;\n#    old_filename = &quot;test.txt&quot;\n    new_filename = &quot;test_new.txt&quot;\n    #使用读模式打开原文件\n    #使用写模式打开新文件\n    f = open(old_filename,&quot;r&quot;)\n    f_new = open(new_filename,&quot;w&quot;)\n    print(&quot;原文件的内容如下:&quot;)\n    print(f.read())\n    #关闭原文件的读取\n    f.close()\n    f = open(old_filename,&quot;r&quot;)\n    #对原文件的内容进行循环检查\n    for line in f:\n        # 将每一行的内容进行替换\n        line = line.replace(old_str,new_str)\n    #    print(line)\n        #将替换号的内容写入新文件中\n        f_new.write(line)   \n    #关闭新文件的写入\n    f_new.close()\n    #关闭原文件的读取\n    f.close()\n    f_new = open(new_filename,&quot;r&quot;)\n    print(&quot;修改后的内容如下:&quot;)\n    print(f_new.read())\n    f_new.close()\n    #导入第三方模块os\n    import os\n    #删除原文件\n    os.remove(old_filename)\n    #将新文件重命名为源文件的名字\n    os.rename(new_filename,old_filename)&apos;, &apos;untion_replace_key(&quot;you&quot;,&quot;i&quot;,&quot;test.txt&quot;)&apos;, &apos;funtion_replace_key(&quot;you&quot;,&quot;i&quot;,&quot;test.txt&quot;)&apos;, &apos;funtion_replace_key(&quot;i&quot;,&quot;u&quot;,&quot;test.txt&quot;)&apos;, &apos;#修改例子\ndef funtion_replace_key(old_str,new_str,old_filename):\n#    old_str = &quot;i&quot;\n#    new_str = &quot;you&quot;\n#    old_filename = &quot;test.txt&quot;\n    new_filename = &quot;test_new.txt&quot;\n    #使用读模式打开原文件\n    #使用写模式打开新文件\n    f = open(old_filename,&quot;r&quot;)\n    f_new = open(new_filename,&quot;w&quot;)\n    print(&quot;原文件的内容如下:&quot;)\n    print(f.read())\n    #关闭原文件的读取\n    f.close()\n    f = open(old_filename,&quot;r&quot;)\n    #对原文件的内容进行循环检查\n    for line in f:\n        # 将每一行的内容进行替换\n        line = line.replace(old_str,new_str)\n    #    print(line)\n        #将替换号的内容写入新文件中\n        f_new.write(line)   \n    #关闭新文件的写入\n    f_new.close()\n    #关闭原文件的读取\n    f.close()\n    #导入第三方模块os\n    import os\n    #删除原文件\n    os.remove(old_filename)\n    #将新文件重命名为源文件的名字\n    os.rename(new_filename,old_filename)\n    f_new = open(new_filename,&quot;r&quot;)\n    print(&quot;修改后的内容如下:&quot;)\n    print(f_new.read())\n    f_new.close()&apos;, &apos;funtion_replace_key(&quot;u&quot;,&quot;i&quot;,&quot;test.txt&quot;)&apos;, &apos;#修改例子\ndef funtion_replace_key(old_str,new_str,old_filename):\n#    old_str = &quot;i&quot;\n#    new_str = &quot;you&quot;\n#    old_filename = &quot;test.txt&quot;\n    new_filename = &quot;test_new.txt&quot;\n    #使用读模式打开原文件\n    #使用写模式打开新文件\n    f = open(old_filename,&quot;r&quot;)\n    f_new = open(new_filename,&quot;w&quot;)\n    print(&quot;原文件的内容如下:&quot;)\n    print(f.read())\n    #关闭原文件的读取\n    f.close()\n    f = open(old_filename,&quot;r&quot;)\n    #对原文件的内容进行循环检查\n    for line in f:\n        # 将每一行的内容进行替换\n        line = line.replace(old_str,new_str)\n    #    print(line)\n        #将替换号的内容写入新文件中\n        f_new.write(line)   \n    #关闭新文件的写入\n    f_new.close()\n    #关闭原文件的读取\n    f.close()\n    #导入第三方模块os\n    import os\n    #删除原文件\n    os.remove(old_filename)\n    #将新文件重命名为源文件的名字\n    os.rename(new_filename,old_filename)\n#   f_new = open(new_filename,&quot;r&quot;)\n#    print(&quot;修改后的内容如下:&quot;)\n#    print(f_new.read())\n#    f_new.close()\n    f = open(old_filename,&quot;r&quot;)\n    print(&quot;修改后的内容如下:&quot;)\n    print(f.read())\n    f.close()&apos;, &apos;funtion_replace_key(&quot;u&quot;,&quot;i&quot;,&quot;test.txt&quot;)&apos;, &apos;funtion_replace_key(&quot;i&quot;,&quot;u&quot;,&quot;test.txt&quot;)&apos;, &apos;#修改例子\ndef funtion_replace_key(old_str,new_str,old_filename):\n    \&apos;\&apos;\&apos;\n    funtion_replace_key是一个用于在文本中替换关键字\n    函数的括号()中需要填写三个参数，需要修改的关键字要改成的关键字、需要修改的文本名称\n    比如:funtion_replace_key(&quot;需要被替换的关键字&quot;、&quot;需要改成的关键字&quot;，&quot;被修改的文档名&quot;）\n    注意的是参数一定要用双引号阔上。\n    \&apos;\&apos;\&apos;\n#    old_str = &quot;i&quot;\n#    new_str = &quot;you&quot;\n#    old_filename = &quot;test.txt&quot;\n    new_filename = &quot;test_new.txt&quot;\n    #使用读模式打开原文件\n    #使用写模式打开新文件\n    f = open(old_filename,&quot;r&quot;)\n    f_new = open(new_filename,&quot;w&quot;)\n    print(&quot;原文件的内容如下:&quot;)\n    print(f.read())\n    #关闭原文件的读取\n    f.close()\n    f = open(old_filename,&quot;r&quot;)\n    #对原文件的内容进行循环检查\n    for line in f:\n        # 将每一行的内容进行替换\n        line = line.replace(old_str,new_str)\n    #    print(line)\n        #将替换号的内容写入新文件中\n        f_new.write(line)   \n    #关闭新文件的写入\n    f_new.close()\n    #关闭原文件的读取\n    f.close()\n    #导入第三方模块os\n    import os\n    #删除原文件\n    os.remove(old_filename)\n    #将新文件重命名为源文件的名字\n    os.rename(new_filename,old_filename)\n    #打开修改后的文件\n    f = open(old_filename,&quot;r&quot;)\n    #读取修改后的内容\n    print(&quot;修改后的内容如下:&quot;)\n    print(f.read())\n    #关闭读取功能\n    f.close()&apos;, &apos;funtion_replace_key(&quot;love&quot;,&quot;like&quot;,&quot;test.txt&quot;)&apos;, &apos;funtion_replace_key(&quot;love&quot;,&quot;like&quot;,&quot;test.txt&quot;)&apos;, &apos;#查看函数的注释\nhelp(funtion_replace_key)&apos;, &apos;#修改例子\n#建立一个函数 叫做funtion_replace_key\ndef funtion_replace_key(old_str,new_str,old_filename):\n    \&apos;\&apos;\&apos;\n    funtion_replace_key是一个用于在文本中替换关键字\n    函数的括号()中需要填写三个参数，需要修改的关键字要改成的关键字、需要修改的文本名称\n    比如:funtion_replace_key(&quot;需要被替换的关键字&quot;、&quot;需要改成的关键字&quot;，&quot;被修改的文档名&quot;）\n    注意的是参数一定要用双引号阔上。\n    \&apos;\&apos;\&apos;\n    new_filename = &quot;test_new.txt&quot;\n    #使用读模式打开原文件\n    #使用写模式打开新文件\n    f = open(old_filename,&quot;r&quot;)\n    f_new = open(new_filename,&quot;w&quot;)\n    print(&quot;原文件的内容如下:&quot;)\n    print(f.read())\n    #关闭原文件的读取\n    f.close()\n    f = open(old_filename,&quot;r&quot;)\n    #对原文件的内容进行循环检查\n    for line in f:\n        # 将每一行的内容进行替换\n        line = line.replace(old_str,new_str)\n    #    print(line)\n        #将替换号的内容写入新文件中\n        f_new.write(line)   \n    #关闭新文件的写入\n    f_new.close()\n    #关闭原文件的读取\n    f.close()\n    #导入第三方模块os\n    import os\n    #删除原文件\n    os.remove(old_filename)\n    #将新文件重命名为源文件的名字\n    os.rename(new_filename,old_filename)\n    #打开修改后的文件\n    f = open(old_filename,&quot;r&quot;)\n    #读取修改后的内容\n    print(&quot;修改后的内容如下:&quot;)\n    print(f.read())\n    #关闭读取功能\n    f.close()&apos;, &apos;#修改例子\n#建立一个函数 叫做funtion_replace_key\ndef funtion_replace_key(old_str,new_str,old_filename):\n    \&apos;\&apos;\&apos;\n    funtion_replace_key是一个用于在文本中替换关键字\n    函数的括号()中需要填写三个参数，需要修改的关键字要改成的关键字、需要修改的文本名称\n    比如:funtion_replace_key(&quot;需要被替换的关键字&quot;、&quot;需要改成的关键字&quot;，&quot;被修改的文档名&quot;）\n    注意的是参数一定要用双引号阔上。\n    \&apos;\&apos;\&apos;\n    new_filename = &quot;test_new.txt&quot;\n    #使用读模式打开原文件\n    #使用写模式打开新文件\n    f = open(old_filename,&quot;r&quot;)\n    f_new = open(new_filename,&quot;w&quot;)\n    print(&quot;原文件的内容如下:&quot;)\n    print(f.read())\n    #关闭原文件的读取\n    f.close()\n    f = open(old_filename,&quot;r&quot;)\n    #对原文件的内容进行循环检查\n    for line in f:\n        # 将每一行的内容进行替换\n        line = line.replace(old_str,new_str)\n    #    print(line)\n        #将替换号的内容写入新文件中\n        f_new.write(line)   \n    #关闭新文件的写入\n    f_new.close()\n    #关闭原文件的读取\n    f.close()\n    #导入第三方模块os\n    import os\n    #删除原文件\n    os.remove(old_filename)\n    #将新文件重命名为源文件的名字\n    os.rename(new_filename,old_filename)\n    #打开修改后的文件\n    f = open(old_filename,&quot;r&quot;)\n    #读取修改后的内容\n    print(&quot;修改后的内容如下:&quot;)\n    print(f.read())\n    #关闭读取功能\n    f.close()&apos;, &apos;#查看函数的注释\nhelp(funtion_replace_key)&apos;, &apos;old_str = &quot;like&quot;\nnew_str = &quot;love&quot;\nold_filename = &quot;test.txt&quot;\nfuntion_replace_key(old_str,new_str,old_filename)&apos;, &apos;#old_str = &quot;like&quot;\n#new_str = &quot;love&quot;\n#old_filename = &quot;test.txt&quot;\nold_str = input(&quot;请输入被替换的关键字，按回车键结束&quot;)\nnew_str = input(&quot;请输入修改成关键字，按回车键结束&quot;)\nold_filename = input(&quot;请输入被修改的文件名，按回车键结束&quot;)\nfuntion_replace_key(old_str,new_str,old_filename)&apos;, &apos;old_str = input(&quot;请输入被替换的关键字，按回车键结束&quot;)\nnew_str = input(&quot;请输入修改成关键字，按回车键结束&quot;)\nold_filename = input(&quot;请输入被修改的文件名，按回车键结束&quot;)\nfuntion_replace_key(old_str,new_str,old_filename)&apos;, &apos;old_str = input(&quot;请输入被替换的关键字，按回车键结束&quot;)\nnew_str = input(&quot;请输入修改成关键字，按回车键结束&quot;)\nold_filename = input(&quot;请输入被修改的文件名，按回车键结束&quot;)\nfuntion_replace_key(old_str,new_str,old_filename)&apos;, &apos;old_str = input(&quot;请输入被替换的关键字，按回车键结束&quot;)\nnew_str = input(&quot;请输入修改成关键字，按回车键结束&quot;)\nold_filename = input(&quot;请输入被修改的文件名，按回车键结束&quot;)\nfuntion_replace_key(old_str,new_str,old_filename)&apos;, &apos;old_str = input(&quot;请输入被替换的关键字，按回车键结束&quot;)\nnew_str = input(&quot;请输入修改成关键字，按回车键结束&quot;)\nold_filename = input(&quot;请输入被修改的文件名，按回车键结束&quot;)\nfuntion_replace_key(old_str,new_str,old_filename)&apos;, &apos;import sys\na = sys.argv\nprint(a)&apos;, &apos;import sys\na = sys.argv()\nprint(a)&apos;, &apos;#查看全局变量与局部变量\ni = 10\nj = 20\ndef function1():\n    i = 30\n    m = 2\n    n = 6\n    #输出function1这个函数中的局部变量\n    print(locals())\n#输出整个python中的全局变量\nprint(globals())&apos;, &apos;#查看全局变量与局部变量\ni = 10\nj = 20\ndef function1():\n    i = 30\n    m = 2\n    n = 6\n    #输出function1这个函数中的局部变量\n    print(locals())\n#输出整个python中的全局变量\n#print(globals())&apos;, &apos;#查看全局变量与局部变量\ni = 10\nj = 20\ndef function1():\n    i = 30\n    m = 2\n    n = 6\n    #输出function1这个函数中的局部变量\n    print(&quot;局部变量为:&quot;,locals())\n#输出整个python中的全局变量\n#print(globals())&apos;, &apos;#查看全局变量与局部变量\ni = 10\nj = 20\ndef function1():\n    i = 30\n    m = 2\n    n = 6\n    #输出function1这个函数中的局部变量\n    print(&quot;局部变量为:&quot;,locals())\n#输出整个python中的全局变量\n#print(globals())&apos;, &apos;#查看全局变量与局部变量\ni = 10\nj = 20\ndef function1():\n    i = 30\n    m = 2\n    n = 6\n    #输出function1这个函数中的局部变量\n    print(&quot;局部变量为:&quot;,locals())\n#输出整个python中的全局变量\n#print(globals())&apos;, &apos;#查看全局变量与局部变量\ni = 10\nj = 20\ndef function1():\n    i = 30\n    m = 2\n    n = 6\n    #输出function1这个函数中的局部变量\n    print(&quot;局部变量为:&quot;,locals())\n#输出整个python中的全局变量\n#print(globals())&apos;, &apos;#查看全局变量与局部变量\ni = 10\nj = 20\ndef function1():\n    i = 30\n    m = 2\n    n = 6\n    #输出function1这个函数中的局部变量\n    print(&quot;局部变量为:&quot;,locals())&apos;, &apos;#查看全局变量与局部变量\ni = 10\nj = 20\ndef function1():\n    i = 30\n    m = 2\n    n = 6\n    #输出function1这个函数中的局部变量\n    print(&quot;局部变量为:&quot;,locals())&apos;, &apos;#查看全局变量与局部变量\ni = 10\nj = 20\ndef function1():\n    i = 30\n    m = 2\n    n = 6\n    #输出function1这个函数中的局部变量\n    print(&quot;局部变量为:&quot;,locals())&apos;, &apos;function1()&apos;, &apos;#查看全局变量与局部变量\ni = 10\nj = 20\ndef function1():\n    i = 30\n    m = 2\n    n = 6\n    #输出function1这个函数中的局部变量\n    print(&quot;function1局部变量为:&quot;,locals())\nprint(&quot;全局变量为&quot;,globals())&apos;, &apos;function1()&apos;, &apos;#查看全局变量与局部变量\ni = 10\nj = 20\ndef function1():\n    i = 30\n    m = 2\n    n = 6\n    #输出function1这个函数中的局部变量\n    print(&quot;function1局部变量为:&quot;,locals())\n    #函数结束\n    return\nprint(&quot;全局变量为&quot;,globals())&apos;], &apos;_oh&apos;: {}, &apos;_dh&apos;: [&apos;C:\\Users\\Administrator\\学习&apos;], &apos;In&apos;: [&apos;&apos;, &apos;#修改例子\ndef funtion_replace_key(old_str,new_str,old_filename):\n#    old_str = &quot;i&quot;\n#    new_str = &quot;you&quot;\n#    old_filename = &quot;test.txt&quot;\n    new_filename = &quot;test_new.txt&quot;\n    #使用读模式打开原文件\n    #使用写模式打开新文件\n    f = open(old_filename,&quot;r&quot;)\n    f_new = open(new_filename,&quot;w&quot;)\n    print(&quot;原文件的内容如下:&quot;)\n    print(f.read())\n    #关闭原文件的读取\n    f.close()\n    f = open(old_filename,&quot;r&quot;)\n    #对原文件的内容进行循环检查\n    for line in f:\n        # 将每一行的内容进行替换\n        line = line.replace(old_str,new_str)\n    #    print(line)\n        #将替换号的内容写入新文件中\n        f_new.write(line)   \n    #关闭新文件的写入\n    f_new.close()\n    #关闭原文件的读取\n    f.close()\n    f_new = open(new_filename,&quot;r&quot;)\n    print(&quot;修改后的内容如下:&quot;)\n    print(f_new.read())\n    f_new.close()\n    #导入第三方模块os\n    import os\n    #删除原文件\n    os.remove(old_filename)\n    #将新文件重命名为源文件的名字\n    os.rename(new_filename,old_filename)&apos;, &apos;#修改例子\ndef funtion_replace_key(old_str,new_str,old_filename):\n#    old_str = &quot;i&quot;\n#    new_str = &quot;you&quot;\n#    old_filename = &quot;test.txt&quot;\n    new_filename = &quot;test_new.txt&quot;\n    #使用读模式打开原文件\n    #使用写模式打开新文件\n    f = open(old_filename,&quot;r&quot;)\n    f_new = open(new_filename,&quot;w&quot;)\n    print(&quot;原文件的内容如下:&quot;)\n    print(f.read())\n    #关闭原文件的读取\n    f.close()\n    f = open(old_filename,&quot;r&quot;)\n    #对原文件的内容进行循环检查\n    for line in f:\n        # 将每一行的内容进行替换\n        line = line.replace(old_str,new_str)\n    #    print(line)\n        #将替换号的内容写入新文件中\n        f_new.write(line)   \n    #关闭新文件的写入\n    f_new.close()\n    #关闭原文件的读取\n    f.close()\n    f_new = open(new_filename,&quot;r&quot;)\n    print(&quot;修改后的内容如下:&quot;)\n    print(f_new.read())\n    f_new.close()\n    #导入第三方模块os\n    import os\n    #删除原文件\n    os.remove(old_filename)\n    #将新文件重命名为源文件的名字\n    os.rename(new_filename,old_filename)&apos;, &apos;untion_replace_key(&quot;you&quot;,&quot;i&quot;,&quot;test.txt&quot;)&apos;, &apos;funtion_replace_key(&quot;you&quot;,&quot;i&quot;,&quot;test.txt&quot;)&apos;, &apos;funtion_replace_key(&quot;i&quot;,&quot;u&quot;,&quot;test.txt&quot;)&apos;, &apos;#修改例子\ndef funtion_replace_key(old_str,new_str,old_filename):\n#    old_str = &quot;i&quot;\n#    new_str = &quot;you&quot;\n#    old_filename = &quot;test.txt&quot;\n    new_filename = &quot;test_new.txt&quot;\n    #使用读模式打开原文件\n    #使用写模式打开新文件\n    f = open(old_filename,&quot;r&quot;)\n    f_new = open(new_filename,&quot;w&quot;)\n    print(&quot;原文件的内容如下:&quot;)\n    print(f.read())\n    #关闭原文件的读取\n    f.close()\n    f = open(old_filename,&quot;r&quot;)\n    #对原文件的内容进行循环检查\n    for line in f:\n        # 将每一行的内容进行替换\n        line = line.replace(old_str,new_str)\n    #    print(line)\n        #将替换号的内容写入新文件中\n        f_new.write(line)   \n    #关闭新文件的写入\n    f_new.close()\n    #关闭原文件的读取\n    f.close()\n    #导入第三方模块os\n    import os\n    #删除原文件\n    os.remove(old_filename)\n    #将新文件重命名为源文件的名字\n    os.rename(new_filename,old_filename)\n    f_new = open(new_filename,&quot;r&quot;)\n    print(&quot;修改后的内容如下:&quot;)\n    print(f_new.read())\n    f_new.close()&apos;, &apos;funtion_replace_key(&quot;u&quot;,&quot;i&quot;,&quot;test.txt&quot;)&apos;, &apos;#修改例子\ndef funtion_replace_key(old_str,new_str,old_filename):\n#    old_str = &quot;i&quot;\n#    new_str = &quot;you&quot;\n#    old_filename = &quot;test.txt&quot;\n    new_filename = &quot;test_new.txt&quot;\n    #使用读模式打开原文件\n    #使用写模式打开新文件\n    f = open(old_filename,&quot;r&quot;)\n    f_new = open(new_filename,&quot;w&quot;)\n    print(&quot;原文件的内容如下:&quot;)\n    print(f.read())\n    #关闭原文件的读取\n    f.close()\n    f = open(old_filename,&quot;r&quot;)\n    #对原文件的内容进行循环检查\n    for line in f:\n        # 将每一行的内容进行替换\n        line = line.replace(old_str,new_str)\n    #    print(line)\n        #将替换号的内容写入新文件中\n        f_new.write(line)   \n    #关闭新文件的写入\n    f_new.close()\n    #关闭原文件的读取\n    f.close()\n    #导入第三方模块os\n    import os\n    #删除原文件\n    os.remove(old_filename)\n    #将新文件重命名为源文件的名字\n    os.rename(new_filename,old_filename)\n#   f_new = open(new_filename,&quot;r&quot;)\n#    print(&quot;修改后的内容如下:&quot;)\n#    print(f_new.read())\n#    f_new.close()\n    f = open(old_filename,&quot;r&quot;)\n    print(&quot;修改后的内容如下:&quot;)\n    print(f.read())\n    f.close()&apos;, &apos;funtion_replace_key(&quot;u&quot;,&quot;i&quot;,&quot;test.txt&quot;)&apos;, &apos;funtion_replace_key(&quot;i&quot;,&quot;u&quot;,&quot;test.txt&quot;)&apos;, &apos;#修改例子\ndef funtion_replace_key(old_str,new_str,old_filename):\n    \&apos;\&apos;\&apos;\n    funtion_replace_key是一个用于在文本中替换关键字\n    函数的括号()中需要填写三个参数，需要修改的关键字要改成的关键字、需要修改的文本名称\n    比如:funtion_replace_key(&quot;需要被替换的关键字&quot;、&quot;需要改成的关键字&quot;，&quot;被修改的文档名&quot;）\n    注意的是参数一定要用双引号阔上。\n    \&apos;\&apos;\&apos;\n#    old_str = &quot;i&quot;\n#    new_str = &quot;you&quot;\n#    old_filename = &quot;test.txt&quot;\n    new_filename = &quot;test_new.txt&quot;\n    #使用读模式打开原文件\n    #使用写模式打开新文件\n    f = open(old_filename,&quot;r&quot;)\n    f_new = open(new_filename,&quot;w&quot;)\n    print(&quot;原文件的内容如下:&quot;)\n    print(f.read())\n    #关闭原文件的读取\n    f.close()\n    f = open(old_filename,&quot;r&quot;)\n    #对原文件的内容进行循环检查\n    for line in f:\n        # 将每一行的内容进行替换\n        line = line.replace(old_str,new_str)\n    #    print(line)\n        #将替换号的内容写入新文件中\n        f_new.write(line)   \n    #关闭新文件的写入\n    f_new.close()\n    #关闭原文件的读取\n    f.close()\n    #导入第三方模块os\n    import os\n    #删除原文件\n    os.remove(old_filename)\n    #将新文件重命名为源文件的名字\n    os.rename(new_filename,old_filename)\n    #打开修改后的文件\n    f = open(old_filename,&quot;r&quot;)\n    #读取修改后的内容\n    print(&quot;修改后的内容如下:&quot;)\n    print(f.read())\n    #关闭读取功能\n    f.close()&apos;, &apos;funtion_replace_key(&quot;love&quot;,&quot;like&quot;,&quot;test.txt&quot;)&apos;, &apos;funtion_replace_key(&quot;love&quot;,&quot;like&quot;,&quot;test.txt&quot;)&apos;, &apos;#查看函数的注释\nhelp(funtion_replace_key)&apos;, &apos;#修改例子\n#建立一个函数 叫做funtion_replace_key\ndef funtion_replace_key(old_str,new_str,old_filename):\n    \&apos;\&apos;\&apos;\n    funtion_replace_key是一个用于在文本中替换关键字\n    函数的括号()中需要填写三个参数，需要修改的关键字要改成的关键字、需要修改的文本名称\n    比如:funtion_replace_key(&quot;需要被替换的关键字&quot;、&quot;需要改成的关键字&quot;，&quot;被修改的文档名&quot;）\n    注意的是参数一定要用双引号阔上。\n    \&apos;\&apos;\&apos;\n    new_filename = &quot;test_new.txt&quot;\n    #使用读模式打开原文件\n    #使用写模式打开新文件\n    f = open(old_filename,&quot;r&quot;)\n    f_new = open(new_filename,&quot;w&quot;)\n    print(&quot;原文件的内容如下:&quot;)\n    print(f.read())\n    #关闭原文件的读取\n    f.close()\n    f = open(old_filename,&quot;r&quot;)\n    #对原文件的内容进行循环检查\n    for line in f:\n        # 将每一行的内容进行替换\n        line = line.replace(old_str,new_str)\n    #    print(line)\n        #将替换号的内容写入新文件中\n        f_new.write(line)   \n    #关闭新文件的写入\n    f_new.close()\n    #关闭原文件的读取\n    f.close()\n    #导入第三方模块os\n    import os\n    #删除原文件\n    os.remove(old_filename)\n    #将新文件重命名为源文件的名字\n    os.rename(new_filename,old_filename)\n    #打开修改后的文件\n    f = open(old_filename,&quot;r&quot;)\n    #读取修改后的内容\n    print(&quot;修改后的内容如下:&quot;)\n    print(f.read())\n    #关闭读取功能\n    f.close()&apos;, &apos;#修改例子\n#建立一个函数 叫做funtion_replace_key\ndef funtion_replace_key(old_str,new_str,old_filename):\n    \&apos;\&apos;\&apos;\n    funtion_replace_key是一个用于在文本中替换关键字\n    函数的括号()中需要填写三个参数，需要修改的关键字要改成的关键字、需要修改的文本名称\n    比如:funtion_replace_key(&quot;需要被替换的关键字&quot;、&quot;需要改成的关键字&quot;，&quot;被修改的文档名&quot;）\n    注意的是参数一定要用双引号阔上。\n    \&apos;\&apos;\&apos;\n    new_filename = &quot;test_new.txt&quot;\n    #使用读模式打开原文件\n    #使用写模式打开新文件\n    f = open(old_filename,&quot;r&quot;)\n    f_new = open(new_filename,&quot;w&quot;)\n    print(&quot;原文件的内容如下:&quot;)\n    print(f.read())\n    #关闭原文件的读取\n    f.close()\n    f = open(old_filename,&quot;r&quot;)\n    #对原文件的内容进行循环检查\n    for line in f:\n        # 将每一行的内容进行替换\n        line = line.replace(old_str,new_str)\n    #    print(line)\n        #将替换号的内容写入新文件中\n        f_new.write(line)   \n    #关闭新文件的写入\n    f_new.close()\n    #关闭原文件的读取\n    f.close()\n    #导入第三方模块os\n    import os\n    #删除原文件\n    os.remove(old_filename)\n    #将新文件重命名为源文件的名字\n    os.rename(new_filename,old_filename)\n    #打开修改后的文件\n    f = open(old_filename,&quot;r&quot;)\n    #读取修改后的内容\n    print(&quot;修改后的内容如下:&quot;)\n    print(f.read())\n    #关闭读取功能\n    f.close()&apos;, &apos;#查看函数的注释\nhelp(funtion_replace_key)&apos;, &apos;old_str = &quot;like&quot;\nnew_str = &quot;love&quot;\nold_filename = &quot;test.txt&quot;\nfuntion_replace_key(old_str,new_str,old_filename)&apos;, &apos;#old_str = &quot;like&quot;\n#new_str = &quot;love&quot;\n#old_filename = &quot;test.txt&quot;\nold_str = input(&quot;请输入被替换的关键字，按回车键结束&quot;)\nnew_str = input(&quot;请输入修改成关键字，按回车键结束&quot;)\nold_filename = input(&quot;请输入被修改的文件名，按回车键结束&quot;)\nfuntion_replace_key(old_str,new_str,old_filename)&apos;, &apos;old_str = input(&quot;请输入被替换的关键字，按回车键结束&quot;)\nnew_str = input(&quot;请输入修改成关键字，按回车键结束&quot;)\nold_filename = input(&quot;请输入被修改的文件名，按回车键结束&quot;)\nfuntion_replace_key(old_str,new_str,old_filename)&apos;, &apos;old_str = input(&quot;请输入被替换的关键字，按回车键结束&quot;)\nnew_str = input(&quot;请输入修改成关键字，按回车键结束&quot;)\nold_filename = input(&quot;请输入被修改的文件名，按回车键结束&quot;)\nfuntion_replace_key(old_str,new_str,old_filename)&apos;, &apos;old_str = input(&quot;请输入被替换的关键字，按回车键结束&quot;)\nnew_str = input(&quot;请输入修改成关键字，按回车键结束&quot;)\nold_filename = input(&quot;请输入被修改的文件名，按回车键结束&quot;)\nfuntion_replace_key(old_str,new_str,old_filename)&apos;, &apos;old_str = input(&quot;请输入被替换的关键字，按回车键结束&quot;)\nnew_str = input(&quot;请输入修改成关键字，按回车键结束&quot;)\nold_filename = input(&quot;请输入被修改的文件名，按回车键结束&quot;)\nfuntion_replace_key(old_str,new_str,old_filename)&apos;, &apos;import sys\na = sys.argv\nprint(a)&apos;, &apos;import sys\na = sys.argv()\nprint(a)&apos;, &apos;#查看全局变量与局部变量\ni = 10\nj = 20\ndef function1():\n    i = 30\n    m = 2\n    n = 6\n    #输出function1这个函数中的局部变量\n    print(locals())\n#输出整个python中的全局变量\nprint(globals())&apos;, &apos;#查看全局变量与局部变量\ni = 10\nj = 20\ndef function1():\n    i = 30\n    m = 2\n    n = 6\n    #输出function1这个函数中的局部变量\n    print(locals())\n#输出整个python中的全局变量\n#print(globals())&apos;, &apos;#查看全局变量与局部变量\ni = 10\nj = 20\ndef function1():\n    i = 30\n    m = 2\n    n = 6\n    #输出function1这个函数中的局部变量\n    print(&quot;局部变量为:&quot;,locals())\n#输出整个python中的全局变量\n#print(globals())&apos;, &apos;#查看全局变量与局部变量\ni = 10\nj = 20\ndef function1():\n    i = 30\n    m = 2\n    n = 6\n    #输出function1这个函数中的局部变量\n    print(&quot;局部变量为:&quot;,locals())\n#输出整个python中的全局变量\n#print(globals())&apos;, &apos;#查看全局变量与局部变量\ni = 10\nj = 20\ndef function1():\n    i = 30\n    m = 2\n    n = 6\n    #输出function1这个函数中的局部变量\n    print(&quot;局部变量为:&quot;,locals())\n#输出整个python中的全局变量\n#print(globals())&apos;, &apos;#查看全局变量与局部变量\ni = 10\nj = 20\ndef function1():\n    i = 30\n    m = 2\n    n = 6\n    #输出function1这个函数中的局部变量\n    print(&quot;局部变量为:&quot;,locals())\n#输出整个python中的全局变量\n#print(globals())&apos;, &apos;#查看全局变量与局部变量\ni = 10\nj = 20\ndef function1():\n    i = 30\n    m = 2\n    n = 6\n    #输出function1这个函数中的局部变量\n    print(&quot;局部变量为:&quot;,locals())&apos;, &apos;#查看全局变量与局部变量\ni = 10\nj = 20\ndef function1():\n    i = 30\n    m = 2\n    n = 6\n    #输出function1这个函数中的局部变量\n    print(&quot;局部变量为:&quot;,locals())&apos;, &apos;#查看全局变量与局部变量\ni = 10\nj = 20\ndef function1():\n    i = 30\n    m = 2\n    n = 6\n    #输出function1这个函数中的局部变量\n    print(&quot;局部变量为:&quot;,locals())&apos;, &apos;function1()&apos;, &apos;#查看全局变量与局部变量\ni = 10\nj = 20\ndef function1():\n    i = 30\n    m = 2\n    n = 6\n    #输出function1这个函数中的局部变量\n    print(&quot;function1局部变量为:&quot;,locals())\nprint(&quot;全局变量为&quot;,globals())&apos;, &apos;function1()&apos;, &apos;#查看全局变量与局部变量\ni = 10\nj = 20\ndef function1():\n    i = 30\n    m = 2\n    n = 6\n    #输出function1这个函数中的局部变量\n    print(&quot;function1局部变量为:&quot;,locals())\n    #函数结束\n    return\nprint(&quot;全局变量为&quot;,globals())&apos;], &apos;Out&apos;: {}, &apos;get_ipython&apos;: &lt;bound method InteractiveShell.get_ipython of &lt;ipykernel.zmqshell.ZMQInteractiveShell object at 0x0000019A75E95C48&gt;&gt;, &apos;exit&apos;: &lt;IPython.core.autocall.ZMQExitAutocall object at 0x0000019A75F05908&gt;, &apos;quit&apos;: &lt;IPython.core.autocall.ZMQExitAutocall object at 0x0000019A75F05908&gt;, &apos;_&apos;: &apos;&apos;, &apos;__&apos;: &apos;&apos;, &apos;___&apos;: &apos;&apos;, &apos;_i&apos;: &apos;function1()&apos;, &apos;_ii&apos;: &apos;#查看全局变量与局部变量\ni = 10\nj = 20\ndef function1():\n    i = 30\n    m = 2\n    n = 6\n    #输出function1这个函数中的局部变量\n    print(&quot;function1局部变量为:&quot;,locals())\nprint(&quot;全局变量为&quot;,globals())&apos;, &apos;_iii&apos;: &apos;function1()&apos;, &apos;_i1&apos;: &apos;#修改例子\ndef funtion_replace_key(old_str,new_str,old_filename):\n#    old_str = &quot;i&quot;\n#    new_str = &quot;you&quot;\n#    old_filename = &quot;test.txt&quot;\n    new_filename = &quot;test_new.txt&quot;\n    #使用读模式打开原文件\n    #使用写模式打开新文件\n    f = open(old_filename,&quot;r&quot;)\n    f_new = open(new_filename,&quot;w&quot;)\n    print(&quot;原文件的内容如下:&quot;)\n    print(f.read())\n    #关闭原文件的读取\n    f.close()\n    f = open(old_filename,&quot;r&quot;)\n    #对原文件的内容进行循环检查\n    for line in f:\n        # 将每一行的内容进行替换\n        line = line.replace(old_str,new_str)\n    #    print(line)\n        #将替换号的内容写入新文件中\n        f_new.write(line)   \n    #关闭新文件的写入\n    f_new.close()\n    #关闭原文件的读取\n    f.close()\n    f_new = open(new_filename,&quot;r&quot;)\n    print(&quot;修改后的内容如下:&quot;)\n    print(f_new.read())\n    f_new.close()\n    #导入第三方模块os\n    import os\n    #删除原文件\n    os.remove(old_filename)\n    #将新文件重命名为源文件的名字\n    os.rename(new_filename,old_filename)&apos;, &apos;funtion_replace_key&apos;: &lt;function funtion_replace_key at 0x0000019A75FF7CA8&gt;, &apos;_i2&apos;: &apos;#修改例子\ndef funtion_replace_key(old_str,new_str,old_filename):\n#    old_str = &quot;i&quot;\n#    new_str = &quot;you&quot;\n#    old_filename = &quot;test.txt&quot;\n    new_filename = &quot;test_new.txt&quot;\n    #使用读模式打开原文件\n    #使用写模式打开新文件\n    f = open(old_filename,&quot;r&quot;)\n    f_new = open(new_filename,&quot;w&quot;)\n    print(&quot;原文件的内容如下:&quot;)\n    print(f.read())\n    #关闭原文件的读取\n    f.close()\n    f = open(old_filename,&quot;r&quot;)\n    #对原文件的内容进行循环检查\n    for line in f:\n        # 将每一行的内容进行替换\n        line = line.replace(old_str,new_str)\n    #    print(line)\n        #将替换号的内容写入新文件中\n        f_new.write(line)   \n    #关闭新文件的写入\n    f_new.close()\n    #关闭原文件的读取\n    f.close()\n    f_new = open(new_filename,&quot;r&quot;)\n    print(&quot;修改后的内容如下:&quot;)\n    print(f_new.read())\n    f_new.close()\n    #导入第三方模块os\n    import os\n    #删除原文件\n    os.remove(old_filename)\n    #将新文件重命名为源文件的名字\n    os.rename(new_filename,old_filename)&apos;, &apos;_i3&apos;: &apos;untion_replace_key(&quot;you&quot;,&quot;i&quot;,&quot;test.txt&quot;)&apos;, &apos;_i4&apos;: &apos;funtion_replace_key(&quot;you&quot;,&quot;i&quot;,&quot;test.txt&quot;)&apos;, &apos;_i5&apos;: &apos;funtion_replace_key(&quot;i&quot;,&quot;u&quot;,&quot;test.txt&quot;)&apos;, &apos;_i6&apos;: &apos;#修改例子\ndef funtion_replace_key(old_str,new_str,old_filename):\n#    old_str = &quot;i&quot;\n#    new_str = &quot;you&quot;\n#    old_filename = &quot;test.txt&quot;\n    new_filename = &quot;test_new.txt&quot;\n    #使用读模式打开原文件\n    #使用写模式打开新文件\n    f = open(old_filename,&quot;r&quot;)\n    f_new = open(new_filename,&quot;w&quot;)\n    print(&quot;原文件的内容如下:&quot;)\n    print(f.read())\n    #关闭原文件的读取\n    f.close()\n    f = open(old_filename,&quot;r&quot;)\n    #对原文件的内容进行循环检查\n    for line in f:\n        # 将每一行的内容进行替换\n        line = line.replace(old_str,new_str)\n    #    print(line)\n        #将替换号的内容写入新文件中\n        f_new.write(line)   \n    #关闭新文件的写入\n    f_new.close()\n    #关闭原文件的读取\n    f.close()\n    #导入第三方模块os\n    import os\n    #删除原文件\n    os.remove(old_filename)\n    #将新文件重命名为源文件的名字\n    os.rename(new_filename,old_filename)\n    f_new = open(new_filename,&quot;r&quot;)\n    print(&quot;修改后的内容如下:&quot;)\n    print(f_new.read())\n    f_new.close()&apos;, &apos;_i7&apos;: &apos;funtion_replace_key(&quot;u&quot;,&quot;i&quot;,&quot;test.txt&quot;)&apos;, &apos;_i8&apos;: &apos;#修改例子\ndef funtion_replace_key(old_str,new_str,old_filename):\n#    old_str = &quot;i&quot;\n#    new_str = &quot;you&quot;\n#    old_filename = &quot;test.txt&quot;\n    new_filename = &quot;test_new.txt&quot;\n    #使用读模式打开原文件\n    #使用写模式打开新文件\n    f = open(old_filename,&quot;r&quot;)\n    f_new = open(new_filename,&quot;w&quot;)\n    print(&quot;原文件的内容如下:&quot;)\n    print(f.read())\n    #关闭原文件的读取\n    f.close()\n    f = open(old_filename,&quot;r&quot;)\n    #对原文件的内容进行循环检查\n    for line in f:\n        # 将每一行的内容进行替换\n        line = line.replace(old_str,new_str)\n    #    print(line)\n        #将替换号的内容写入新文件中\n        f_new.write(line)   \n    #关闭新文件的写入\n    f_new.close()\n    #关闭原文件的读取\n    f.close()\n    #导入第三方模块os\n    import os\n    #删除原文件\n    os.remove(old_filename)\n    #将新文件重命名为源文件的名字\n    os.rename(new_filename,old_filename)\n#   f_new = open(new_filename,&quot;r&quot;)\n#    print(&quot;修改后的内容如下:&quot;)\n#    print(f_new.read())\n#    f_new.close()\n    f = open(old_filename,&quot;r&quot;)\n    print(&quot;修改后的内容如下:&quot;)\n    print(f.read())\n    f.close()&apos;, &apos;_i9&apos;: &apos;funtion_replace_key(&quot;u&quot;,&quot;i&quot;,&quot;test.txt&quot;)&apos;, &apos;_i10&apos;: &apos;funtion_replace_key(&quot;i&quot;,&quot;u&quot;,&quot;test.txt&quot;)&apos;, &apos;_i11&apos;: &apos;#修改例子\ndef funtion_replace_key(old_str,new_str,old_filename):\n    \&apos;\&apos;\&apos;\n    funtion_replace_key是一个用于在文本中替换关键字\n    函数的括号()中需要填写三个参数，需要修改的关键字要改成的关键字、需要修改的文本名称\n    比如:funtion_replace_key(&quot;需要被替换的关键字&quot;、&quot;需要改成的关键字&quot;，&quot;被修改的文档名&quot;）\n    注意的是参数一定要用双引号阔上。\n    \&apos;\&apos;\&apos;\n#    old_str = &quot;i&quot;\n#    new_str = &quot;you&quot;\n#    old_filename = &quot;test.txt&quot;\n    new_filename = &quot;test_new.txt&quot;\n    #使用读模式打开原文件\n    #使用写模式打开新文件\n    f = open(old_filename,&quot;r&quot;)\n    f_new = open(new_filename,&quot;w&quot;)\n    print(&quot;原文件的内容如下:&quot;)\n    print(f.read())\n    #关闭原文件的读取\n    f.close()\n    f = open(old_filename,&quot;r&quot;)\n    #对原文件的内容进行循环检查\n    for line in f:\n        # 将每一行的内容进行替换\n        line = line.replace(old_str,new_str)\n    #    print(line)\n        #将替换号的内容写入新文件中\n        f_new.write(line)   \n    #关闭新文件的写入\n    f_new.close()\n    #关闭原文件的读取\n    f.close()\n    #导入第三方模块os\n    import os\n    #删除原文件\n    os.remove(old_filename)\n    #将新文件重命名为源文件的名字\n    os.rename(new_filename,old_filename)\n    #打开修改后的文件\n    f = open(old_filename,&quot;r&quot;)\n    #读取修改后的内容\n    print(&quot;修改后的内容如下:&quot;)\n    print(f.read())\n    #关闭读取功能\n    f.close()&apos;, &apos;_i12&apos;: &apos;funtion_replace_key(&quot;love&quot;,&quot;like&quot;,&quot;test.txt&quot;)&apos;, &apos;_i13&apos;: &apos;funtion_replace_key(&quot;love&quot;,&quot;like&quot;,&quot;test.txt&quot;)&apos;, &apos;_i14&apos;: &apos;#查看函数的注释\nhelp(funtion_replace_key)&apos;, &apos;_i15&apos;: &apos;#修改例子\n#建立一个函数 叫做funtion_replace_key\ndef funtion_replace_key(old_str,new_str,old_filename):\n    \&apos;\&apos;\&apos;\n    funtion_replace_key是一个用于在文本中替换关键字\n    函数的括号()中需要填写三个参数，需要修改的关键字要改成的关键字、需要修改的文本名称\n    比如:funtion_replace_key(&quot;需要被替换的关键字&quot;、&quot;需要改成的关键字&quot;，&quot;被修改的文档名&quot;）\n    注意的是参数一定要用双引号阔上。\n    \&apos;\&apos;\&apos;\n    new_filename = &quot;test_new.txt&quot;\n    #使用读模式打开原文件\n    #使用写模式打开新文件\n    f = open(old_filename,&quot;r&quot;)\n    f_new = open(new_filename,&quot;w&quot;)\n    print(&quot;原文件的内容如下:&quot;)\n    print(f.read())\n    #关闭原文件的读取\n    f.close()\n    f = open(old_filename,&quot;r&quot;)\n    #对原文件的内容进行循环检查\n    for line in f:\n        # 将每一行的内容进行替换\n        line = line.replace(old_str,new_str)\n    #    print(line)\n        #将替换号的内容写入新文件中\n        f_new.write(line)   \n    #关闭新文件的写入\n    f_new.close()\n    #关闭原文件的读取\n    f.close()\n    #导入第三方模块os\n    import os\n    #删除原文件\n    os.remove(old_filename)\n    #将新文件重命名为源文件的名字\n    os.rename(new_filename,old_filename)\n    #打开修改后的文件\n    f = open(old_filename,&quot;r&quot;)\n    #读取修改后的内容\n    print(&quot;修改后的内容如下:&quot;)\n    print(f.read())\n    #关闭读取功能\n    f.close()&apos;, &apos;_i16&apos;: &apos;#修改例子\n#建立一个函数 叫做funtion_replace_key\ndef funtion_replace_key(old_str,new_str,old_filename):\n    \&apos;\&apos;\&apos;\n    funtion_replace_key是一个用于在文本中替换关键字\n    函数的括号()中需要填写三个参数，需要修改的关键字要改成的关键字、需要修改的文本名称\n    比如:funtion_replace_key(&quot;需要被替换的关键字&quot;、&quot;需要改成的关键字&quot;，&quot;被修改的文档名&quot;）\n    注意的是参数一定要用双引号阔上。\n    \&apos;\&apos;\&apos;\n    new_filename = &quot;test_new.txt&quot;\n    #使用读模式打开原文件\n    #使用写模式打开新文件\n    f = open(old_filename,&quot;r&quot;)\n    f_new = open(new_filename,&quot;w&quot;)\n    print(&quot;原文件的内容如下:&quot;)\n    print(f.read())\n    #关闭原文件的读取\n    f.close()\n    f = open(old_filename,&quot;r&quot;)\n    #对原文件的内容进行循环检查\n    for line in f:\n        # 将每一行的内容进行替换\n        line = line.replace(old_str,new_str)\n    #    print(line)\n        #将替换号的内容写入新文件中\n        f_new.write(line)   \n    #关闭新文件的写入\n    f_new.close()\n    #关闭原文件的读取\n    f.close()\n    #导入第三方模块os\n    import os\n    #删除原文件\n    os.remove(old_filename)\n    #将新文件重命名为源文件的名字\n    os.rename(new_filename,old_filename)\n    #打开修改后的文件\n    f = open(old_filename,&quot;r&quot;)\n    #读取修改后的内容\n    print(&quot;修改后的内容如下:&quot;)\n    print(f.read())\n    #关闭读取功能\n    f.close()&apos;, &apos;_i17&apos;: &apos;#查看函数的注释\nhelp(funtion_replace_key)&apos;, &apos;_i18&apos;: &apos;old_str = &quot;like&quot;\nnew_str = &quot;love&quot;\nold_filename = &quot;test.txt&quot;\nfuntion_replace_key(old_str,new_str,old_filename)&apos;, &apos;old_str&apos;: &apos;like&apos;, &apos;new_str&apos;: &apos;love&apos;, &apos;old_filename&apos;: &apos;test.txt&apos;, &apos;_i19&apos;: &apos;#old_str = &quot;like&quot;\n#new_str = &quot;love&quot;\n#old_filename = &quot;test.txt&quot;\nold_str = input(&quot;请输入被替换的关键字，按回车键结束&quot;)\nnew_str = input(&quot;请输入修改成关键字，按回车键结束&quot;)\nold_filename = input(&quot;请输入被修改的文件名，按回车键结束&quot;)\nfuntion_replace_key(old_str,new_str,old_filename)&apos;, &apos;_i20&apos;: &apos;old_str = input(&quot;请输入被替换的关键字，按回车键结束&quot;)\nnew_str = input(&quot;请输入修改成关键字，按回车键结束&quot;)\nold_filename = input(&quot;请输入被修改的文件名，按回车键结束&quot;)\nfuntion_replace_key(old_str,new_str,old_filename)&apos;, &apos;_i21&apos;: &apos;old_str = input(&quot;请输入被替换的关键字，按回车键结束&quot;)\nnew_str = input(&quot;请输入修改成关键字，按回车键结束&quot;)\nold_filename = input(&quot;请输入被修改的文件名，按回车键结束&quot;)\nfuntion_replace_key(old_str,new_str,old_filename)&apos;, &apos;_i22&apos;: &apos;old_str = input(&quot;请输入被替换的关键字，按回车键结束&quot;)\nnew_str = input(&quot;请输入修改成关键字，按回车键结束&quot;)\nold_filename = input(&quot;请输入被修改的文件名，按回车键结束&quot;)\nfuntion_replace_key(old_str,new_str,old_filename)&apos;, &apos;_i23&apos;: &apos;old_str = input(&quot;请输入被替换的关键字，按回车键结束&quot;)\nnew_str = input(&quot;请输入修改成关键字，按回车键结束&quot;)\nold_filename = input(&quot;请输入被修改的文件名，按回车键结束&quot;)\nfuntion_replace_key(old_str,new_str,old_filename)&apos;, &apos;_i24&apos;: &apos;import sys\na = sys.argv\nprint(a)&apos;, &apos;sys&apos;: &lt;module &apos;sys&apos; (built-in)&gt;, &apos;a&apos;: [&apos;C:\\ProgramData\\Anaconda3\\lib\\site-packages\\ipykernel_launcher.py&apos;, &apos;-f&apos;, &apos;C:\\Users\\Administrator\\AppData\\Roaming\\jupyter\\runtime\\kernel-a26b84d8-7ec2-486d-a736-0954ab144260.json&apos;], &apos;_i25&apos;: &apos;import sys\na = sys.argv()\nprint(a)&apos;, &apos;_i26&apos;: &apos;#查看全局变量与局部变量\ni = 10\nj = 20\ndef function1():\n    i = 30\n    m = 2\n    n = 6\n    #输出function1这个函数中的局部变量\n    print(locals())\n#输出整个python中的全局变量\nprint(globals())&apos;, &apos;i&apos;: 10, &apos;j&apos;: 20, &apos;function1&apos;: &lt;function function1 at 0x0000019A76DDE3A8&gt;, &apos;_i27&apos;: &apos;#查看全局变量与局部变量\ni = 10\nj = 20\ndef function1():\n    i = 30\n    m = 2\n    n = 6\n    #输出function1这个函数中的局部变量\n    print(locals())\n#输出整个python中的全局变量\n#print(globals())&apos;, &apos;_i28&apos;: &apos;#查看全局变量与局部变量\ni = 10\nj = 20\ndef function1():\n    i = 30\n    m = 2\n    n = 6\n    #输出function1这个函数中的局部变量\n    print(&quot;局部变量为:&quot;,locals())\n#输出整个python中的全局变量\n#print(globals())&apos;, &apos;_i29&apos;: &apos;#查看全局变量与局部变量\ni = 10\nj = 20\ndef function1():\n    i = 30\n    m = 2\n    n = 6\n    #输出function1这个函数中的局部变量\n    print(&quot;局部变量为:&quot;,locals())\n#输出整个python中的全局变量\n#print(globals())&apos;, &apos;_i30&apos;: &apos;#查看全局变量与局部变量\ni = 10\nj = 20\ndef function1():\n    i = 30\n    m = 2\n    n = 6\n    #输出function1这个函数中的局部变量\n    print(&quot;局部变量为:&quot;,locals())\n#输出整个python中的全局变量\n#print(globals())&apos;, &apos;_i31&apos;: &apos;#查看全局变量与局部变量\ni = 10\nj = 20\ndef function1():\n    i = 30\n    m = 2\n    n = 6\n    #输出function1这个函数中的局部变量\n    print(&quot;局部变量为:&quot;,locals())\n#输出整个python中的全局变量\n#print(globals())&apos;, &apos;_i32&apos;: &apos;#查看全局变量与局部变量\ni = 10\nj = 20\ndef function1():\n    i = 30\n    m = 2\n    n = 6\n    #输出function1这个函数中的局部变量\n    print(&quot;局部变量为:&quot;,locals())&apos;, &apos;_i33&apos;: &apos;#查看全局变量与局部变量\ni = 10\nj = 20\ndef function1():\n    i = 30\n    m = 2\n    n = 6\n    #输出function1这个函数中的局部变量\n    print(&quot;局部变量为:&quot;,locals())&apos;, &apos;_i34&apos;: &apos;#查看全局变量与局部变量\ni = 10\nj = 20\ndef function1():\n    i = 30\n    m = 2\n    n = 6\n    #输出function1这个函数中的局部变量\n    print(&quot;局部变量为:&quot;,locals())&apos;, &apos;_i35&apos;: &apos;function1()&apos;, &apos;_i36&apos;: &apos;#查看全局变量与局部变量\ni = 10\nj = 20\ndef function1():\n    i = 30\n    m = 2\n    n = 6\n    #输出function1这个函数中的局部变量\n    print(&quot;function1局部变量为:&quot;,locals())\nprint(&quot;全局变量为&quot;,globals())&apos;, &apos;_i37&apos;: &apos;function1()&apos;, &apos;_i38&apos;: &apos;#查看全局变量与局部变量\ni = 10\nj = 20\ndef function1():\n    i = 30\n    m = 2\n    n = 6\n    #输出function1这个函数中的局部变量\n    print(&quot;function1局部变量为:&quot;,locals())\n    #函数结束\n    return\nprint(&quot;全局变量为&quot;,globals())&apos;}</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">function1()</span><br></pre></td></tr></table></figure>
+
+<pre><code>function1局部变量为: {&apos;i&apos;: 30, &apos;m&apos;: 2, &apos;n&apos;: 6}</code></pre><h2 id="闭包现象"><a href="#闭包现象" class="headerlink" title="闭包现象"></a>闭包现象</h2><ul>
+<li>定义：当函数func1中嵌套了func2，并且func2中引用了func1的变量，如果后续程序会使用func2，不会再使用func1，那么本应该销毁掉func1里面的所有变量，由于这中现象的方式就不会被销毁，其名字空间也不会被释放，这种现象叫做闭包现象。（自己理解的，不是官方定义）</li>
+<li>用途： 此概念一般使用在装饰器中<h2 id="装饰器"><a href="#装饰器" class="headerlink" title="装饰器"></a>装饰器</h2></li>
+<li>当我们对原有的程序需要新增一个功能时，需要遵循开放-封闭原则</li>
+<li>开放封闭原则<ul>
+<li>封闭：不能为了增加一个新功能，修改原来已经写好并且可运行的代码，也不能修改原来的调用方式</li>
+<li>开放：可对原有功能进行拓展，从而实现新增的功能</li>
+</ul>
+</li>
+<li>以实例来讲述装饰器的实现、开放-封闭原则、以及闭包现象的使用。</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#假设我们做了一个视频网站的页面</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">home</span><span class="params">()</span>:</span></span><br><span class="line">    print(<span class="string">"---欢迎进入我们网站首页---"</span>)</span><br><span class="line">    </span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">us</span><span class="params">()</span>:</span></span><br><span class="line">    print(<span class="string">"---欢迎进入欧美专区---"</span>)</span><br><span class="line">    </span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">jan</span><span class="params">()</span>:</span></span><br><span class="line">    print(<span class="string">"---欢迎进入日韩专区---"</span>)</span><br><span class="line">    </span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">chat</span><span class="params">()</span>:</span></span><br><span class="line">    print(<span class="string">"--欢迎进入激情果聊专区--"</span>)</span><br><span class="line">    </span><br><span class="line"><span class="comment">#进入页面的调用方法</span></span><br><span class="line"><span class="comment">#进入首页</span></span><br><span class="line">home()</span><br><span class="line"><span class="comment">#进入欧美</span></span><br><span class="line">us()</span><br><span class="line"><span class="comment">#进入果聊</span></span><br><span class="line">chat()</span><br></pre></td></tr></table></figure>
+
+<pre><code>---欢迎进入我们网站首页---
+---欢迎进入欧美专区---
+--欢迎进入激情果聊专区--</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#由于建立初期，使用免费政策，现在已经积累了一定用户量，服务器和宽带也要升级了，因此有些火爆的专区需要搞vip收费</span></span><br><span class="line"><span class="comment">#需要我们新增一个认证功能，对于进入欧美和果聊专区的用户需要进行账号密码的认证。</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#模拟一个账号信息,一般以一个字典的形式出现</span></span><br><span class="line">account = &#123;</span><br><span class="line">    <span class="string">"is_auth"</span>:<span class="literal">False</span>, <span class="comment"># 代表该账号是否已通过认证，默认没有通过认证为False，使用账号密码认证通过后，状态改为True</span></span><br><span class="line">    <span class="string">"acc_name"</span>:<span class="string">"laohuang"</span>, <span class="comment">#代表账号名称</span></span><br><span class="line">    <span class="string">"acc_passwd"</span>:<span class="string">"123456"</span>  <span class="comment">#代表账号密码</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">#创建一个认证功能的函数</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">auth</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="comment">#首先判断账号是否被认证</span></span><br><span class="line">    <span class="keyword">if</span> account[<span class="string">"is_auth"</span>] <span class="keyword">is</span> <span class="literal">False</span>:</span><br><span class="line">        <span class="comment">#没有被认证时，需要对账号进行认证</span></span><br><span class="line">        name = input(<span class="string">"请输入您的账号，按回车键结束"</span>)</span><br><span class="line">        <span class="comment">#认证账号</span></span><br><span class="line">        <span class="keyword">if</span> name == account[<span class="string">"acc_name"</span>]:</span><br><span class="line">            <span class="comment">#开始对密码进行认证</span></span><br><span class="line">            passwd = input(<span class="string">"请输入您的密码，按回车键结束"</span>)</span><br><span class="line">            <span class="comment">#认证密码</span></span><br><span class="line">            <span class="keyword">if</span> passwd == account[<span class="string">"acc_passwd"</span>]:</span><br><span class="line">                print(<span class="string">"尊敬的用户%s"</span> % name,<span class="string">"欢迎您的登录！"</span>)</span><br><span class="line">                <span class="comment">#更改账号的认证状态为：已认证</span></span><br><span class="line">                account[<span class="string">"is_auth"</span>] = <span class="literal">True</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                <span class="comment">#密码错误时，提示有误</span></span><br><span class="line">                print(<span class="string">"您输入的密码有误"</span>)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="comment">#账号错误时，提示有误</span></span><br><span class="line">            print(<span class="string">"您输入的账号有误"</span>)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        print(<span class="string">"检测到您已登录过"</span>)</span><br><span class="line">    <span class="keyword">return</span> </span><br><span class="line"></span><br><span class="line"><span class="comment">#原来的页面</span></span><br><span class="line"><span class="comment">#首先判断账号的状态是否被认证</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">home</span><span class="params">()</span>:</span></span><br><span class="line">    print(<span class="string">"---欢迎进入我们网站首页---"</span>)</span><br><span class="line">    </span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">us</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="comment">#在这个位置添加我们写好的认证函数，这样调用该登录函数时，会首先执行认证函数</span></span><br><span class="line">    auth()    </span><br><span class="line">    print(<span class="string">"---欢迎进入欧美专区---"</span>)</span><br><span class="line">    </span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">jan</span><span class="params">()</span>:</span></span><br><span class="line">    print(<span class="string">"---欢迎进入日韩专区---"</span>)</span><br><span class="line">    </span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">chat</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="comment">#在这个位置添加我们写好的认证函数，这样调用该登录函数时，会首先执行认证函数</span></span><br><span class="line">    auth()</span><br><span class="line">    print(<span class="string">"--欢迎进入激情果聊专区--"</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#测试，登录果聊专区</span></span><br><span class="line">chat()</span><br><span class="line">us()</span><br></pre></td></tr></table></figure>
+
+<pre><code>请输入您的账号，按回车键结束laohuang
+请输入您的密码，按回车键结束123456
+尊敬的用户laohuang 欢迎您的登录！
+--欢迎进入激情果聊专区--
+检测到您已登录过
+---欢迎进入欧美专区---</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#功能已经实现，但是这个代码会被一顿臭骂，主要原因就是因为你修改了原来的登录模块的代码，我们要遵守开放-封闭原则，不能对以完成的代码进行修改。</span></span><br><span class="line"><span class="comment">#因此需要我们换一种方式</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#模拟一个账号信息,一般以一个字典的形式出现</span></span><br><span class="line">account = &#123;</span><br><span class="line">    <span class="string">"is_auth"</span>:<span class="literal">False</span>, <span class="comment"># 代表该账号是否已通过认证，默认没有通过认证为False，使用账号密码认证通过后，状态改为True</span></span><br><span class="line">    <span class="string">"acc_name"</span>:<span class="string">"laohuang"</span>, <span class="comment">#代表账号名称</span></span><br><span class="line">    <span class="string">"acc_passwd"</span>:<span class="string">"123456"</span>  <span class="comment">#代表账号密码</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">#创建一个认证功能的函数</span></span><br><span class="line"><span class="comment">#括号内加入一个形参叫func_name</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">auth</span><span class="params">(func_name)</span>:</span></span><br><span class="line">    <span class="comment">#首先判断账号是否被认证</span></span><br><span class="line">    <span class="keyword">if</span> account[<span class="string">"is_auth"</span>] <span class="keyword">is</span> <span class="literal">False</span>:</span><br><span class="line">        <span class="comment">#没有被认证时，需要对账号进行认证</span></span><br><span class="line">        name = input(<span class="string">"请输入您的账号，按回车键结束"</span>)</span><br><span class="line">        <span class="comment">#认证账号</span></span><br><span class="line">        <span class="keyword">if</span> name == account[<span class="string">"acc_name"</span>]:</span><br><span class="line">            <span class="comment">#开始对密码进行认证</span></span><br><span class="line">            passwd = input(<span class="string">"请输入您的密码，按回车键结束"</span>)</span><br><span class="line">            <span class="comment">#认证密码</span></span><br><span class="line">            <span class="keyword">if</span> passwd == account[<span class="string">"acc_passwd"</span>]:</span><br><span class="line">                print(<span class="string">"尊敬的用户%s"</span> % name,<span class="string">"欢迎您的登录！"</span>)</span><br><span class="line">                <span class="comment">#更改账号的认证状态为：已认证</span></span><br><span class="line">                account[<span class="string">"is_auth"</span>] = <span class="literal">True</span></span><br><span class="line">                <span class="comment">#当认证通过，就将func_name作为函数执行。</span></span><br><span class="line">                func_name()</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                <span class="comment">#密码错误时，提示有误</span></span><br><span class="line">                print(<span class="string">"您输入的密码有误"</span>)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="comment">#账号错误时，提示有误</span></span><br><span class="line">            print(<span class="string">"您输入的账号有误"</span>)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        print(<span class="string">"检测到您已登录过"</span>)</span><br><span class="line">        func_name()</span><br><span class="line">    <span class="keyword">return</span> </span><br><span class="line"></span><br><span class="line"><span class="comment">#原来的页面</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">home</span><span class="params">()</span>:</span></span><br><span class="line">    print(<span class="string">"---欢迎进入我们网站首页---"</span>)</span><br><span class="line">    </span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">us</span><span class="params">()</span>:</span></span><br><span class="line">    print(<span class="string">"---欢迎进入欧美专区---"</span>)</span><br><span class="line">    </span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">jan</span><span class="params">()</span>:</span></span><br><span class="line">    print(<span class="string">"---欢迎进入日韩专区---"</span>)</span><br><span class="line">    </span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">chat</span><span class="params">()</span>:</span></span><br><span class="line">    print(<span class="string">"--欢迎进入激情果聊专区--"</span>)</span><br><span class="line"></span><br><span class="line">    </span><br><span class="line"></span><br><span class="line"><span class="comment">#测试，登录果聊专区</span></span><br><span class="line">auth(chat)</span><br><span class="line">auth(us)</span><br></pre></td></tr></table></figure>
+
+<pre><code>请输入您的账号，按回车键结束laohuang
+请输入您的密码，按回车键结束123456
+尊敬的用户laohuang 欢迎您的登录！
+--欢迎进入激情果聊专区--
+检测到您已登录过
+---欢迎进入欧美专区---</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#上面的代码没有修改原有的功能代码了，但是还是不行！</span></span><br><span class="line"><span class="comment">#为啥呢？ 因为咱们修改了原有的登录调用方式，原来使用chat()进行登录，现在需要使用auth(chat)进行登录，依旧不满足开放-封闭原则</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">#模拟一个账号信息,一般以一个字典的形式出现</span></span><br><span class="line">account = &#123;</span><br><span class="line">    <span class="string">"is_auth"</span>:<span class="literal">False</span>, <span class="comment"># 代表该账号是否已通过认证，默认没有通过认证为False，使用账号密码认证通过后，状态改为True</span></span><br><span class="line">    <span class="string">"acc_name"</span>:<span class="string">"laohuang"</span>, <span class="comment">#代表账号名称</span></span><br><span class="line">    <span class="string">"acc_passwd"</span>:<span class="string">"123456"</span>  <span class="comment">#代表账号密码</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">#创建一个认证功能的函数，叫做auth函数</span></span><br><span class="line"><span class="comment">#括号内加入一个形参叫func_name</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">auth</span><span class="params">(func_name)</span>:</span></span><br><span class="line">    <span class="comment">#在创建认证功能函数之后，先不直接开始写认证流程，而是再建立一个函数inner，在最新的函数中写认证流程，并指定auth函数的return结果为inner。</span></span><br><span class="line">    <span class="comment">#换个说话，我们将具体的认证流程包装了一下，变成了一个新的函数inner，将这个函数放到auth函数中，当执行auth函数时，结果就为inner。</span></span><br><span class="line">    <span class="comment">#这么做的目的是:当我们执行auth函数后，执行结果就是代表真正的认证流程的inner函数名称。</span></span><br><span class="line">    <span class="comment">#依据就是是在python中可以用一个别名+括号()的形式取运行一个函数的执行结果</span></span><br><span class="line">    <span class="comment">#因此想要继续调用chat()作为登录函数的话，我们可以将原本的登录方式auth(char)起一个别名叫做chat，因此就可以使用chat()来运行函数inner了</span></span><br><span class="line">    <span class="comment">#使用chat()就相当于使用inner(),使用inner()就是在走认证流程</span></span><br><span class="line">    <span class="comment">#这样我们就实现了使用原来的调用方式来走认证流程。</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">inner</span><span class="params">()</span>:</span></span><br><span class="line">        <span class="comment">#首先判断账号是否被认证</span></span><br><span class="line">        <span class="keyword">if</span> account[<span class="string">"is_auth"</span>] <span class="keyword">is</span> <span class="literal">False</span>:</span><br><span class="line">            <span class="comment">#没有被认证时，需要对账号进行认证</span></span><br><span class="line">            name = input(<span class="string">"请输入您的账号，按回车键结束"</span>)</span><br><span class="line">            <span class="comment">#认证账号</span></span><br><span class="line">            <span class="keyword">if</span> name == account[<span class="string">"acc_name"</span>]:</span><br><span class="line">                <span class="comment">#开始对密码进行认证</span></span><br><span class="line">                passwd = input(<span class="string">"请输入您的密码，按回车键结束"</span>)</span><br><span class="line">                <span class="comment">#认证密码</span></span><br><span class="line">                <span class="keyword">if</span> passwd == account[<span class="string">"acc_passwd"</span>]:</span><br><span class="line">                    print(<span class="string">"尊敬的用户%s"</span> % name,<span class="string">"欢迎您的登录！"</span>)</span><br><span class="line">                    <span class="comment">#更改账号的认证状态为：已认证</span></span><br><span class="line">                    account[<span class="string">"is_auth"</span>] = <span class="literal">True</span></span><br><span class="line">                    <span class="comment">#当认证通过，就将func_name作为函数执行。</span></span><br><span class="line">                    func_name()</span><br><span class="line">                <span class="keyword">else</span>:</span><br><span class="line">                    <span class="comment">#密码错误时，提示有误</span></span><br><span class="line">                    print(<span class="string">"您输入的密码有误"</span>)</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                <span class="comment">#账号错误时，提示有误</span></span><br><span class="line">                print(<span class="string">"您输入的账号有误"</span>)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            print(<span class="string">"检测到您已登录过"</span>)</span><br><span class="line">            func_name()</span><br><span class="line">    <span class="comment">#指定auth函数的执行结果为inner</span></span><br><span class="line">    <span class="keyword">return</span> inner</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">#原来的页面</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">home</span><span class="params">()</span>:</span></span><br><span class="line">    print(<span class="string">"---欢迎进入我们网站首页---"</span>)</span><br><span class="line">    </span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">us</span><span class="params">()</span>:</span></span><br><span class="line">    print(<span class="string">"---欢迎进入欧美专区---"</span>)</span><br><span class="line">    </span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">jan</span><span class="params">()</span>:</span></span><br><span class="line">    print(<span class="string">"---欢迎进入日韩专区---"</span>)</span><br><span class="line">    </span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">chat</span><span class="params">()</span>:</span></span><br><span class="line">    print(<span class="string">"--欢迎进入激情果聊专区--"</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#最后需要将登录函数装饰一下，可以继续使用原来的登录方式进行调用。</span></span><br><span class="line"><span class="comment">#chat等于auth(chat)的执行结果return，即inner</span></span><br><span class="line">chat = auth(chat)</span><br><span class="line"><span class="comment">#us等于auth(us)的执行结果return，即inner</span></span><br><span class="line">us = auth(us)</span><br><span class="line"></span><br><span class="line"><span class="comment">#测试，登录果聊专区</span></span><br><span class="line"><span class="comment">#使用chat() 相当于使用inner()</span></span><br><span class="line">chat()</span><br><span class="line"><span class="comment">#使用us() 相当于使用inner()</span></span><br><span class="line">us()</span><br></pre></td></tr></table></figure>
+
+<pre><code>请输入您的账号，按回车键结束laohuang
+请输入您的密码，按回车键结束123456
+尊敬的用户laohuang 欢迎您的登录！
+--欢迎进入激情果聊专区--
+检测到您已登录过
+---欢迎进入欧美专区---</code></pre><h2 id="闭包现象再次分析"><a href="#闭包现象再次分析" class="headerlink" title="闭包现象再次分析"></a>闭包现象再次分析</h2><ul>
+<li>上面的例子就又一次展现了闭包现象。<ul>
+<li>我们给auth函数传了一个参数,chat或者时us，这个函数执行完毕后，得出的结果是inner</li>
+<li>当使用inner函数时，用到了当时我们给auth函数传的参数，正是由于闭包现象，虽然auth执行完毕，但是给auth依旧留着给inner函数使用，没有销毁。</li>
+<li>因此我们调用chat()时，没有特地赋予参数，但是inner还是能够得到他需要的参数。</li>
+</ul>
+</li>
+</ul>
+<h2 id="列表生成式"><a href="#列表生成式" class="headerlink" title="列表生成式"></a>列表生成式</h2><ul>
+<li>用简单的方法修改原有的列表内容</li>
+<li>格式: a = [i+1 for i in a]  a代表原有的列表，通过循环，让列表中的每个值都加1</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#列表生成式示例</span></span><br><span class="line">a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]</span><br><span class="line">a = [i+<span class="number">1</span> <span class="keyword">for</span> i <span class="keyword">in</span> a]</span><br><span class="line">print(a)</span><br></pre></td></tr></table></figure>
+
+<pre><code>[2, 3, 4, 5, 6]</code></pre><h2 id="匿名函数"><a href="#匿名函数" class="headerlink" title="匿名函数"></a>匿名函数</h2><ul>
+<li>函数格式： lambda x,y:x+y  <ul>
+<li>x y 表示匿名函数的形参</li>
+<li>x+y 表示匿名函数执行后返回的结果</li>
+<li>对于执行内容，一定要非常简单，不能有循环、判断等操作</li>
+<li>但是对于判断来说，使用三元表达式，也可以，但终归来说执行内容一定要能一句话表达完才行。</li>
+</ul>
+</li>
+<li>简单的常规函数可以转换成匿名函数</li>
+<li>看起来这个匿名函数不常用，而且也没啥大用，他能表示的，常规函数都能表示，他不能表示的，常规函数也能表示</li>
+<li>主要使用匿名函数与其他函数进行搭配使用，比如map函数与匿名函数使用，下面有例子<ul>
+<li>比如map函数与匿名函数搭配的主要意义在于，map函数需要引用函数，常规来说我们需要声明一个，随后用于调用</li>
+<li>如果使用匿名函数的话，就避免花功夫我们声明，也可以直接看到map使用的函数内容是什么。</li>
+<li>还有一点最主要的原因：就是熟练掌握后，可以装逼使用</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#匿名函数举例</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#先写一个常规函数</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">function1</span><span class="params">(x,y)</span>:</span></span><br><span class="line">    <span class="comment"># function1函数执行结果返回参数x与y的和</span></span><br><span class="line">    <span class="keyword">return</span> x+y</span><br><span class="line"><span class="comment">#打印出function的执行结果</span></span><br><span class="line">print(<span class="string">"常规函数的执行结果："</span>,function1(<span class="number">2</span>,<span class="number">3</span>))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">#写一个和常规函数同样功能的匿名函数</span></span><br><span class="line"><span class="comment">#需要将匿名函数赋予给一个变量</span></span><br><span class="line">a = <span class="keyword">lambda</span> x,y:x+y</span><br><span class="line"><span class="comment">#打印出匿名函数的执行结果</span></span><br><span class="line">print(<span class="string">"匿名函数的执行结果："</span>,a(<span class="number">2</span>,<span class="number">3</span>))</span><br></pre></td></tr></table></figure>
+
+<pre><code>常规函数的执行结果： 5
+匿名函数的执行结果： 5</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#map函数与匿名函数搭配</span></span><br><span class="line"><span class="comment">#首先讲一下map函数的含义，map函数有两个形参：函数与可循环数据（比如字典、列表、元组）</span></span><br><span class="line"><span class="comment">#通过map(func,iterables) 可以将字段或列表中可循环的数据都依次加载到func函数中，进行执行，得出函数运算过后的结果</span></span><br><span class="line">a = map(<span class="keyword">lambda</span> x:x*<span class="number">2</span>,[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>])</span><br><span class="line"><span class="comment">#通过map函数得到的结果会存到一个地址下，直接print出map结果，会发现是一个内存地址</span></span><br><span class="line">print(<span class="string">"map结果实际是内存地址:"</span>,a)</span><br><span class="line"><span class="comment">#需要输出实际数据的话，需要使用for循环</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> a:</span><br><span class="line">    print(i)</span><br></pre></td></tr></table></figure>
+
+<pre><code>map结果实际是内存地址: &lt;map object at 0x000002869C31AA08&gt;
+2
+4
+6
+8
+10</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#匿名函数的执行内容使用三元表达式来实现判断 </span></span><br><span class="line"><span class="comment">#使用匿名函数实现两数大小比较，输出最大的数</span></span><br><span class="line">a = <span class="keyword">lambda</span> x,y:x <span class="keyword">if</span> x&gt;y <span class="keyword">else</span> y</span><br><span class="line">print(a(<span class="number">4</span>,<span class="number">2</span>))</span><br></pre></td></tr></table></figure>
+
+<pre><code>4</code></pre><h2 id="递归函数"><a href="#递归函数" class="headerlink" title="递归函数"></a>递归函数</h2><ul>
+<li>通过函数可以实现递归</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#递归举例</span></span><br><span class="line"><span class="comment">#输入一个数字，每次除以2，什么时候商为0，即停止运行</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">function1</span><span class="params">(n)</span>:</span></span><br><span class="line">    print(n)</span><br><span class="line">    n = int(n/<span class="number">2</span>)</span><br><span class="line">    <span class="keyword">if</span> n&gt;<span class="number">0</span> :</span><br><span class="line">        function1(n)</span><br><span class="line">    <span class="keyword">return</span></span><br><span class="line"></span><br><span class="line">function1(<span class="number">100</span>)</span><br></pre></td></tr></table></figure>
+
+<pre><code>100
+50
+25
+12
+6
+3
+1</code></pre><h2 id="递归深化习题"><a href="#递归深化习题" class="headerlink" title="递归深化习题"></a>递归深化习题</h2><ul>
+<li>有一个由小到大顺序列表[‘1’,’3’,’4’,’6’,’7’,’8’,’9’,’11’,’15’,’16’,’17’,’19’,’21’,’22’,’25’,’29’,’33’,’38’,’69’,’102’]</li>
+<li>使用二分查找的算法，算出一个数是否在这个列表中</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#有一个由小到大顺序列表['1','3','4','6','7','8','9','11','15','16','17','19','21','22','25','29','33','38','69','102']</span></span><br><span class="line"><span class="comment">#输入一个数，判断是否在这个列表中</span></span><br><span class="line"><span class="comment">#思路：首先需要计算出列表中有几个值，这样可以知道最后一个值所在的序号和第一个值所在的序号</span></span><br><span class="line"><span class="comment">#通过第一个值所在位置和最后一个值所在的位置，可以算出二分计算使用的最中间的值是哪个，使用该值与输入值进行对比</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#将列表赋值给a</span></span><br><span class="line">a = [<span class="string">'1'</span>,<span class="string">'3'</span>,<span class="string">'4'</span>,<span class="string">'6'</span>,<span class="string">'7'</span>,<span class="string">'8'</span>,<span class="string">'9'</span>,<span class="string">'11'</span>,<span class="string">'15'</span>,<span class="string">'16'</span>,<span class="string">'17'</span>,<span class="string">'19'</span>,<span class="string">'21'</span>,<span class="string">'22'</span>,<span class="string">'25'</span>,<span class="string">'29'</span>,<span class="string">'33'</span>,<span class="string">'38'</span>,<span class="string">'69'</span>,<span class="string">'102'</span>]</span><br><span class="line"><span class="comment">#建立一个函数叫func1，由三个参数x,y,n</span></span><br><span class="line"><span class="comment">#x为比较范围中最小数所在序号，调用函数不赋予x变量对象时，默认使用x=1</span></span><br><span class="line"><span class="comment">#y为比较范围中最大值所在序号，调用函数不赋予y变量对象时，默认使用int(a.index(a[-1]))+1,也就是列表中最后一个值所在的位置</span></span><br><span class="line"><span class="comment">#n为输入的值</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">func1</span><span class="params">(n,x=<span class="number">1</span>,y=int<span class="params">(a.index<span class="params">(a[<span class="number">-1</span>])</span>)</span>+<span class="number">1</span>)</span>:</span></span><br><span class="line">    <span class="comment">#使用x，y算出比较值所在的位置，用变量i表示</span></span><br><span class="line">    i = int((y-x)/<span class="number">2</span>)+x</span><br><span class="line">    <span class="comment">#通过位置算出比较值，并于输入值进行对比</span></span><br><span class="line">    <span class="keyword">if</span> int(a[i<span class="number">-1</span>]) == n :</span><br><span class="line">        <span class="comment">#匹配上，输出结果</span></span><br><span class="line">        print(<span class="string">"在列表中找到相匹配的数字%d,该数字所在列表的位置是%d个"</span> % (n,i))</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="comment">#没有匹配上，判断输入值是否小于比较值</span></span><br><span class="line">        <span class="keyword">if</span> int(a[i<span class="number">-1</span>]) &gt; n :</span><br><span class="line">            <span class="comment">#如果小于比较值，判断最小数所在的位置与最大数的位置是否是同一个序号</span></span><br><span class="line">            <span class="keyword">if</span> x != y:</span><br><span class="line">                <span class="comment">#如果不是同一个序号，可以将搜索范围变小，即将最大值选为比较值的前一个数</span></span><br><span class="line">                y = i<span class="number">-1</span></span><br><span class="line">                <span class="comment">#再次重新执行func函数，算出最新的比较值与输入值进行新一轮的比较</span></span><br><span class="line">                func1(n,x,y)      </span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                <span class="comment">#如果是同一个序号，代表已经到达了最小范围，即没有符合配合条件的。</span></span><br><span class="line">                print(<span class="string">"表中没有找到相匹配的"</span>)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="comment">#如果大于比较值，判断最小数所在的位置与最大数的位置是否是同一个序号</span></span><br><span class="line">            <span class="keyword">if</span> x != y:</span><br><span class="line">                <span class="comment">#如果不是同一个序号，可以将搜索范围变小，即将最小值选为比较值的下一个数</span></span><br><span class="line">                x = i+<span class="number">1</span></span><br><span class="line">                <span class="comment">#再次重新执行func函数，算出最新的比较值与输入值进行新一轮的比较</span></span><br><span class="line">                func1(n,x,y)</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                <span class="comment">#如果是同一个序号，代表已经到达了最小范围，即没有符合配合条件的。</span></span><br><span class="line">                print(<span class="string">"表中没有找到相匹配的"</span>)</span><br><span class="line"></span><br><span class="line">func1(<span class="number">22</span>)</span><br></pre></td></tr></table></figure>
+
+<pre><code>在列表中找到相匹配的数字22,该数字所在列表的位置是14个</code></pre><h2 id="内置函数"><a href="#内置函数" class="headerlink" title="内置函数"></a>内置函数</h2><ul>
+<li>abs 求绝对值</li>
+<li>ascii() 将内容转换成ascii格式,()内填写需要转换的内容</li>
+<li>bin() 转换二进制</li>
+<li>bool() 判断一个数据结构是true还是false<ul>
+<li>字典、列表、元组为空，bool判断都为false。</li>
+<li>字典、列表、元组有值，bool判断为true</li>
+<li>bool(0) 代表false</li>
+<li>bool(None) 代表false</li>
+</ul>
+</li>
+<li>all() 对一个可循环的数据结构内所有数据进行判断<ul>
+<li>字典、列表、元组有元素为0或None，其all函数结果就为false</li>
+<li>只有所有元素都为true，结果才为true</li>
+<li>有一个元素为false，结果就为false</li>
+</ul>
+</li>
+<li>any() 对一个可循环的数据结构内所有数据进行判断<ul>
+<li>只有所有元素都为false，结果才为false</li>
+<li>有一个元素为true，结果就为true  </li>
+</ul>
+</li>
+<li>bytearray() 可以将字节转换为一个数组，用于字节修改</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#bytearray举例</span></span><br><span class="line"><span class="comment">#创建一个变量a</span></span><br><span class="line">a = <span class="string">"中国"</span></span><br><span class="line"><span class="comment">#改变变量a的编码格式为gbk</span></span><br><span class="line">a = a.encode(<span class="string">"gbk"</span>)</span><br><span class="line"><span class="comment">#变量a变成字节，如果想要对某个字节进行修改，比如xd0进行修改</span></span><br><span class="line">print(a[<span class="number">1</span>])</span><br><span class="line"><span class="comment">#使用bytearray</span></span><br><span class="line">b = bytearray(a)</span><br><span class="line">print(b)</span><br><span class="line"><span class="comment">#修改xd0</span></span><br><span class="line">b[<span class="number">1</span>]=<span class="number">186</span></span><br><span class="line">print(b)</span><br><span class="line"><span class="comment">#修改成功</span></span><br><span class="line"><span class="comment">#看看b变量转换成中文的含义</span></span><br><span class="line">print(b.decode(<span class="string">"gbk"</span>))</span><br></pre></td></tr></table></figure>
+
+<pre><code>208
+bytearray(b&apos;\xd6\xd0\xb9\xfa&apos;)
+bytearray(b&apos;\xd6\xba\xb9\xfa&apos;)
+趾国</code></pre><ul>
+<li>bytes() 转换成二进制</li>
+<li>dir() 查看可调用的属性</li>
+<li>divmod 返回出发的商和余数</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">divmod(<span class="number">5</span>,<span class="number">2</span>)</span><br></pre></td></tr></table></figure>
+
+
+
+
+<pre><code>(2, 1)</code></pre><ul>
+<li>enumerate() 返回列表的索引和元素</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]</span><br><span class="line">enumerate(a)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> enumerate(a):</span><br><span class="line">    print(i)</span><br></pre></td></tr></table></figure>
+
+<pre><code>(0, 1)
+(1, 2)
+(2, 3)
+(3, 4)
+(4, 5)</code></pre><ul>
+<li>eval() 可以把字符串形式的列表、字典、tuple、set再转换成其原有的数据类型</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">a = [<span class="string">"laozhang"</span>,<span class="string">"laowang"</span>,<span class="string">"laoliu"</span>]</span><br><span class="line"><span class="comment">#测试取出列表中的第一个元素</span></span><br><span class="line">print(a[<span class="number">0</span>])</span><br><span class="line"><span class="comment"># 将变量a的对象变成字符串格式</span></span><br><span class="line">a = str(a)</span><br><span class="line"><span class="comment">#验证一下</span></span><br><span class="line">print(type(a))</span><br><span class="line"><span class="comment">#一般我们的列表或字典存到文件中，就变化了字符串</span></span><br><span class="line"><span class="comment">#如果这个时候我们取读字符串格式的数据时，取出第一个元素的内容就改变了</span></span><br><span class="line">print(a[<span class="number">0</span>])</span><br><span class="line"><span class="comment">#这个时候再想取出laozhang或laowang就麻烦了，但使用eval可以再次让你体验列表的快感</span></span><br><span class="line">b = eval(a)</span><br><span class="line"><span class="comment">#看b的类型，应该变成list</span></span><br><span class="line">print(type(b))</span><br><span class="line"><span class="comment">#再次查询第一个元素</span></span><br><span class="line">print(b[<span class="number">0</span>])</span><br></pre></td></tr></table></figure>
+
+<pre><code>laozhang
+&lt;class &apos;str&apos;&gt;
+[
+&lt;class &apos;list&apos;&gt;
+laozhang</code></pre><ul>
+<li>exec 可以把字符串格式的代码，及逆行解义和执行</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="string">'print("hello world")'</span></span><br><span class="line">print(type(a))</span><br><span class="line">exec(a)</span><br></pre></td></tr></table></figure>
+
+<pre><code>&lt;class &apos;str&apos;&gt;
+hello world</code></pre><ul>
+<li>filter 对列表、字典等过滤，与匿名函数配合，过滤出符合函数条件的数据</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">a = filter(<span class="keyword">lambda</span> x:x&gt;<span class="number">5</span>,[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>,<span class="number">10</span>])</span><br><span class="line"><span class="comment">#将大于5的都输出出来</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> a:</span><br><span class="line">    print(i)</span><br></pre></td></tr></table></figure>
+
+<pre><code>6
+7
+8
+9
+10</code></pre><ul>
+<li>isinstance() 判断某个变量是否为某种类型</li>
+<li>max() 求最大值</li>
+<li>min() 求最小值</li>
+<li>sum() 求和</li>
+<li>round() 可以把小数四舍五入, round(10.56,1) 结果为10.6</li>
+<li>zip 可以把两个或多个列表拼成一起</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>]</span><br><span class="line">b = [<span class="string">"小猫"</span>,<span class="string">"小狗"</span>,<span class="string">"小猪"</span>]</span><br><span class="line">c = zip(a,b)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> c:</span><br><span class="line">    print(i)</span><br></pre></td></tr></table></figure>
+
+<pre><code>(1, &apos;小猫&apos;)
+(2, &apos;小狗&apos;)
+(3, &apos;小猪&apos;)</code></pre><h2 id="生成器-generator"><a href="#生成器-generator" class="headerlink" title="生成器 generator"></a>生成器 generator</h2><ul>
+<li>定义：在python中，这种一边循环一边计算后面元素的机制，叫做生成器</li>
+<li>生成器主要适用于那些，数值给定的范围很大，但是由于判断条件，只会用到一小部分的情况</li>
+<li>简单的说，与其将数值可能等于的整个范围加载到内存中，再进行遍历，不如直接通过生成器不停模拟出下一次出现的数字，这样只既节省空间也节省时间。</li>
+<li>格式为：(x * x for x in range(10)) 解释为将0-10的数字依次取出并赋予给变量x，之后经过x*x的运算产生结果，该结果就是生成器的结果。</li>
+<li>这种生成器也叫做惰性运算</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#定义一个生成器</span></span><br><span class="line">generator1=(i**<span class="number">2</span> <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">5</span>))</span><br><span class="line"><span class="comment"># 使用next函数使用调用生成器</span></span><br><span class="line"><span class="comment"># 每调用一次就依次从range里取数值进行运算。</span></span><br><span class="line">next(generator1)</span><br></pre></td></tr></table></figure>
+
+
+
+
+<pre><code>0</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">next(generator1)</span><br></pre></td></tr></table></figure>
+
+
+
+
+<pre><code>1</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">next(generator1)</span><br></pre></td></tr></table></figure>
+
+
+
+
+<pre><code>4</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">next(generator1)</span><br></pre></td></tr></table></figure>
+
+
+
+
+<pre><code>9</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">next(generator1)</span><br></pre></td></tr></table></figure>
+
+
+
+
+<pre><code>16</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#定义一个生成器</span></span><br><span class="line">generator1=(i**<span class="number">2</span> <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">5</span>))</span><br><span class="line"><span class="comment">#使用for循环运行生成器</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> generator1:</span><br><span class="line">    print(i)</span><br></pre></td></tr></table></figure>
+
+<pre><code>0
+1
+4
+9
+16</code></pre><h2 id="函数生成器"><a href="#函数生成器" class="headerlink" title="函数生成器"></a>函数生成器</h2><ul>
+<li>上述的生成器虽然可以模拟推导下一个数字，但是只是适用于较为简单的规律，一旦复杂起来，无法使用一句进行实现</li>
+<li>因此使用函数生成器，应对复杂的规律，依旧可以进行模拟推导</li>
+<li>将函数中输出用的print改成yield即可</li>
+<li>yield  在函数中表明暂停并输出的作用。等下一次调用函数的时候，会将上次没执行完的继续执行</li>
+<li>灵活使用yield 可以在运行第一个函数时，突然跳到第二个函数开始执行，之后还可以再返回到第一个函数继续执行。</li>
+<li>yield要说明的是，它不是print，不是打印，而是相当于return，表示是暂停函数时，这个函数的返回结果。</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#使用函数实现100以内的斐波那契数</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">func1</span><span class="params">(x,y)</span>:</span></span><br><span class="line">    z = x+y</span><br><span class="line">    <span class="keyword">if</span> z &lt; <span class="number">100</span>:</span><br><span class="line">        print(z)</span><br><span class="line">        x = y</span><br><span class="line">        y = z</span><br><span class="line">        func1(x,y)</span><br><span class="line">        </span><br><span class="line">func1(<span class="number">1</span>,<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
+
+<pre><code>2
+3
+5
+8
+13
+21
+34
+55
+89</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#使用函数实现100以内的斐波那契数(第二种实现方式)</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">func1</span><span class="params">()</span>:</span></span><br><span class="line">    x = <span class="number">1</span></span><br><span class="line">    y = <span class="number">1</span></span><br><span class="line">    <span class="keyword">while</span> x+y &lt; <span class="number">100</span>:</span><br><span class="line">        z = x+y</span><br><span class="line">        x = y </span><br><span class="line">        y = z  </span><br><span class="line">        print(z)</span><br><span class="line"></span><br><span class="line">func1()</span><br></pre></td></tr></table></figure>
+
+<pre><code>2
+3
+5
+8
+13
+21
+34
+55
+89</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#使用函数生成器</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">func1</span><span class="params">()</span>:</span></span><br><span class="line">    x = <span class="number">1</span></span><br><span class="line">    y = <span class="number">1</span></span><br><span class="line">    <span class="keyword">while</span> x+y &lt; <span class="number">100</span>:</span><br><span class="line">        z = x+y</span><br><span class="line">        x = y </span><br><span class="line">        y = z        </span><br><span class="line">        <span class="keyword">yield</span> (z)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 输出结果变成了内存地址</span></span><br><span class="line">func1()</span><br></pre></td></tr></table></figure>
+
+
+
+
+<pre><code>&lt;generator object func1 at 0x0000019462EB2EC8&gt;</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> func1():</span><br><span class="line">    print(i)</span><br></pre></td></tr></table></figure>
+
+<pre><code>2
+3
+5
+8
+13
+21
+34
+55
+89</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">line = func1()</span><br><span class="line">print(next(line))</span><br><span class="line">print(next(line))</span><br><span class="line">print(next(line))</span><br><span class="line">print(next(line))</span><br><span class="line">print(next(line))</span><br><span class="line"><span class="comment">#另一种调用next函数的方法</span></span><br><span class="line">print(line.__next__())</span><br></pre></td></tr></table></figure>
+
+<pre><code>2
+3
+5
+8
+13
+21</code></pre><h2 id="yield用于接收数据"><a href="#yield用于接收数据" class="headerlink" title="yield用于接收数据"></a>yield用于接收数据</h2><ul>
+<li>yield可以暂停函数并且将函数结果发送出去</li>
+<li>yield可以暂停函数并接收数据进来</li>
+<li>调用需要接收数据的函数.send(i)，可以将i的值发送给函数中需要接收数据的变量</li>
+<li>注意：接收数据的函数生成器要求第一次需要接收一个空值才可以，不能发有值的内容给他</li>
+<li>下面举例说明</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#定义一个函数</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">func1</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="comment">#定义一个变量n，并使用yield让变量n可以接收数据</span></span><br><span class="line">    n = <span class="keyword">yield</span></span><br><span class="line">    <span class="comment">#打印变量n接收到的数据</span></span><br><span class="line">    print(<span class="string">"变量n接收到的数据为"</span>,n)</span><br><span class="line"></span><br><span class="line"><span class="comment">#将函数func1赋予给一个变量x</span></span><br><span class="line">x = func1()</span><br><span class="line">    </span><br><span class="line"><span class="comment">#使用for循环，产生输入数据</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">6</span>):</span><br><span class="line">    <span class="comment">#向函数发送变量i</span></span><br><span class="line">    x.send(i)</span><br><span class="line">    </span><br><span class="line"><span class="comment">#这个就是第一次发送有值的数据给函数生成器，会提示can't send non-None value to a just-started generator</span></span><br></pre></td></tr></table></figure>
+
+
+<pre><code>---------------------------------------------------------------------------
+
+TypeError                                 Traceback (most recent call last)
+
+&lt;ipython-input-25-2a44fd5f7f61&gt; in &lt;module&gt;
+     12 for i in range(6):
+     13     #向函数发送变量i
+---&gt; 14     x.send(i)
+     15 
+     16 #这个就是第一次发送有值的数据给函数生成器，会提示can&apos;t send non-None value to a just-started generator
+
+
+TypeError: can&apos;t send non-None value to a just-started generator</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#定义一个函数</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">func1</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="comment"># 设置一个死循环，让下面定义的变量n反复进行接收，将所有发送过来的数据接收到并打印出来。</span></span><br><span class="line">    <span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">        <span class="comment">#定义一个变量n，并使用yield让变量n可以接收数据</span></span><br><span class="line">        n = <span class="keyword">yield</span></span><br><span class="line">        <span class="comment">#打印变量n接收到的数据</span></span><br><span class="line">        print(<span class="string">"变量n接收到的数据为"</span>,n)</span><br><span class="line"></span><br><span class="line"><span class="comment">#将函数func1赋予给一个变量x</span></span><br><span class="line">x = func1()</span><br><span class="line"></span><br><span class="line"><span class="comment">#在使用for循环输入数据给函数生成器之前，先发送一个None给函数生成器，这样就不会出现上述的报错了</span></span><br><span class="line">x.__next__()  <span class="comment">#这个函数就可以实现调用生成器并发送None给生成器</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#使用for循环，产生输入数据</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">10</span>):</span><br><span class="line">    <span class="comment">#调用生成器并向生成器发送i</span></span><br><span class="line">    x.send(i) </span><br><span class="line">    </span><br><span class="line"><span class="comment">#这个就是第一次发送有值的数据给函数生成器，会提示can't send non-None value to a just-started generator</span></span><br></pre></td></tr></table></figure>
+
+<pre><code>变量n接收到的数据为 0
+变量n接收到的数据为 1
+变量n接收到的数据为 2
+变量n接收到的数据为 3
+变量n接收到的数据为 4
+变量n接收到的数据为 5
+变量n接收到的数据为 6
+变量n接收到的数据为 7
+变量n接收到的数据为 8
+变量n接收到的数据为 9</code></pre><h2 id="使用生成器实现并发编程"><a href="#使用生成器实现并发编程" class="headerlink" title="使用生成器实现并发编程"></a>使用生成器实现并发编程</h2><ul>
+<li>使用yield与send函数搭配使用可以实现单线程下的多并发</li>
+<li>下面写一个菜市场同时给3家饭店送菜的程序来诠释咱们的并发</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#定义一个函数作为消费者，也就是饭店</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">consumer</span><span class="params">(name)</span>:</span></span><br><span class="line">    print(<span class="string">"-----%s饭店开门了！------"</span> % name)</span><br><span class="line">    <span class="comment">#开启while循环，保证送的菜都能接收到</span></span><br><span class="line">    <span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">        <span class="comment">#定义变量n为接收第几批菜</span></span><br><span class="line">        n = <span class="keyword">yield</span></span><br><span class="line">        print(<span class="string">"%s饭店已经接收到第%s批菜了"</span> % (name,n))</span><br><span class="line"></span><br><span class="line"><span class="comment">#创建五洲饭店</span></span><br><span class="line">wuzhou = consumer(<span class="string">"五洲"</span>)</span><br><span class="line"><span class="comment">#发送一次None给五洲</span></span><br><span class="line">wuzhou.__next__()</span><br><span class="line"><span class="comment">#创建九州饭店</span></span><br><span class="line">jiuzhou = consumer(<span class="string">"九州"</span>)</span><br><span class="line"><span class="comment">#发送一次None给九州</span></span><br><span class="line">jiuzhou.__next__()</span><br><span class="line"><span class="comment">#创建帝豪饭店</span></span><br><span class="line">dihao = consumer(<span class="string">"帝豪"</span>)</span><br><span class="line"><span class="comment">#发送一次None给帝豪</span></span><br><span class="line">dihao.__next__()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">#定义一个函数作为生产者，也就是菜市场</span></span><br><span class="line"><span class="comment">#计划给饭店送10批菜</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">10</span>):</span><br><span class="line">    i +=<span class="number">1</span></span><br><span class="line">    print(<span class="string">"----菜市场开始送第%s批菜啦-------"</span> % i)</span><br><span class="line">    <span class="comment">#将菜发给三家饭店</span></span><br><span class="line">    wuzhou.send(i)</span><br><span class="line">    jiuzhou.send(i)</span><br><span class="line">    dihao.send(i)</span><br></pre></td></tr></table></figure>
+
+<pre><code>-----五洲饭店开门了！------
+-----九州饭店开门了！------
+-----帝豪饭店开门了！------
+----菜市场开始送第1批菜啦-------
+五洲饭店已经接收到第1批菜了
+九州饭店已经接收到第1批菜了
+帝豪饭店已经接收到第1批菜了
+----菜市场开始送第2批菜啦-------
+五洲饭店已经接收到第2批菜了
+九州饭店已经接收到第2批菜了
+帝豪饭店已经接收到第2批菜了
+----菜市场开始送第3批菜啦-------
+五洲饭店已经接收到第3批菜了
+九州饭店已经接收到第3批菜了
+帝豪饭店已经接收到第3批菜了
+----菜市场开始送第4批菜啦-------
+五洲饭店已经接收到第4批菜了
+九州饭店已经接收到第4批菜了
+帝豪饭店已经接收到第4批菜了
+----菜市场开始送第5批菜啦-------
+五洲饭店已经接收到第5批菜了
+九州饭店已经接收到第5批菜了
+帝豪饭店已经接收到第5批菜了
+----菜市场开始送第6批菜啦-------
+五洲饭店已经接收到第6批菜了
+九州饭店已经接收到第6批菜了
+帝豪饭店已经接收到第6批菜了
+----菜市场开始送第7批菜啦-------
+五洲饭店已经接收到第7批菜了
+九州饭店已经接收到第7批菜了
+帝豪饭店已经接收到第7批菜了
+----菜市场开始送第8批菜啦-------
+五洲饭店已经接收到第8批菜了
+九州饭店已经接收到第8批菜了
+帝豪饭店已经接收到第8批菜了
+----菜市场开始送第9批菜啦-------
+五洲饭店已经接收到第9批菜了
+九州饭店已经接收到第9批菜了
+帝豪饭店已经接收到第9批菜了
+----菜市场开始送第10批菜啦-------
+五洲饭店已经接收到第10批菜了
+九州饭店已经接收到第10批菜了
+帝豪饭店已经接收到第10批菜了</code></pre><h2 id="迭代器"><a href="#迭代器" class="headerlink" title="迭代器"></a>迭代器</h2><ul>
+<li>我们已经知道，作用于for循环的数据类型有以下几种<ul>
+<li>一类时集合数据类型，如list、tuple、dict、set、str等</li>
+<li>一类时generator（生成器），包括生成器和带yield的generator function（函数生成器）</li>
+</ul>
+</li>
+<li>这些可以直接作用于for循环的对象统称为可迭代对象:Iterable，可迭代的意思就是可遍历的或者是可循环的</li>
+<li>可以使用isinstance() 判断一个对象是否时可遍历的或可循环的</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#在内置函数中讲解过isinstance是内置的</span></span><br><span class="line"><span class="comment">#但Iterable这个类型不是内置的，需要我们从第三方包引用一下</span></span><br><span class="line"><span class="keyword">from</span> collections <span class="keyword">import</span> Iterable <span class="comment"># 从杂货铺中引用Iterable这个概念</span></span><br><span class="line">print(isinstance([],Iterable)) <span class="comment">#列表</span></span><br><span class="line">print(isinstance(&#123;&#125;,Iterable)) <span class="comment">#字典</span></span><br><span class="line">print(isinstance(<span class="string">'abc'</span>,Iterable)) <span class="comment">#字符串</span></span><br><span class="line">print(isinstance((x <span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">100</span>)),Iterable)) <span class="comment">#生成器</span></span><br><span class="line">print(isinstance(<span class="number">100</span>,Iterable)) <span class="comment">#数字</span></span><br></pre></td></tr></table></figure>
+
+<pre><code>True
+True
+True
+True
+False</code></pre><ul>
+<li>生成器不但可以作用于for循环，还可以被next()函数不断调用并返回下一个值，知道最后抛出StopIteration错误表示无法继续返回下一个值</li>
+<li>可以被next()函数调用并不断返回下一个值的对象成为迭代器:Iterator</li>
+<li>可以使用isinstance函数判断一个对象是否是Iterator对象</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> collections <span class="keyword">import</span> Iterator <span class="comment"># 从杂货铺中引用Iterator这个概念</span></span><br><span class="line">print(isinstance([],Iterator)) <span class="comment">#列表</span></span><br><span class="line">print(isinstance(&#123;&#125;,Iterator)) <span class="comment">#字典</span></span><br><span class="line">print(isinstance(<span class="string">'abc'</span>,Iterator)) <span class="comment">#字符串</span></span><br><span class="line">print(isinstance((x <span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">100</span>)),Iterator)) <span class="comment">#生成器</span></span><br></pre></td></tr></table></figure>
+
+<pre><code>False
+False
+False
+True</code></pre><ul>
+<li>可以使用iter()函数，将对象变成Iterator迭代器对象，一般不用。</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/05/27/%E5%87%BD%E6%95%B0%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" data-id="ckaouxxo90003wkweeasj8u8m" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2020/05/27/Python%E5%B8%B8%E7%94%A8%E6%A8%A1%E5%9D%97%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Python常用模块学习笔记</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">May 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/05/27/%E5%87%BD%E6%95%B0%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">函数编程基础知识学习笔记</a>
+          </li>
+        
+          <li>
+            <a href="/2020/05/27/Python%E5%B8%B8%E7%94%A8%E6%A8%A1%E5%9D%97%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">Python常用模块学习笔记</a>
+          </li>
+        
+          <li>
+            <a href="/2020/05/27/python%E5%A5%BD%E4%B9%A0%E6%83%AF/">python好习惯</a>
+          </li>
+        
+          <li>
+            <a href="/2020/05/27/Python%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">Python基础知识学习笔记</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>

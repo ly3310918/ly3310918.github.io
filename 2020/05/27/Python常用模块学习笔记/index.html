@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Python常用模块学习笔记 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="模块的介绍 什么是模块 将多个函数分组，将相关的函数放到py文件中，正在书写的代码需要函数时直接调用py文件，避免程序代码出现成百上千个函数，体积臃肿 在python中，py文件就可以称之为模块 一个模块可由一个py文件或多个py文件构成   模块的好处 提高代码的可维护性 无论是自己写的模块、第三方的模块、内置的模块都可以被引用到我们的编程中，不必重新写一些基础的代码。 使用模块可以避免函数名和">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python常用模块学习笔记">
+<meta property="og:url" content="http://yoursite.com/2020/05/27/Python%E5%B8%B8%E7%94%A8%E6%A8%A1%E5%9D%97%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="模块的介绍 什么是模块 将多个函数分组，将相关的函数放到py文件中，正在书写的代码需要函数时直接调用py文件，避免程序代码出现成百上千个函数，体积臃肿 在python中，py文件就可以称之为模块 一个模块可由一个py文件或多个py文件构成   模块的好处 提高代码的可维护性 无论是自己写的模块、第三方的模块、内置的模块都可以被引用到我们的编程中，不必重新写一些基础的代码。 使用模块可以避免函数名和">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-05-27T04:14:15.561Z">
+<meta property="article:modified_time" content="2020-05-27T04:14:10.650Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Python常用模块学习笔记" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/05/27/Python%E5%B8%B8%E7%94%A8%E6%A8%A1%E5%9D%97%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="article-date">
+  <time datetime="2020-05-27T04:14:15.561Z" itemprop="datePublished">2020-05-27</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Python常用模块学习笔记
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="模块的介绍"><a href="#模块的介绍" class="headerlink" title="模块的介绍"></a>模块的介绍</h2><ul>
+<li>什么是模块<ul>
+<li>将多个函数分组，将相关的函数放到py文件中，正在书写的代码需要函数时直接调用py文件，避免程序代码出现成百上千个函数，体积臃肿</li>
+<li>在python中，py文件就可以称之为模块</li>
+<li>一个模块可由一个py文件或多个py文件构成</li>
+</ul>
+</li>
+<li>模块的好处<ul>
+<li>提高代码的可维护性</li>
+<li>无论是自己写的模块、第三方的模块、内置的模块都可以被引用到我们的编程中，不必重新写一些基础的代码。</li>
+<li>使用模块可以避免函数名和变量名冲突，py中写的函数名和你本体代码中的函数名哪怕重名也是不受影响的，如果都将函数直接写在本体中，就需要考虑</li>
+</ul>
+</li>
+<li>模块的分类<ul>
+<li>内置模块（标准模块、标准库、近300个）</li>
+<li>第三方模块 其他人上传到社区的模块，需要单点安装 pip install</li>
+<li>自定义模块 自己写的模块</li>
+</ul>
+</li>
+<li>模块的导入&amp;调用<ul>
+<li>import module_name 导入模块</li>
+<li>from module import xx   从模块中导入函数，可直接使用函数即可，不需要加模块前缀</li>
+<li>from module.xx import xx   从模块中某个子模块或分类中导入某个函数</li>
+<li>from module.xx import xx as xxx  从模块中某个子模块或分类中导入某个函数，并将函数起个别名</li>
+<li>from os import *  从模块中导入所有函数</li>
+</ul>
+</li>
+<li>模块导入的写入格式<ul>
+<li>通常将模块导入语句写在开头</li>
+<li>语句要顶头写</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os,sys</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> os <span class="keyword">import</span> rename,path</span><br></pre></td></tr></table></figure>
+
+<h2 id="自定义模块"><a href="#自定义模块" class="headerlink" title="自定义模块"></a>自定义模块</h2><ul>
+<li>创建一个自定义模块</li>
+<li>将自定义模块进行导入调用<ul>
+<li>模块的路径列表，默认的路径列表查找方式 print(sys.path)<ul>
+<li>默认包含内部模块的路径 （Versions/3.6/lib/python3.6）</li>
+<li>包含第三发默认下载的路径（venv/lib/python3.6/site-packages）</li>
+<li>本代码所在的路径</li>
+<li>调用的模块只有在这三个路径下，才能被import<ul>
+<li>如果想要在任意目录下执行自己的模块，可以将模块复制到第三方默认下载路径中即可</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#自定义模块my mod</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">function1</span><span class="params">(name)</span>:</span></span><br><span class="line">    print(<span class="string">"hello,%s"</span> % name)</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#导入模块</span></span><br><span class="line"><span class="keyword">import</span> my_mod</span><br><span class="line">my_mod.function1(laozhang)</span><br><span class="line"><span class="comment">#会输出hello,laozhang</span></span><br></pre></td></tr></table></figure>
+
+
+<pre><code>---------------------------------------------------------------------------
+
+ModuleNotFoundError                       Traceback (most recent call last)
+
+&lt;ipython-input-4-2f227f46d6b6&gt; in &lt;module&gt;
+      1 #导入模块
+----&gt; 2 import my_mod
+      3 my_mod.function1(laozhang)
+      4 #会输出hello,laozhang
+
+
+ModuleNotFoundError: No module named &apos;my_mod&apos;</code></pre><h2 id="安装第三方模块"><a href="#安装第三方模块" class="headerlink" title="安装第三方模块"></a>安装第三方模块</h2><ul>
+<li>社区地址<a href="https://pypi.python.org/pypi" target="_blank" rel="noopener">https://pypi.python.org/pypi</a></li>
+<li>下载安装方式:<ul>
+<li>方式一<ul>
+<li>pip install module_name  使用pip安装器下载并安装第三方模块<ul>
+<li>正常会链接国外网站下载，速度超慢</li>
+<li>使用国内镜像网站（豆瓣源），实现快速的pip下载</li>
+<li>pip install -i <a href="http://pypi.douban.com/simple" target="_blank" rel="noopener">http://pypi.douban.com/simple</a> –trusted-host pypi.douban.com module_name</li>
+<li>使用 -i 参数可以指定下载mod的地址</li>
+<li>必须使用–trusted-host 加上镜像网站名，这样表明该网站获得信任，可以下载并安装   <ul>
+<li>pip uninstall module_name 卸载模块</li>
+<li>pip list 查看当前安装了哪些模块</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>方式二（）<ul>
+<li>现在社区中下载第三方模块，tar包</li>
+<li>解压tar包</li>
+<li>编译源码 python xxx.py build</li>
+<li>安装源码 python xxx.py install</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="OS模块使用"><a href="#OS模块使用" class="headerlink" title="OS模块使用"></a>OS模块使用</h2><ul>
+<li>os.getcwd()  得到当前工作目录的路径</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line">os.getcwd()</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>os.listdir() 查询某个目录下的所有文件和目录</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">os.listdir(<span class="string">"C:\\Users\\Administrator\\"</span>)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>os.remove() 用函数删除一个文件</li>
+<li>os.removedirs() 删除多个目录</li>
+<li>os.path.isfile() 检验某个路径是否是一个文件</li>
+<li>os.path.isdir() 检验某个文件是否是一个目录</li>
+<li>os.path.isabs() 判断是否为绝对路径</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">os.path.isabs(<span class="string">"Administrator\\学习"</span>)</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">os.path.isabs(<span class="string">"C:\\Users\\Administrator\\"</span>)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>os.path.exists() 判断路径是否真实存在</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">os.path.exists(<span class="string">"C:\\Users\\Administrators\\"</span>)</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">os.path.exists(<span class="string">"C:\\Users\\Administrator\\"</span>)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>os.path.split() 查询一个文件或文件夹，返回该文件/目录的所在目录与文件名</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">os.path.split(<span class="string">"C:\\Users\\Administrator\\学习\\test.txt"</span>)</span><br><span class="line"><span class="comment">#查询一个文件，会返回文件所在的路径与文件名</span></span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">os.path.split(<span class="string">"C:\\Users\\Administrator\\学习\\"</span>)</span><br><span class="line"><span class="comment">#查询一个目录，会返回目录所在的路径，文件名为空。</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>os.path.dirname() 获取文件或目录所在的路径名 </li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">os.path.dirname(<span class="string">"C:\\Users\\Administrator"</span>)</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">os.path.dirname(<span class="string">"C:\\Users\\Administrator\\学习\\test.txt"</span>)</span><br></pre></td></tr></table></figure>
+
+
+
+
+<pre><code>&apos;C:\\Users\\Administrator\\学习&apos;</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">os.path.dirname(<span class="string">"test.txt"</span>)</span><br></pre></td></tr></table></figure>
+
+
+
+
+<pre><code>&apos;&apos;</code></pre><ul>
+<li>os.path.abspath() 获取文件或目录所在的的绝对路径名 </li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">os.path.abspath(<span class="string">"test.txt"</span>)</span><br></pre></td></tr></table></figure>
+
+
+
+
+<pre><code>&apos;C:\\Users\\Administrator\\学习\\test.txt&apos;</code></pre><ul>
+<li>os.system() 运行系统命令 </li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">os.system(<span class="string">"pwd"</span>)</span><br></pre></td></tr></table></figure>
+
+
+
+
+<pre><code>1</code></pre><ul>
+<li>os.environ 查询并返回系统的环境变量</li>
+<li>os.environ.setdefault(环境变量名,环境变量值) 设置系统运行的环境变量，仅在程序运行时该环境变量参数生效</li>
+<li>os.getenv() 读取操作系统中某个环境变量的值</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">os.getenv(<span class="string">"ORACLE_SID"</span>)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>os.rename(oldname,newname) 重命名</li>
+<li>os.stat() 查询并返回某个目录或文件的详细信息</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">os.stat(<span class="string">"test.txt"</span>)</span><br><span class="line"><span class="comment">#查询文件并返回文件详情</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+<pre><code>os.stat_result(st_mode=33206, st_ino=1688849860649643, st_dev=3302262785, st_nlink=1, st_uid=0, st_gid=0, st_size=11, st_atime=1590389680, st_mtime=1590045650, st_ctime=1589349859)</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">os.stat(<span class="string">"testfolder"</span>)</span><br><span class="line"><span class="comment">#查询目录并返回目录详情</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+<pre><code>os.stat_result(st_mode=16895, st_ino=1407374884043944, st_dev=3302262785, st_nlink=1, st_uid=0, st_gid=0, st_size=0, st_atime=1590552771, st_mtime=1589525920, st_ctime=1589525893)</code></pre><ul>
+<li>os.makdirs(“路径”) 递归建立目录</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">os.makedirs(<span class="string">"1\\2\\3"</span>)</span><br><span class="line">os.path.abspath(<span class="string">"1\\2\\3"</span>)</span><br></pre></td></tr></table></figure>
+
+
+<pre><code>---------------------------------------------------------------------------
+
+FileExistsError                           Traceback (most recent call last)
+
+&lt;ipython-input-12-f41386c485b3&gt; in &lt;module&gt;
+----&gt; 1 os.makedirs(&quot;1\\2\\3&quot;)
+      2 os.path.abspath(&quot;1\\2\\3&quot;)
+
+
+C:\ProgramData\Anaconda3\lib\os.py in makedirs(name, mode, exist_ok)
+    219             return
+    220     try:
+--&gt; 221         mkdir(name, mode)
+    222     except OSError:
+    223         # Cannot rely on checking for EEXIST, since the operating system
+
+
+FileExistsError: [WinError 183] 当文件已存在时，无法创建该文件。: &apos;1\\2\\3&apos;</code></pre><ul>
+<li>os.chmod() 修改文件权限和时间戳</li>
+<li>os.path.getsize() 获取文件或目录大小</li>
+<li>os.kill() 杀死进程 </li>
+</ul>
+<h2 id="sys模块"><a href="#sys模块" class="headerlink" title="sys模块"></a>sys模块</h2><ul>
+<li>sys.argsv  命令行参数List，第一个元素是程序本身路径</li>
+<li>sys.exit(n) 退出程序，正常退出时exit(0)</li>
+<li>sys.version 获取python解释程序的版本号</li>
+<li>sys.maxint  获取最大的Int值</li>
+<li>sys.path    获取返回模块的搜索路径</li>
+<li>sys.platform  返回操作系统平台名称</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> sys</span><br><span class="line">sys.platform</span><br><span class="line"><span class="comment">#获取操作平台型号。后续的代码执行可以通过不同的平台型号来区分，增加兼容性</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>sys.stdout.write()   标准输出 </li>
+<li>sys.stdin.readline()  标准输入</li>
+<li>sys.getrecursionlimit() 获得最大递归层数</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sys.getrecursionlimit()</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>sys.setrecursionlimit() 设置最大递归层数 （一般不用修改）</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sys.setrecursionlimit(<span class="number">4000</span>)</span><br><span class="line">sys.getrecursionlimit()</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>sys.getdefaultencoding()  获取解释器默认编码</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sys.getdefaultencoding()</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>sys.getfilesystemencoding 获取内存数据存到文件里的默认编码</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sys.getfilesystemencoding</span><br></pre></td></tr></table></figure>
+
+<h2 id="时间处理模块"><a href="#时间处理模块" class="headerlink" title="时间处理模块"></a>时间处理模块</h2><ul>
+<li>写程序时对时间的处理可以归为以下三种<ul>
+<li>时间的显示： 在屏幕显示，记录日志</li>
+<li>时间的转换：比如把字符串格式的日志转成python中的日期类型</li>
+<li>时间的转换 计算两个日期间的差值</li>
+</ul>
+</li>
+<li>time模块<ul>
+<li>在python中，通常有这几种方式来表示时间<ul>
+<li>时间戳：表示从1970年1月1日00：00：00开始按秒计算的偏移量</li>
+<li>格式化的时间字符串：比如2020-10-03 17：54</li>
+<li>元组：共有九个元素。由于Python的time模块实现主要调用C库，所以各个平台可能有所不同。(tm_year=2020, tm_mon=5, tm_mday=19, tm_hour=12, tm_min=8, tm_sec=10, tm_wday=1, tm_yday=140, tm_isdst=0)  </li>
+</ul>
+</li>
+</ul>
+</li>
+<li>UTC时间<ul>
+<li>定义： 世界协调时，亦格林威治天文时间，世界标准时间。在中国为UTC+8,又称东八区。</li>
+</ul>
+</li>
+<li>time模块的方法<ul>
+<li>time.localtime([sec])：将一个时间戳转换为当前时区的struct_tiem（元组）。括号内填写需要进行转换的时间戳，如果不填写，默认为当前时间</li>
+<li>time.time()：返回当前时间的时间戳</li>
+<li>time.mktime(t)：将一个struct_tiem（元组）转换为时间戳，与time.localtime函数正好相反。</li>
+<li>time.sleep(sec)：线程推迟指定的时间运行，单位为秒。括号中的参数填写延迟的时间。</li>
+<li>time.asctime()：将元组转换为Tue May 19 12:31:08 2020格式的字符串，不填写参数默认代表转换当前时间</li>
+<li>time.ctime():将时间戳转换为Tue May 19 12:31:08 2020格式的字符串，不填写参数默认代表转换当前时间</li>
+<li>time.strftime(“格式化格式”,t)：把一个代表时间的元组按照格式化格式转换为时间字符串。如果t未指定，将传入当前时间的元组形式。<ul>
+<li>格式化格式中的%Y 代表取元组中的年</li>
+<li>格式化格式中的%m 代表取元组中的月</li>
+<li>格式化格式中的%d 代表取元组中的天 </li>
+<li>格式化格式中的%H 代表取元组中的小时（24小时制显示）</li>
+<li>格式化格式中的%M 代表取元组中的分钟</li>
+<li>格式化格式中的%S 代表取元组中的秒</li>
+<li>格式化格式中的%p 代表一天的AM或PM，一般与显示小时的%I进行搭配</li>
+<li>格式化格式中的%I 表取元组中的小时（12小时制显示）,一般与%p搭配</li>
+</ul>
+</li>
+<li>time.strptime（字符串,字符串的格式）：将字符串转换为元组，属于strftime函数的逆操作</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#将时间戳转换为元组</span></span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line">time.localtime()</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#返回当前时间时间戳</span></span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line">time.time()</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#将元组转换为时间戳</span></span><br><span class="line">t = time.localtime()</span><br><span class="line">print(t)</span><br><span class="line">print(time.mktime(t))</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#程序睡眠</span></span><br><span class="line">t = time.localtime()</span><br><span class="line">print(t)</span><br><span class="line">print(<span class="string">"-----开始睡眠3秒钟------"</span>)</span><br><span class="line">time.sleep(<span class="number">3</span>)</span><br><span class="line">t = time.localtime()</span><br><span class="line">print(t)</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#将元组转换成Tue May 19 12:31:08 2020格式的字符串</span></span><br><span class="line">time.asctime()</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#将时间戳转换成Tue May 19 12:31:08 2020格式的字符串</span></span><br><span class="line">time.ctime()</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#将元组形式的时间标准化成时间字符串</span></span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line">time.strftime(<span class="string">"%Y-%m-%d %H:%M:%S"</span>,time.localtime())</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#将时间字符串转换成元组形式</span></span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line">print(time.strptime(<span class="string">"2020-03-21 9:30"</span>,<span class="string">"%Y-%m-%d %H:%M"</span>))</span><br><span class="line">print(time.strptime(<span class="string">"2020-03-21 9:30 PM"</span>,<span class="string">"%Y-%m-%d %I:%M %p"</span>))</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>datetime模块<ul>
+<li>定义： 相比time模块，datetime模块接口则更直观，也更容易调用</li>
+<li>定义以下几个类<ul>
+<li>datetime.data:表示日期的类。常用的属性有year、month、day</li>
+<li>datetime.time:表示时间的类。常用的属性有hour、minute、second、microsecond</li>
+<li>datetime.datetime:表示日期时间</li>
+<li>datetime.timedelta:表示时间间隔，即两个时间点之间的长度</li>
+<li>datetime.tzinfo:与时区有关的信息<ul>
+<li>常用的函数方法：</li>
+<li>datetime.date.today()：查看今天的日期</li>
+<li>datetime.date.timetuple():将日期转换为元组格式的时间</li>
+<li>datetime.datetime.now()：查看当前的日期时间</li>
+<li>datetime.timedelta():括号内可以填写days或seconds或microseconds，代表增加或减少天数或秒数或毫秒数</li>
+<li>变量.replace()：可以将年月日时分秒中任意一个或多个值进行替换</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#查看今天的日期</span></span><br><span class="line"><span class="keyword">import</span> datetime</span><br><span class="line">datetime.date.today()</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#将今天的日期转换为元组形式</span></span><br><span class="line"><span class="keyword">import</span> datetime</span><br><span class="line">datetime.date.timetuple(datetime.date.today())</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#查看当前的日期时间</span></span><br><span class="line">datetime.datetime.now()</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#将一个时间增加2天</span></span><br><span class="line"><span class="keyword">import</span> datetime</span><br><span class="line">t1 = datetime.datetime.now()</span><br><span class="line">print(t1)</span><br><span class="line">t2 = t1 + datetime.timedelta(days = <span class="number">2</span>)</span><br><span class="line">print(t2)</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#使用replace替换时间</span></span><br><span class="line"><span class="keyword">import</span> datetime</span><br><span class="line">t1 = datetime.datetime.now()</span><br><span class="line">print(t1)</span><br><span class="line">t2 = t1.replace(year=<span class="number">2008</span>,month=<span class="number">5</span>,day=<span class="number">12</span>,hour=<span class="number">14</span>,minute=<span class="number">29</span>,second=<span class="number">30</span>)</span><br><span class="line">print(t2)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>pytz模块 用于时区<ul>
+<li>pytz.all_timezones 用该函数查看每个时区的名字</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pytz</span><br><span class="line">pytz.all_timezones</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>使用pytz模块与datetime搭配，可以对时间显示时区<ul>
+<li>datetime.datetime.now(tz=xxx) xxx代表时区标识</li>
+<li>时区表示需要使用pytz.timezone(“xxx”) xxx代表时区名称</li>
+<li>时区名称可通过pytz.all_timezones 可查询到</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pytz</span><br><span class="line"><span class="keyword">import</span> datetime</span><br><span class="line">t1 = datetime.datetime.now()</span><br><span class="line">print(t1)</span><br><span class="line">t2 = datetime.datetime.now(tz = pytz.timezone(<span class="string">"Asia/Shanghai"</span>))</span><br><span class="line">print(t2)</span><br><span class="line">t3 = datetime.datetime.now(tz = pytz.timezone(<span class="string">"Asia/Saigon"</span>))</span><br><span class="line">print(t3)</span><br></pre></td></tr></table></figure>
+
+<h2 id="random随机数模块"><a href="#random随机数模块" class="headerlink" title="random随机数模块"></a>random随机数模块</h2><ul>
+<li>random.randrange(1,10):返回1-10之前的一个随机数，不包括10</li>
+<li>random.randint(1，10): 返回1-10之前的一个随机数，包括10 </li>
+<li>random.randrange(1,100,2)：返回1-10之前的一个奇数，2为数字间隔奇数</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> random</span><br><span class="line">random.randrange(<span class="number">1</span>,<span class="number">10</span>)</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">random.randint(<span class="number">1</span>,<span class="number">10</span>)</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">random.randrange(<span class="number">1</span>,<span class="number">20</span>,<span class="number">2</span>)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>random.random() 返回0-1之间的一个浮点数</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">random.random()</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>random.choice(‘ilovehina#@!’):随机返回字符串中任意一个字符</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">random.choice(<span class="string">'ilovehina#@!'</span>)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>random.sample(‘ilovehina#@!’,4) 随机返回字符串中多个字符，4为返回字符的个数</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">random.sample(<span class="string">'ilovehina#@!'</span>,<span class="number">3</span>)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>使用string模块与random模块可以实现简单验证码功能<ul>
+<li>使用string.digits函数可以获取所有的数字</li>
+<li>使用string.ascii_lowercase函数可以获取所有的小写字母</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> string</span><br><span class="line">print(string.digits + string.ascii_lowercase)</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#实现验证码</span></span><br><span class="line"><span class="keyword">import</span> string</span><br><span class="line"><span class="keyword">import</span> random</span><br><span class="line"><span class="comment">#将数字与小写字母都赋予给i</span></span><br><span class="line">i = string.digits+string.ascii_lowercase</span><br><span class="line">print(i)</span><br><span class="line"><span class="comment">#从i中随机返回4个数</span></span><br><span class="line">r = random.sample(i,<span class="number">4</span>)</span><br><span class="line">print(r)</span><br><span class="line"><span class="comment">#使用''的join函数将元组进行拼接在一起</span></span><br><span class="line">k = <span class="string">''</span>.join(r)</span><br><span class="line">print(k)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>random.shuffle() 括号中需要填写列表，将列表的顺序进行打乱，也称为洗牌</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">a = list(range(<span class="number">0</span>,<span class="number">10</span>))</span><br><span class="line">print(a)</span><br><span class="line"><span class="comment">#将变量a里的所有值打乱顺序</span></span><br><span class="line">b = random.shuffle(a)</span><br><span class="line">print(a)</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">print(r)</span><br><span class="line"><span class="comment">#将变量r里的所有值打乱顺序</span></span><br><span class="line">random.shuffle(r)</span><br><span class="line">print(r)</span><br></pre></td></tr></table></figure>
+
+<h2 id="序列化与反序列化"><a href="#序列化与反序列化" class="headerlink" title="序列化与反序列化"></a>序列化与反序列化</h2><ul>
+<li>含义：当我们需要将字典或列表的数据从内存中存入硬盘中时，需要将字典或列表等数据进行序列化后，方可以写入硬盘中，否则写入报错，因为写入硬盘时只能是字符串，不能是其他格式，因此其他格式要写入时必须格式化，当从硬盘中读取数据时，需要对数据进行反序列化，这样就可以还原数据格式</li>
+<li>pickle模块可以用序列化与反序列化</li>
+<li>常用函数<ul>
+<li>pickle.dumps() 为将数据序列化的函数，括号中填写的是需要进行序列化的内容</li>
+<li>pickle.loads() 为将数据反序列化的函数，括号中填写的是需要进行反序列化的内容</li>
+<li>pickle.dump(x,f) 为将数据进行序列化并直接存入文件中,x为需要写入的数据，f为写入的文件</li>
+<li>pickle.load(f) 为将存有序列化的文件进行反序列化解析后进行读取</li>
+</ul>
+</li>
+<li>特征<ul>
+<li>先进先出：用反序列化进行数据解析时，优先解析的是第一个写入的序列化数据。</li>
+</ul>
+</li>
+<li>优点：专为python设计，支持python所有的数据类型。</li>
+<li>缺点： 只能在python中使用，存储数据占用空间大。</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 将数据进行序列化</span></span><br><span class="line"><span class="comment">#导入pickle模块</span></span><br><span class="line"><span class="keyword">import</span> pickle</span><br><span class="line"><span class="comment">#需要保存一个字典数据</span></span><br><span class="line">a = &#123;</span><br><span class="line">    <span class="string">"name"</span>:<span class="string">"jerry"</span>,</span><br><span class="line">    <span class="string">"blood"</span>:<span class="string">"96"</span>,</span><br><span class="line">    <span class="string">"weapon"</span>:<span class="string">"m4"</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">#将a进行序列化，并输出序列化后的内容</span></span><br><span class="line">context = pickle.dumps(a)</span><br><span class="line">print(context)</span><br></pre></td></tr></table></figure>
+
+<pre><code>b&apos;\x80\x03}q\x00(X\x04\x00\x00\x00nameq\x01X\x05\x00\x00\x00jerryq\x02X\x05\x00\x00\x00bloodq\x03X\x02\x00\x00\x0096q\x04X\x06\x00\x00\x00weaponq\x05X\x02\x00\x00\x00m4q\x06u.&apos;</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 将序列化内容写入文件中，使用wirte函数</span></span><br><span class="line"><span class="comment">#新建一个game.pkl文件，用于存放序列化数据</span></span><br><span class="line"><span class="comment">#后缀为pkl的文件一般就代表序列化输出文件</span></span><br><span class="line"><span class="comment">#wb的含义是允许写入字节，如果不加，会报错不能写入字节，只能写入字符串</span></span><br><span class="line">f = open(<span class="string">"game.pkl"</span>,<span class="string">"wb"</span>)</span><br><span class="line">f.write(context)</span><br><span class="line">f.close()</span><br><span class="line"><span class="comment">#rb的含义是允许读取字节，如果不加，会报错不能读取字节，只能读取字符串</span></span><br><span class="line">f = open(<span class="string">"game.pkl"</span>,<span class="string">"rb"</span>)</span><br><span class="line">x = f.read()</span><br><span class="line">print(x)</span><br><span class="line">f.close()</span><br></pre></td></tr></table></figure>
+
+<pre><code>b&apos;\x80\x03}q\x00(X\x04\x00\x00\x00nameq\x01X\x05\x00\x00\x00jerryq\x02X\x05\x00\x00\x00bloodq\x03X\x02\x00\x00\x0096q\x04X\x06\x00\x00\x00weaponq\x05X\x02\x00\x00\x00m4q\x06u.&apos;</code></pre><ul>
+<li>f.write() 可以使用write函数，将已转换为序列化的对象直接写入到文件中</li>
+<li>pickle.dump(x,f) 使用该函数可以代替write方式将将未转成序列化的对象直接进行序列化并写在文件中，x为需要写入的数据，f为需要写入的文件。这种方式比write更简单</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pickle</span><br><span class="line">a = &#123;</span><br><span class="line">    <span class="string">"name"</span>:<span class="string">"jerry"</span>,</span><br><span class="line">    <span class="string">"blood"</span>:<span class="string">"96"</span>,</span><br><span class="line">    <span class="string">"weapon"</span>:<span class="string">"m4"</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">#打开一个文件</span></span><br><span class="line">f = open(<span class="string">"data.pkl"</span>,<span class="string">"wb"</span>)</span><br><span class="line"><span class="comment">#使用pickle.dump函数将context写入文件中</span></span><br><span class="line">pickle.dump(a,f)</span><br><span class="line">f.close()</span><br><span class="line">f = open(<span class="string">"data.pkl"</span>,<span class="string">"rb"</span>)</span><br><span class="line">print(f.read())</span><br><span class="line">f.close()</span><br></pre></td></tr></table></figure>
+
+<pre><code>b&apos;\x80\x03}q\x00(X\x04\x00\x00\x00nameq\x01X\x05\x00\x00\x00jerryq\x02X\x05\x00\x00\x00bloodq\x03X\x02\x00\x00\x0096q\x04X\x06\x00\x00\x00weaponq\x05X\x02\x00\x00\x00m4q\x06u.&apos;</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#使用反序列化解析序列化数据</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#导入pickle模块</span></span><br><span class="line"><span class="keyword">import</span> pickle</span><br><span class="line"><span class="comment">#需要保存一个字典数据</span></span><br><span class="line">a = &#123;</span><br><span class="line">    <span class="string">"name"</span>:<span class="string">"jerry"</span>,</span><br><span class="line">    <span class="string">"blood"</span>:<span class="string">"96"</span>,</span><br><span class="line">    <span class="string">"weapon"</span>:<span class="string">"m4"</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">#将a进行序列化，并输出序列化后的内容</span></span><br><span class="line">context = pickle.dumps(a)</span><br><span class="line">print(pickle.loads(context))</span><br></pre></td></tr></table></figure>
+
+<pre><code>{&apos;name&apos;: &apos;jerry&apos;, &apos;blood&apos;: &apos;96&apos;, &apos;weapon&apos;: &apos;m4&apos;}</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#使用反序列化读取文件中的序列化数据</span></span><br><span class="line">a = &#123;</span><br><span class="line">    <span class="string">"name"</span>:<span class="string">"jerry"</span>,</span><br><span class="line">    <span class="string">"blood"</span>:<span class="string">"96"</span>,</span><br><span class="line">    <span class="string">"weapon"</span>:<span class="string">"m4"</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">#打开一个文件</span></span><br><span class="line">f = open(<span class="string">"game.pkl"</span>,<span class="string">"wb"</span>)</span><br><span class="line"><span class="comment">#使用pickle.dump函数将a写入文件中</span></span><br><span class="line">pickle.dump(a,f)</span><br><span class="line">f.close()</span><br><span class="line"><span class="comment">#读取一个文件</span></span><br><span class="line">f = open(<span class="string">"game.pkl"</span>,<span class="string">"rb"</span>)</span><br><span class="line"><span class="comment">#对文件进行反序列化</span></span><br><span class="line">print(pickle.load(f))</span><br><span class="line">f.close()</span><br></pre></td></tr></table></figure>
+
+<pre><code>{&apos;name&apos;: &apos;jerry&apos;, &apos;blood&apos;: &apos;96&apos;, &apos;weapon&apos;: &apos;m4&apos;}</code></pre><ul>
+<li>json模块也可用于序列化与反序列化</li>
+<li>优点：跨语言（不同语言间的数据传递可用json交接），体积小</li>
+<li>缺点：只能支持int、str、list、tuple、dict,不能将不同类型的数据都存在一个文件中，这样无法读取</li>
+<li>用法： 与pickle模块用法一模一样<ul>
+<li>json.dumps():将要写入硬盘的数据转换为string类型</li>
+<li>json.dump():将要写入硬盘的数据转换为string类型并写入到文件中，x为数据内容，f为打开的文件</li>
+<li>json.loads()：将数据进行反序列化解析，读取出原来的格式</li>
+<li>json.load()：从文件中解析序列化数据，读取出原来的格式</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#将数据序列化与反序列化</span></span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line">a = &#123;</span><br><span class="line">    <span class="string">"name"</span>:<span class="string">"jerry"</span>,</span><br><span class="line">    <span class="string">"blood"</span>:<span class="string">"96"</span>,</span><br><span class="line">    <span class="string">"weapon"</span>:<span class="string">"m4"</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">#将a的字段类型转换为字符串类型</span></span><br><span class="line">x = json.dumps(a)</span><br><span class="line">x_type = type(x)</span><br><span class="line">print(<span class="string">"序列化后的结果为%s"</span> % x ,<span class="string">"类型为"</span>,x_type)</span><br><span class="line"><span class="comment">#将字符串类型转换为字典类型</span></span><br><span class="line">y = json.loads(x)</span><br><span class="line">y_type = type(y)</span><br><span class="line">print(<span class="string">"反序列化的结果为"</span>, y ,<span class="string">"类型为"</span>,y_type)</span><br></pre></td></tr></table></figure>
+
+<pre><code>序列化后的结果为{&quot;name&quot;: &quot;jerry&quot;, &quot;blood&quot;: &quot;96&quot;, &quot;weapon&quot;: &quot;m4&quot;} 类型为 &lt;class &apos;str&apos;&gt;
+反序列化的结果为 {&apos;name&apos;: &apos;jerry&apos;, &apos;blood&apos;: &apos;96&apos;, &apos;weapon&apos;: &apos;m4&apos;} 类型为 &lt;class &apos;dict&apos;&gt;</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#将数据写入、读取文件</span></span><br><span class="line">f = open(<span class="string">"game.json"</span>,<span class="string">"w"</span>)</span><br><span class="line">json.dump(a,f)</span><br><span class="line">f.close()</span><br><span class="line">f = open(<span class="string">"game.json"</span>,<span class="string">"r"</span>)</span><br><span class="line">d = json.load(f)</span><br><span class="line">print(d)</span><br><span class="line">print(type(d))</span><br><span class="line">f.close()</span><br></pre></td></tr></table></figure>
+
+<pre><code>{&apos;name&apos;: &apos;jerry&apos;, &apos;blood&apos;: &apos;96&apos;, &apos;weapon&apos;: &apos;m4&apos;}
+&lt;class &apos;dict&apos;&gt;</code></pre><h2 id="hashlib加密模块"><a href="#hashlib加密模块" class="headerlink" title="hashlib加密模块"></a>hashlib加密模块</h2><ul>
+<li>hash定义：也称为散列，又被音译为哈希，就是把任意长度的输入（又叫做预映射,pre-image），通过散列算法，变成固定长度的输出，该输出就是散列值。这种转换就是一个压缩映射，也就是，散列值的空间通过远远小于输入的空间，不同的输入可能会散列成相同的输出，而不可能通过散列值来唯一的确定输入值的内容。简单的说就是一种将任意长度的消息压缩到某一固定长度的信息摘要的函数。</li>
+<li>hash用途：主要用于信息安全领域中的加密算法，他把不同长度的信息转换为128位的编码里，叫作hash值，也可以说，hash就是找到一种数据内容和数据存放地址之间的映射关系</li>
+<li>但是由于每次使用hash()函数对某个对象加密后，结果都是不同的，因此在hash的基础上衍生了真正的加密算法。</li>
+<li>加密算法：<ul>
+<li>MD5<ul>
+<li>定义：MD5讯息摘要演算法，一种被广泛使用的密码杂凑函数，可以产生出一个128位的散列值，用于确保信息传输的完整一致。MD5的前身有MD2、MD3、MD4</li>
+<li>功能：<ul>
+<li>1、输入任意长度的信息，经过处理，输出128位的信息（数字指纹）</li>
+<li>2、不同的输入得到的不同结果（唯一性）</li>
+</ul>
+</li>
+<li>算法的特点：<ul>
+<li>1、压缩性：任意长度的数据，算出的MD5值的长度是固定的。</li>
+<li>2、容易计算：从原数据计算出MD5值很容易</li>
+<li>3、抗修改性：对原数据进行改动后，修改字节生成的MD5值区别会很大</li>
+<li>4、强抗碰撞：出现hash碰撞的概率极低。</li>
+<li>5、不可逆：md5使用的是hash算法，计算过程中原文的部分信息是丢失的<ul>
+<li>用途:</li>
+<li>1、防止被篡改</li>
+<li>2、防止直接看到明文</li>
+<li>3、防止抵赖（数字签名）</li>
+<li>用法：</li>
+<li>hashlib.md5() 创建一个md5加密队列</li>
+<li>m.update(“xxx”) 将内容xxx更新到md5加密队列中，等待加密，多次update不同的内容时，内容不是覆盖而是追加到最后。m为创建的加密队列，xxx为需要加密的内容</li>
+<li>m.digest() 将m中的所有内容进行加密，结果以byte形式呈现</li>
+<li>m.hexdigest() 将m中的所有内容进行加密，结果以十六进制呈现</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#md5</span></span><br><span class="line"><span class="keyword">import</span> hashlib</span><br><span class="line"><span class="comment">#调用md5算法</span></span><br><span class="line">m = hashlib.md5()</span><br><span class="line"><span class="comment">#对数据进行md5加密，要求必须是encoded，如果数据内容都是ASCII，可以直接在前面加b，转换成byte类型</span></span><br><span class="line">m.update(<span class="string">b"hello world"</span>)</span><br><span class="line"><span class="comment">#已经将要加密的内容update到md5算法中，开始进行加密</span></span><br><span class="line">x = m.digest()</span><br><span class="line">print(<span class="string">"加密后的内容为:%s"</span> % x)</span><br><span class="line"><span class="comment">#由于输出的内容为byte类型，不好阅读，因此给他转换为16进制数</span></span><br><span class="line"><span class="comment">#使用hexdigest函数可以输出为16进制</span></span><br><span class="line">y = m.hexdigest()</span><br><span class="line">print(<span class="string">"加密后的十六进制的内容为:%s"</span> % y)</span><br><span class="line"></span><br><span class="line"><span class="comment">#如果想要将加密的内容进行追加，再次使用update()函数</span></span><br><span class="line"><span class="comment">#想要对中文进行md5加密，就必须先要进行encoded，使用b无法转换汉字</span></span><br><span class="line">m.update(<span class="string">"开始进行我们的加密"</span>.encode(<span class="string">"utf-8"</span>))</span><br><span class="line"><span class="comment">#已经将要加密的内容update到md5算法中，开始进行加密</span></span><br><span class="line"><span class="comment">#使用hexdigest函数可以输出为16进制</span></span><br><span class="line">y = m.hexdigest()</span><br><span class="line">print(<span class="string">"加密后的十六进制的内容为:%s"</span> % y)</span><br></pre></td></tr></table></figure>
+
+<pre><code>加密后的内容为:b&apos;^\xb6;\xbb\xe0\x1e\xee\xd0\x93\xcb&quot;\xbb\x8fZ\xcd\xc3&apos;
+加密后的十六进制的内容为:5eb63bbbe01eeed093cb22bb8f5acdc3
+加密后的十六进制的内容为:42dcb3af9de303216f3a1f3afb194532</code></pre><ul>
+<li>SHA-1加密算法<ul>
+<li>定义:<br>安全哈希算法，主要使用于数字签名标准里面定义的数字签名算法。对于长度小于2^64位的消息，SHA1会产生一个160位的消息摘要。当接收到消息的时候，这个消息摘要可以用来验证数据的完整性。</li>
+<li>历史：<br>由于山东大学王小云破解了MD5和sha-1，科学家又推出了SHA224,SHA256,SHA384,SHA512,位数越长越难被破解，一般流行的是sha-256，https的加密算法就是基于sha-256的</li>
+<li>用法：<ul>
+<li>hashlib.sha1()  创建一个sha1加密队列</li>
+<li>hashlib.sha256() 创建一个sha256加密队列</li>
+<li>m.update(“xxx”) 将内容xxx更新到sha1加密队列中，等待加密，多次update不同的内容时，内容不是覆盖而是追加到最后。m为创建的加密队列，xxx为需要加密的内容</li>
+<li>m.digest() 将m中的所有内容进行加密，结果以byte形式呈现</li>
+<li>m.hexdigest() 将m中的所有内容进行加密，结果以十六进制呈现</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#sha256加密</span></span><br><span class="line"><span class="keyword">import</span> hashlib</span><br><span class="line">m = hashlib.sha256()</span><br><span class="line"><span class="comment">#对于需要加密的内容一定要先encode一下，否则报错。</span></span><br><span class="line">m.update(<span class="string">"hello world"</span>.encode(<span class="string">"utf-8"</span>))</span><br><span class="line">d = m.hexdigest()</span><br><span class="line">print(<span class="string">"经过sha256加密后的结果为：%s"</span> % d)</span><br></pre></td></tr></table></figure>
+
+<pre><code>经过sha256加密后的结果为：b94d27b9934d3e08a52e52d7da7dabfac484efe37a5380ee9088f7ace2efcde9</code></pre><h2 id="MD5与SHA-1"><a href="#MD5与SHA-1" class="headerlink" title="MD5与SHA-1"></a>MD5与SHA-1</h2><ul>
+<li>由于MD5与SHA-1均是从MD4演化而来。他们的结构和特性有很多的相似之处，SHA-1与MD5最大的区别在于SHA-1的结果要比MD5长32字节。对于强行攻击而言，越长的加密破解的难度就越大。因此SHA–1对抗强行攻击的能力要比MD5强。以此也可以知道SHA-256也要比SHA-1更加牛逼。</li>
+<li>当前主流使用MD5对文件的一致性进行校验，确保文件的一致性。由于md5加密速度很快</li>
+<li>对于加密而言，一般还是使用sha加密算法</li>
+</ul>
+<h2 id="文件COPY模块shutil"><a href="#文件COPY模块shutil" class="headerlink" title="文件COPY模块shutil"></a>文件COPY模块shutil</h2><ul>
+<li>shutil.copyfileobj(fsrc,fdst) 将源文件的内容复制到目标文件中，fsrc代表打开源文件，fdst代表打开目标文件。</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#复制内容到目标文件</span></span><br><span class="line"><span class="keyword">import</span> shutil</span><br><span class="line"><span class="comment">#需要提前将源文件和目标文件都打开</span></span><br><span class="line">fsrc = open(<span class="string">"test.txt"</span>,<span class="string">"r"</span>) </span><br><span class="line">fdst = open(<span class="string">"test1.txt"</span>,<span class="string">"w"</span>)</span><br><span class="line">shutil.copyfileobj(fsrc,fdst)</span><br><span class="line">fsrc.close()</span><br><span class="line">fdst.close()</span><br><span class="line">fdst = open(<span class="string">"test1.txt"</span>,<span class="string">"r"</span>)</span><br><span class="line">d = fdst.read()</span><br><span class="line">print(d)</span><br><span class="line">fdst.close()</span><br></pre></td></tr></table></figure>
+
+<pre><code>hello world</code></pre><ul>
+<li>shutil.copyfile(“src_name”,”dst_name”) 复制文件，src_name代表源文件名称，dst_name代表目标文件名称，如果目标文件已存在，就会直接覆盖，请注意。</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#复制文件</span></span><br><span class="line"><span class="keyword">import</span> shutil</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line">shutil.copyfile(<span class="string">"test1.txt"</span>,<span class="string">"test2.txt"</span>)</span><br><span class="line">os.path.abspath(<span class="string">"test2.txt"</span>)</span><br></pre></td></tr></table></figure>
+
+
+
+
+<pre><code>&apos;C:\\Users\\Administrator\\学习\\test2.txt&apos;</code></pre><ul>
+<li>shutil.copymode(“src_name”,”dst_name”) 将源文件的权限拷贝给目标文件。源文件和目标文件必须存在。</li>
+<li>shutil.copystat(“src_name”,”dst_name”) 将源文件的状态信息拷贝给目标文件</li>
+<li>shutil.copy(“src_name”,”dst_name”) 将源文件及其权限都拷贝到目标文件</li>
+<li>shutil.copy2(“src_name”,”dst_name”) 将源文件及其状态都拷贝到目标文件</li>
+<li>shutil.copytree(“srcdir”,”dstdir”) 将源文件夹及文件夹下所有文件夹和文件都复制到另一个文件夹中。<ul>
+<li>在参数中可以添加第三个参数ignore=shutil.ignore_patterns()，将目录下的某些文件忽略不进行复制</li>
+<li>shutil.copytree(“srcdir”,”dstdir”,ignore=shutil.ignore_patterns(“*.txt”)) 所有后缀为txt的不复制</li>
+</ul>
+</li>
+<li>shutil.rmtree(“dir”) 目录下所有文件进行删除</li>
+<li>shutuk.make_archive(base_name=”生成的压缩包的文件名”,fortmat=”压缩格式”,root_dir=”需要压缩的文件或文件夹路径”,owener=”压缩包的拥有者”)</li>
+</ul>
+<h2 id="压缩与解压"><a href="#压缩与解压" class="headerlink" title="压缩与解压"></a>压缩与解压</h2><ul>
+<li>模块:zipfile</li>
+<li>z = zipfile.ZipFile(“压缩包名称与相对路径”,”w”) 新建一个zip包，并准备将文件压缩到zip包中</li>
+<li>z.write(“文件名”) 将文件压缩到压缩包中，不能压缩目录。</li>
+<li>z.close() 关闭压缩包</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> zipfile</span><br><span class="line">z = zipfile.ZipFile(<span class="string">"test.zip"</span>,<span class="string">"w"</span>)</span><br><span class="line">z.write(<span class="string">"test.txt"</span>)</span><br><span class="line">z.close()</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>使用zipfie与os模块进行配合，可以实现对目录下所有的文件进行压缩</li>
+<li>os.walk(.) :括号内填写目录的相对路径，填写.为当前目录，该函数会遍历出当前目录下所有的文件，包括子目录下的所有文件</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> zipfile</span><br><span class="line">a = os.walk(<span class="string">"."</span>)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> a:</span><br><span class="line">    print(i)</span><br></pre></td></tr></table></figure>
+
+<pre><code>(&apos;.&apos;, [&apos;.ipynb_checkpoints&apos;, &apos;1&apos;, &apos;jieya&apos;, &apos;testfolder&apos;], [&apos;data.pkl&apos;, &apos;game.json&apos;, &apos;game.pkl&apos;, &apos;lizi.ipynb&apos;, &apos;phonenumber.txt&apos;, &apos;Python基础知识学习笔记.ipynb&apos;, &apos;python好习惯.ipynb&apos;, &apos;Python常用模块学习笔记.ipynb&apos;, &apos;test.txt&apos;, &apos;test.zip&apos;, &apos;test1.txt&apos;, &apos;test2.txt&apos;, &apos;test2.zip&apos;, &apos;Untitled.ipynb&apos;, &apos;untitled.txt&apos;, &apos;函数编程基础知识学习笔记.ipynb&apos;])
+(&apos;.\\.ipynb_checkpoints&apos;, [], [&apos;lizi-checkpoint.ipynb&apos;, &apos;Python基础知识学习笔记-checkpoint.ipynb&apos;, &apos;python好习惯-checkpoint.ipynb&apos;, &apos;Python常用模块学习笔记-checkpoint.ipynb&apos;, &apos;Untitled-checkpoint.ipynb&apos;, &apos;函数编程基础知识学习笔记-checkpoint.ipynb&apos;])
+(&apos;.\\1&apos;, [&apos;2&apos;], [])
+(&apos;.\\1\\2&apos;, [&apos;3&apos;], [])
+(&apos;.\\1\\2\\3&apos;, [], [])
+(&apos;.\\jieya&apos;, [&apos;testfolder&apos;], [])
+(&apos;.\\jieya\\testfolder&apos;, [], [&apos;test.txt&apos;])
+(&apos;.\\testfolder&apos;, [&apos;.ipynb_checkpoints&apos;], [&apos;test.txt&apos;])
+(&apos;.\\testfolder\\.ipynb_checkpoints&apos;, [], [])</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> zipfile</span><br><span class="line"><span class="comment">#首先定义一个空列表用于记录每个需要压缩的文件路径</span></span><br><span class="line">filelist=[]</span><br><span class="line"><span class="comment">#使用walk函数对testfolder目录下的每个子目录进行遍历，将路径传给形参root_dir</span></span><br><span class="line"><span class="comment">#将每个目录中的目录传给形参dirs</span></span><br><span class="line"><span class="comment">#将每个目录中的文件传给形参files</span></span><br><span class="line"><span class="keyword">for</span> root_dir,dirs,files <span class="keyword">in</span> os.walk(<span class="string">"./testfolder"</span>):</span><br><span class="line">    <span class="comment">#由于一个目录下的文件可能是多个，因此是列表形式，所以需要对列表进行遍历，得出每个目录下文件名称。</span></span><br><span class="line">    <span class="keyword">for</span> filename <span class="keyword">in</span> files:</span><br><span class="line">        <span class="comment">#将文件路径与文件名进行拼接，将拼接结果都传给形参filelist</span></span><br><span class="line">        filelist.append(os.path.join(root_dir,filename))</span><br><span class="line"><span class="comment">#输出filelist列表中每个值，看看长什么样子。</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> filelist:</span><br><span class="line">    print(i)    </span><br><span class="line"><span class="comment">#定义一个等待添加的压缩队列</span></span><br><span class="line">z = zipfile.ZipFile(<span class="string">"test2.zip"</span>,<span class="string">"w"</span>)</span><br><span class="line"><span class="comment">#对testfolder目录下的所有文件的路径进行遍历</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> filelist:</span><br><span class="line">    <span class="comment">#将每个文件都添加到压缩队列中</span></span><br><span class="line">    z.write(i)</span><br><span class="line"><span class="comment">#所有文件都添加后，关闭压缩</span></span><br><span class="line">z.close()</span><br></pre></td></tr></table></figure>
+
+<pre><code>./testfolder\test.txt</code></pre><ul>
+<li>解压<br>z.extractall(“.”)：括号中填写解压路径。</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> zipfile</span><br><span class="line">z = zipfile.ZipFile(<span class="string">"./test2.zip"</span>,<span class="string">"r"</span>)</span><br><span class="line">z.extractall(<span class="string">"./jieya"</span>)</span><br></pre></td></tr></table></figure>
+
+<h2 id="正则模块re模块"><a href="#正则模块re模块" class="headerlink" title="正则模块re模块"></a>正则模块re模块</h2><ul>
+<li>通过正则进行匹配时，可以使用re模块<ul>
+<li>re.findall(“r”,”f”)  对f的内容进行正则匹配，r为正则。将所有匹配到的字符组成列表进行返回。</li>
+<li>re.match() 内容开头匹配</li>
+<li>re.search() 匹配包含</li>
+<li>re.split() 以匹配到的字符作为列表的分隔符</li>
+<li>re.sub() 匹配字符并替换</li>
+<li>re.fullmatch() 全部匹配</li>
+<li>re.compile(“r”) r为正则，compile可以对正则进行提前编译，等待后续使用，避免多次使用时出现多次编译的现象。如 a = re.compile(“r”)，以后可以使用 a.split,a.match,a.findall</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> re</span><br><span class="line"><span class="comment">#打开一个电话薄</span></span><br><span class="line">f = open(<span class="string">"phonenumber.txt"</span>,<span class="string">"r"</span>)</span><br><span class="line">phonelist = re.findall(<span class="string">"[0-9]&#123;11&#125;"</span>,f.read())</span><br><span class="line">print(phonelist)</span><br></pre></td></tr></table></figure>
+
+<pre><code>[&apos;18833201113&apos;, &apos;18944217789&apos;, &apos;18900227777&apos;, &apos;18868990223&apos;]</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#使用匹配字符作为分隔符来实现去除数字只保留英文</span></span><br><span class="line"><span class="keyword">import</span> re</span><br><span class="line">a = re.split(<span class="string">"\d"</span>,<span class="string">"jerry3walk8aliez4tom"</span>)</span><br><span class="line">print(a)</span><br></pre></td></tr></table></figure>
+
+<pre><code>[&apos;jerry&apos;, &apos;walk&apos;, &apos;aliez&apos;, &apos;tom&apos;]</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#使用re.sub函数实现替换</span></span><br><span class="line"><span class="keyword">import</span> re</span><br><span class="line"><span class="comment">#将abcdefgabc中的所有的abc替换为ABC</span></span><br><span class="line">a = re.sub(<span class="string">"abc"</span>,<span class="string">"ABC"</span>,<span class="string">"abcdefgabc"</span>)</span><br><span class="line">print(a)</span><br><span class="line"><span class="comment">#将abcdefgabc中的第一个abc替换为ABC</span></span><br><span class="line">b = re.sub(<span class="string">"abc"</span>,<span class="string">"ABC"</span>,<span class="string">"abcdefgabc"</span>,count=<span class="number">1</span>)</span><br><span class="line">print(b)</span><br><span class="line"><span class="comment">#将只要是a,b,c这三个字母，都替换为1</span></span><br><span class="line">c = re.sub(<span class="string">"[a-c]"</span>,<span class="string">"1"</span>,<span class="string">"abcdefgabc"</span>)</span><br><span class="line">print(c)</span><br></pre></td></tr></table></figure>
+
+<pre><code>ABCdefgABC
+ABCdefgabc
+111defg111</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#当内容与正则完全匹配时，才会返回内容，否则为None</span></span><br><span class="line"><span class="keyword">import</span> re</span><br><span class="line">a = re.fullmatch(<span class="string">"[a-z]&#123;3&#125;"</span>,<span class="string">"acd"</span>)</span><br><span class="line">print(a)</span><br></pre></td></tr></table></figure>
+
+<pre><code>&lt;re.Match object; span=(0, 3), match=&apos;acd&apos;&gt;</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#对正则进行提前编译</span></span><br><span class="line"><span class="keyword">import</span> re</span><br><span class="line">a = re.compile(<span class="string">"[a-z]"</span>)</span><br><span class="line">b = a.findall(<span class="string">"123abc123dfs123ioio"</span>)</span><br><span class="line">print(b)</span><br></pre></td></tr></table></figure>
+
+<pre><code>[&apos;a&apos;, &apos;b&apos;, &apos;c&apos;, &apos;d&apos;, &apos;f&apos;, &apos;s&apos;, &apos;i&apos;, &apos;o&apos;, &apos;i&apos;, &apos;o&apos;]</code></pre><ul>
+<li>Flag标志符<ul>
+<li>re.I:忽略大小写</li>
+<li>re.M:多行模式，改变’^’与’$’的行为</li>
+<li>re.S 改变’.’的行为，可以匹配到换行符一类的</li>
+<li>re.X 可以给你的表达式写注释</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#忽略大小写</span></span><br><span class="line"><span class="keyword">import</span> re</span><br><span class="line"><span class="comment">#在ABC中找到能匹配abc的</span></span><br><span class="line">a = re.search(<span class="string">"abc"</span>,<span class="string">"ABC"</span>)</span><br><span class="line">print(a)</span><br><span class="line"><span class="comment">#在ABC中匹配abc，不区分大小写</span></span><br><span class="line">b = re.search(<span class="string">"abc"</span>,<span class="string">"ABC"</span>,re.I)</span><br><span class="line">print(b)</span><br></pre></td></tr></table></figure>
+
+<pre><code>None
+&lt;re.Match object; span=(0, 3), match=&apos;ABC&apos;&gt;</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#多行模式</span></span><br><span class="line"><span class="comment">#使用search一类的函数，如果内容时多行数据，如果使用代表以某字符为开头的^或结尾的$，就会出现无法匹配的问题</span></span><br><span class="line"><span class="comment">#匹配出以1开头的数据</span></span><br><span class="line">a = re.search(<span class="string">"^1"</span>,<span class="string">"abc\n1231"</span>)</span><br><span class="line">print(a)</span><br><span class="line"><span class="comment">#对多行进行匹配，匹配出以1开头的数据</span></span><br><span class="line">b = re.search(<span class="string">"^1"</span>,<span class="string">"abc\n1231"</span>,re.M)</span><br><span class="line">print(b)</span><br></pre></td></tr></table></figure>
+
+<pre><code>None
+&lt;re.Match object; span=(4, 5), match=&apos;1&apos;&gt;</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#匹配到换行符</span></span><br><span class="line"><span class="keyword">import</span> re</span><br><span class="line">a = re.search(<span class="string">"."</span>,<span class="string">"\n"</span>)</span><br><span class="line">print(a)</span><br><span class="line">b = re.search(<span class="string">"."</span>,<span class="string">"\n"</span>,re.S)</span><br><span class="line">print(b)</span><br></pre></td></tr></table></figure>
+
+<pre><code>None
+&lt;re.Match object; span=(0, 1), match=&apos;\n&apos;&gt;</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#写注释</span></span><br><span class="line"><span class="keyword">import</span> re</span><br><span class="line">a = re.search(<span class="string">". # 匹配一个字符"</span>,<span class="string">"123abc"</span>,re.X)</span><br><span class="line">print(a)</span><br></pre></td></tr></table></figure>
+
+<pre><code>&lt;re.Match object; span=(0, 1), match=&apos;1&apos;&gt;</code></pre>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/05/27/Python%E5%B8%B8%E7%94%A8%E6%A8%A1%E5%9D%97%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" data-id="ckaouxxo00001wkwe4i6zf2f3" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2020/05/27/%E5%87%BD%E6%95%B0%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          函数编程基础知识学习笔记
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/05/27/python%E5%A5%BD%E4%B9%A0%E6%83%AF/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">python好习惯</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">May 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/05/27/%E5%87%BD%E6%95%B0%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">函数编程基础知识学习笔记</a>
+          </li>
+        
+          <li>
+            <a href="/2020/05/27/Python%E5%B8%B8%E7%94%A8%E6%A8%A1%E5%9D%97%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">Python常用模块学习笔记</a>
+          </li>
+        
+          <li>
+            <a href="/2020/05/27/python%E5%A5%BD%E4%B9%A0%E6%83%AF/">python好习惯</a>
+          </li>
+        
+          <li>
+            <a href="/2020/05/27/Python%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">Python基础知识学习笔记</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>

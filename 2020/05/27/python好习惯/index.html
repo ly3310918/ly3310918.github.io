@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>python好习惯 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="软件开发目录设计规范 推荐的最方便的目录结构，如果项目叫做foo bin&#x2F;:存放项目的一些可执行文件，当然起名script一类的也行 foo&#x2F;：存放项目的所有源代码 源代码中的所有模块，包都应该在这个目录中 其子目录tests存放单元测试代码 程序的入口最好命名为main.py   docs&#x2F;：存放一些文档 conf&#x2F;:存放配置文件 setup.py：安装、部署、打包娇而不能 业界标准的写法是用p">
+<meta property="og:type" content="article">
+<meta property="og:title" content="python好习惯">
+<meta property="og:url" content="http://yoursite.com/2020/05/27/python%E5%A5%BD%E4%B9%A0%E6%83%AF/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="软件开发目录设计规范 推荐的最方便的目录结构，如果项目叫做foo bin&#x2F;:存放项目的一些可执行文件，当然起名script一类的也行 foo&#x2F;：存放项目的所有源代码 源代码中的所有模块，包都应该在这个目录中 其子目录tests存放单元测试代码 程序的入口最好命名为main.py   docs&#x2F;：存放一些文档 conf&#x2F;:存放配置文件 setup.py：安装、部署、打包娇而不能 业界标准的写法是用p">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-05-27T04:13:26.949Z">
+<meta property="article:modified_time" content="2020-05-27T04:12:25.926Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-python好习惯" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/05/27/python%E5%A5%BD%E4%B9%A0%E6%83%AF/" class="article-date">
+  <time datetime="2020-05-27T04:13:26.949Z" itemprop="datePublished">2020-05-27</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      python好习惯
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="软件开发目录设计规范"><a href="#软件开发目录设计规范" class="headerlink" title="软件开发目录设计规范"></a>软件开发目录设计规范</h2><ul>
+<li>推荐的最方便的目录结构，如果项目叫做foo<ul>
+<li>bin/:存放项目的一些可执行文件，当然起名script一类的也行</li>
+<li>foo/：存放项目的所有源代码<ul>
+<li>源代码中的所有模块，包都应该在这个目录中</li>
+<li>其子目录tests存放单元测试代码</li>
+<li>程序的入口最好命名为main.py</li>
+</ul>
+</li>
+<li>docs/：存放一些文档</li>
+<li>conf/:存放配置文件</li>
+<li>setup.py：安装、部署、打包娇而不能<ul>
+<li>业界标准的写法是用python流行的打包工具setuptools</li>
+<li>但不是说必须要用打包工具，而是建议一个项目一定要有自己的安装部署工具</li>
+<li>目的是为了能够快速搭建</li>
+</ul>
+</li>
+<li>requirements.txt:存放软件依赖的外部python包列表<ul>
+<li>方便开发者维护软件的包依赖，将开发过程中新增的包添加进这个列表中，避免setip.py安装依赖时漏掉软件包</li>
+<li>方便读者明确项目使用了哪些python包</li>
+<li>文件的内容格式为每一行包含一个包依赖的说明，通常是flask&gt;=0.10这种格式</li>
+<li>要求这个格式能够被pip识别，这样就可以简单使用pip install -r requirements.txt 命令把所有依赖都安装好。</li>
+<li>使用pip freeze &gt; requirements 可以快速将已安装的python包生成requirements文件。</li>
+</ul>
+</li>
+<li>README:项目说明文件<ul>
+<li>软件定位，软件的基本功能</li>
+<li>运行代码的方式：安装环境，启动命令</li>
+<li>简要的使用功能</li>
+<li>代码目录结构，更详细点可以说明软件的基本原理</li>
+<li>常见问题说明</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/05/27/python%E5%A5%BD%E4%B9%A0%E6%83%AF/" data-id="ckaouxxo20002wkwebb5kbf55" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2020/05/27/Python%E5%B8%B8%E7%94%A8%E6%A8%A1%E5%9D%97%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Python常用模块学习笔记
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/05/27/Python%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Python基础知识学习笔记</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">May 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/05/27/%E5%87%BD%E6%95%B0%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">函数编程基础知识学习笔记</a>
+          </li>
+        
+          <li>
+            <a href="/2020/05/27/Python%E5%B8%B8%E7%94%A8%E6%A8%A1%E5%9D%97%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">Python常用模块学习笔记</a>
+          </li>
+        
+          <li>
+            <a href="/2020/05/27/python%E5%A5%BD%E4%B9%A0%E6%83%AF/">python好习惯</a>
+          </li>
+        
+          <li>
+            <a href="/2020/05/27/Python%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">Python基础知识学习笔记</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
